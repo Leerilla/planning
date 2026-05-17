@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "Bash(npm run dev)",
+      "Bash(npm run lint)",
+      "Bash(git status)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Read(./src/**)",
+      "Read(./lectures/**)",
+      "Read(./docs/**)",
+      "Read(./public/**)",
+      "Write(./src/**)",
+      "Write(./public/**)",
+      "Edit(./src/**)",
+      "Edit(./public/**)",
+      "Write(./lectures/*/captures/**)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(npm install -g:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(rm -rf:*)",
+      "Write(./.env*)",
+      "Edit(./.env*)",
+      "Edit(./package.json)",
+      "Edit(./next.config.js)",
+      "Edit(./tailwind.config.js)"
+    ],
+    "deny": [
+      "Read(./.env.local)",
+      "Read(./.env.production)",
+      "Edit(./reference/**)",
+      "Write(./reference/**)",
+      "Write(./lectures/*/lecture.md)",
+      "Edit(./lectures/*/lecture.md)",
+      "Write(./lectures/*/assignment.md)",
+      "Edit(./lectures/*/assignment.md)",
+      "Write(./lectures/*/checklist.md)",
+      "Edit(./lectures/*/checklist.md)",
+      "Bash(curl * .env*)",
+      "Bash(cat .env*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d),p=((e.tool_input||{}).file_path||'').split(String.fromCharCode(92)).join('/');if(p.includes('src/components/slides/')&&p.endsWith('.jsx'))console.log('🎨 슬라이드 컴포넌트 변경 — design-reviewer 검증 권장')}catch(_){}})\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d),p=e.prompt||'';if(p.includes('큐레이션')||p.includes('슬라이드'))console.log('🎯 슬라이드 큐레이션은 docs/curation-workflow.md 9단계를 따릅니다')}catch(_){}})\""
+          },
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d);if((e.prompt||'').includes('lecture.md'))console.log('⚠️ 강사 자료(lecture.md)는 절대 수정하지 않습니다')}catch(_){}})\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d),p=((e.tool_input||{}).file_path||'').split(String.fromCharCode(92)).join('/');const inLectures=p.includes('/lectures/')||p.startsWith('lectures/');const isInstructor=p.endsWith('/lecture.md')||p.endsWith('/assignment.md')||p.endsWith('/checklist.md');if(inLectures&&isInstructor)console.log('⛔ lecture.md/assignment.md/checklist.md는 강사 영역. 수정 금지.')}catch(_){}})\""
+          },
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const e=JSON.parse(d),p=((e.tool_input||{}).file_path||'').split(String.fromCharCode(92)).join('/');if(p.startsWith('reference/')||p.includes('/reference/'))console.log('⛔ reference/ 폴더는 검증된 데모. 수정 금지.')}catch(_){}})\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '✅ 작업 완료 — git status 확인 후 커밋 권장'"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "CLAUDE_PROJECT_NAME": "Claude Code 풀사이클 학습 플랫폼",
+    "CLAUDE_PROJECT_VERSION": "0.2.0"
+  }
+}

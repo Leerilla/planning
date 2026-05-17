@@ -1,0 +1,33 @@
+/* ============================================================
+   인쇄/내보내기 전용 스타일
+   /print/[slug]/[deck]/[page] 라우트에서만 사용
+   - 단일 슬라이드를 1920×1080 고정 캔버스로 렌더
+   - 전역 그래디언트 배경 / 스크롤 / 포커스 효과 제거
+   - data-played="true" 강제 적용으로 fadeUp 스태거 비활성화 (globals.css의 .slide-frame[data-played="false"] 선택자가 매치 안 됨)
+   ============================================================ */
+
+body.print-mode {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+body.print-mode::before {
+  display: none !important;
+}
+
+.print-root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+}
+
+/* slide-frame은 globals.css에서 100vw × 100vh — 1920×1080 viewport에 자연스럽게 들어맞음 */
+.print-root .slide-frame {
+  width: 100vw;
+  height: 100vh;
+}

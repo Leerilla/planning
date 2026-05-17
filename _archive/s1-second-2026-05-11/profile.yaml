@@ -1,0 +1,192 @@
+session: S1
+status: confirmed
+inferred_at: "2026-05-11T00:00:00Z"
+confirmed_at: "2026-05-11T03:30:00Z"
+confirmed_by: "instructor (Gate-1 시뮬레이션 — Auto Mode 권고 채택)"
+
+independent_inference: true  # S1 첫 세션, prev_session_profile 없음
+
+gate_1_decisions:
+  - field: core_visual_kind
+    chosen: comparison
+    rationale: "좋은/나쁜 갈림길 + 거짓 패턴 3종 + 과거/현재 대조가 세션 핵심 학습 효과. tie 상황에서 첫 단정('사람과 문제 vs 기능')이 본질적으로 대조 메시지"
+  - field: interactivity_density
+    chosen: medium
+    rationale: "활동(🚀) 섹션 분명 → 활동 덱 완전 분리 권고. 이론 덱 6-9건 인터랙티브"
+  - field: expected_slide_count
+    chosen: { min: 35, max: 40 }
+    rationale: "공식 base 37 기준, 균형 옵션. 강도 분포 + 호흡 룰 고려"
+
+profile:
+  logic_structure:
+    value: linear
+    confidence: high
+    signals:
+      - "한 단계의 출력이 다음 단계의 입력 (line 82)"
+      - "5단계 프레임 명시: 문제→페르소나→가설→검증→정제 (line 80-90)"
+      - "사슬은 가장 약한 고리에서 끊어진다 (line 91-92)"
+      - "5 Whys [증상]→[1]→[2]→[3]→[4]→[5] (line 57-68)"
+      - "출처 검증 3단계: 클릭→원문→신뢰 (line 227-233)"
+      - "활동 3단계 순차: 아이디어 선택→워크시트→회고 (line 273-507)"
+    score:
+      linear: 8
+      parallel: 0
+      cyclic: 0
+      hierarchical: 0
+
+  core_visual_kind:
+    value: comparison  # Gate-1 결정 (원래 AMBIGUOUS 7=7)
+    confidence: high   # Gate-1 강사 결정으로 확정
+    original_inference: AMBIGUOUS
+    original_confidence: low
+    signals:
+      diagram:
+        - "5단계 사슬 프레임 (line 80-90)"
+        - "5 Whys 단계 흐름 (line 53-68)"
+        - "출처 검증 3단계 흐름 (line 210-234)"
+      comparison:
+        - "좋은 vs 나쁜 기획 갈림길 (line 32-41)"
+        - "거짓 패턴 3가지 표 (line 148-206)"
+        - "과거 vs 현재 표 (line 149-155)"
+    score:
+      diagram: 7
+      comparison: 7
+      simulation: 2
+      data: 2
+    signal_dominance: 0.39  # (7 / 18 = 39%, threshold 0.6 미달 → tie)
+    minimum_presence: 1
+    candidates:
+      - value: diagram
+        score: 7
+        signals:
+          - "5단계 사슬 프레임"
+          - "5 Whys 단계"
+          - "3단계 검증 흐름"
+        consequence: "ChainDiagram, StepGuide 패턴 우선. 절차와 흐름 명확화"
+      - value: comparison
+        score: 7
+        signals:
+          - "좋은/나쁜 기획 대조"
+          - "거짓 패턴 3가지"
+          - "과거/현재 비교"
+        consequence: "Comparison, Warning 패턴 우선. 대조와 오류 회피 강조"
+    reason: "diagram 신호(사슬/단계)와 comparison 신호(비교/대조)가 정확히 동률(각 7점). 목표 설정(개념 이해 vs 오류 회피)에 따라 우선순위 결정 필요"
+    requires_decision: true
+
+  interactivity_density:
+    value: medium  # Gate-1 결정 (활동 덱 분리, 이론 덱은 6-9건)
+    confidence: high
+    original_inference: high
+    original_confidence: medium
+    signals:
+      - "비교/대조: 좋은/나쁜 기획(1), 거짓 패턴(1), 과거/현재(1)"
+      - "단계 시퀀스: 5 Whys(1), 5단계(1), 출처 검증(1)"
+      - "데이터 표: 도구 카탈로그(1)"
+      - "토글/선택: 시드 6개(1), 아이디어 후보(1)"
+      - "시뮬/입력: ChatGPT→검증 활동(1)"
+    candidate_count: 10
+    range:
+      low: { min: 3, max: 5 }
+      medium: { min: 6, max: 9 }
+      high: { min: 10, max: 13 }
+    note: "활동 덱 완전 분리 시 이론 덱은 medium(6-9) 권고"
+    requires_decision: true
+
+  tone_strength:
+    value: strong
+    confidence: medium
+    signals:
+      - "단정 명시 3회 (line 33, 110, 144)"
+      - "절대/~이다 단언 (line 162-163)"
+      - "사용 불가 표현 (line 200, 243)"
+      - "권장/경험상 표현 (line 159-175)"
+    score:
+      strong: 5
+      balanced: 2
+      soft: 0
+    conditions:
+      - if: "lecture.md 명시 단정 3개"
+        then: "strong 톤 허용 (KeyMessage 패턴)"
+      - if: "활동 섹션"
+        then: "soft 권장 (실습/선택 중심)"
+
+  expected_slide_count:
+    value: { min: 35, max: 40 }  # Gate-1 결정 (균형 옵션)
+    original_range: { min: 31, max: 43 }
+    base: 37
+    adjustments:
+      theory_h2: 0  # (3 - 3) × 4 = 0
+      activity_h2: 3  # 1 × 3 = 3 (별도 덱)
+      assertion: 6  # 3 × 2 = 6
+      density: 3  # medium(+3) 또는 high(+7)
+      structure: 0  # linear(0)
+    calculation: "25 + 0 + 3 + 6 + 3 + 0 = 37, range ±15% = [31, 43]"
+    confidence: medium
+    note: "활동 덱 분리 권고. 이론 덱만: 31-43 범위. 실 목표: 35-40장"
+    requires_decision: true
+
+decisions_required: []  # 모두 Gate-1에서 해소됨 (gate_1_decisions 참조)
+
+session_specific_decisions:
+  flow:
+    deductive_only_in: []
+    narrative_structure: "선형: 기획 정의 → AI 변화 → 출처 검증 → 활동 (1차 가설)"
+    five_step_location: "§1에서 5단계 프레임 명시 (Slide 8 예상)"
+
+  content:
+    persona_axes:
+      - "직군: 스타트업 PM, 팀장, 신입 제품 담당자"
+      - "맥락: 회의록 정리, 기획 문서 작성, AI 활용"
+      - "동기: '검증 가능한 기획'이라는 개념 이해"
+    assertions:
+      - "line 33 — 기능을 정하기 전에 사람과 문제를 정한다"
+      - "line 110 — AI는 기획을 대신하지 않는다"
+      - "line 144 — AI가 만든 답은 출처를 검증하지 않으면 사용 불가"
+    critical_concepts:
+      - "5단계 프레임 (문제→페르소나→가설→검증→정제)"
+      - "5 Whys 깊이 파기"
+      - "거짓 정보 3패턴 (통계/인용/출처)"
+      - "출처 검증 3단계 (클릭→원문→신뢰)"
+
+  interactivity:
+    catalog_min: 4  # diagram + comparison + warning + stepguide 필수
+    placement_notes:
+      - "Slide 5: 3질문 선택 (ThreeCards 또는 대화형)"
+      - "Slide 10: 과거/현재 비교 (Comparison 표)"
+      - "Slide 13: 거짓 패턴 분석 (ThreeCards)"
+      - "Slide 17: 3단계 검증 (StepGuide)"
+      - "Slide 19: 시드 6개 선택 (카드 또는 필터)"
+    density_target_if_medium: "6-9 인터랙티브 슬라이드 (이론 덱)"
+    density_target_if_high: "10-13 인터랙티브 슬라이드 (활동 통합)"
+
+creative_judge_v3_exemption: true
+reason_exemption: "S1 첫 세션, prev_session_profile 없음. 세션 차별성 검증 N/A. 4축 평균으로 총점 계산"
+
+---
+
+# 강사 검토 필요사항 (Gate-1 요약)
+
+다음 3개 항목에 대해 강사 선택이 필요합니다.
+
+## 1. core_visual_kind: diagram vs comparison
+
+- **현황**: 신호 점수 동률 (각 7점)
+- **옵션 A (diagram)**: 5단계 사슬, 5 Whys, 검증 흐름 강조 → ChainDiagram/StepGuide 우선
+- **옵션 B (comparison)**: 좋은/나쁜 대조, 거짓 패턴, 과거/현재 강조 → Comparison/Warning 우선
+- **권고**: 옵션 C (균형) — 둘 다 표현하여 절차+오류 회피 학습 극대화
+
+## 2. interactivity_density: high vs medium
+
+- **현황**: 카운트 10개 (high 범위, 10-13)
+- **옵션 A (high)**: 활동과 통합, 이론 덱에서 직접 선택/입력 (10-13 슬라이드)
+- **옵션 B (medium)**: 활동 덱 완전 분리, 이론 덱은 시각/설명 중심 (6-9 슬라이드)
+- **권고**: 옵션 B (medium) — 활동 섹션(🚀)이 분명하므로 분리 구조 권고
+
+## 3. expected_slide_count: 범위 확정
+
+- **현황**: 공식 계산 31-43장 (base 37 ±15%)
+- **옵션 A (하한)**: 31-36장 — 빠른 진도
+- **옵션 B (중간)**: 35-40장 — 균형 ✓ **권고**
+- **옵션 C (상한)**: 40-43장 — 깊이 강화
+
+선택 후 phase β (layer-composer) 진행 가능합니다.

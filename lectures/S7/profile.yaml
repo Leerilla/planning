@@ -1,0 +1,201 @@
+session: S7
+title: "통합 디버깅과 E2E 테스트"
+status: draft
+inferred_at: "2026-05-15T09:30:00Z"
+
+profile:
+  logic_structure:
+    value: hierarchical
+    confidence: high
+    derivation_source: lecture_tree_analysis
+    signals:
+      - "### 순서: 순차적 (1→2→3 섹션), Step 0→1→2→3 단계"
+      - "계층 구조: 단위 테스트 → 통합 → E2E (확대/심화)"
+      - "원칙 1→2→3 (순차 심화)"
+      - "8타입 process 9개로 단계 강조"
+    score:
+      linear: 5
+      hierarchical: 6
+      parallel: 0
+      cyclic: 1
+    primary: hierarchical
+
+  core_visual_kind:
+    value: AMBIGUOUS
+    confidence: medium
+    derivation_source: type_distribution
+    signals:
+      - "comparison 점수: 12 (6개 슬라이드 × 2)"
+      - "diagram 점수: 12 (9개 process + 10개 title × 0.3)"
+      - "concept 26개 (34%) — 우세 불충분"
+    score:
+      diagram: 12
+      comparison: 12
+      simulation: 3
+      data: 0
+    candidates:
+      - value: comparison
+        score: 12
+        reason: "6개 비교 표 (테스트 단계, 안티 vs 올바름, 비교 관점)"
+        consequence: "슬라이드는 대비/비교 시각 강조"
+      - value: diagram
+        score: 12
+        reason: "9개 단계/흐름 (4단계, 3단계, 5단계, 검증 루프)"
+        consequence: "슬라이드는 프로세스/흐름 시각 강조"
+    requires_decision: true
+    decision_deadline: "Gate-1 강사 선택"
+
+  interactivity_density:
+    value: medium
+    confidence: medium
+    signals:
+      - "8타입 기본 인터랙티브: ~54 (concept 26×1 + comparison 6×1 + process 9×1.5 + quote 3×1 + example 3×1 + terms 5×0.5 + title 10×0 + activity 1×0)"
+      - "강사 명시 (@interactive/@animation): 0"
+      - "평균 per slide: 54÷76 ≈ 0.71"
+    range:
+      low: { min: 3, max: 5 }
+      medium: { min: 6, max: 9 }
+      high: { min: 10, max: 13 }
+    primary: medium
+
+  tone_strength:
+    value: strong
+    confidence: high
+    signals:
+      - "단정 키워드: 3회 ('첫/두/세 번째 단정' > 블록)"
+      - "강제 키워드: '이것이 정의', '필수', '반드시', '사용 불가', '금지' ~5회"
+      - "안티패턴 vs 올바름: 6회 (§1 1회, §2 1회, §3 1회 + Step 3회)"
+      - "strong 점수: 3 (단정) + 5 (강제) = 8"
+      - "soft 점수: 2 (권장/경험상)"
+    conditions:
+      - "lecture.md가 '이것이 정답' 형 제시 — 학생은 따르도록"
+      - "3원칙은 명령형 (자율 디버깅 3원칙 필수 적용)"
+      - "세션의 학습 목표가 원칙 습득"
+    primary: strong
+
+  expected_slide_count:
+    value: { min: 75, max: 77 }
+    actual: 76
+    confidence: high
+    derivation_source: auto_mapping_result
+    signals:
+      - "자동 생성: 10 (세션 표지 1, 덱 목차 2, 섹션 표지 7)"
+      - "이론: 27 (§1 9, §2 15, §3 13)"
+      - "실습: 38 (Step 0-3 23, Step N 4, 과제 1, Tips 10)"
+      - "범위: ±1장 (최종 Step 결정에 따라 변동 가능)"
+    distribution:
+      theory: { count: 27, percent: 35 }
+      activity: { count: 38, percent: 50 }
+      auto_generated: { count: 10, percent: 13 }
+
+decisions_required:
+  - field: core_visual_kind
+    current: AMBIGUOUS (comparison vs diagram)
+    impact: "슬라이드 시각 표현 방향 (표 중심 vs 흐름도 중심)"
+    deadline: "Gate-1"
+
+  - field: interactivity_density (optional)
+    current: medium
+    question: "강사 명시 인터랙티브 추가 여부"
+    candidates:
+      - value: medium
+        condition: "현재 기본 인터랙티브만 사용"
+      - value: high
+        requirement: "8개 강사 명시 인터랙티브 추가"
+    impact: "phase β' 에서 interactive prop 결정"
+    deadline: "선택 (medium으로 진행 가능)"
+
+  - field: concept_emphasis_distribution
+    current: "key-message 3, definition 7, default 16, outro 0"
+    question: "각 emphasis 최종 확정"
+    impact: "26개 concept 슬라이드 타이포그래피"
+    deadline: "phase δ' 빌드 단계"
+
+  - field: d_052_vertical_split_strategy
+    question: "자율 디버깅 3원칙 표현 (분산 3장 vs 통합 1-2장)"
+    impact: "Step 2 슬라이드 구성 변경 가능"
+    deadline: "phase δ' 또는 phase 6 (강사 피드백)"
+
+session_specific_decisions:
+  flow:
+    linear_sections:
+      - "이론 § 1 → 2 → 3"
+      - "실습 Step 0 → 1 → 2 → 3 → N"
+    branching: null
+    loops: ["검증 루프 (Step 3 반복)"]
+
+  content:
+    seed_reference: "시드 6번 (1인 셀러 카피 생성기)"
+    core_assertions:
+      - line: "L42-44"
+        text: "동작한다의 정의는 테스트가 통과한다이다"
+        type: "첫 번째 단정"
+      - line: "L190-192"
+        text: "자율 디버깅 3원칙: 에러 그대로, 분석 먼저, 결과 검증"
+        type: "두 번째 단정"
+      - line: "L302-304"
+        text: "PRD 일치성 검증은 코드 단위가 아닌 시나리오 단위로 한다. 그리고 검증은 루프로 진행한다"
+        type: "세 번째 단정"
+
+    three_step_patterns:
+      - "테스트 3단계 (L46-52 표): 단위/통합/E2E"
+      - "Playwright MCP 4단계 (L147-154): 선택/작성/실행/결과"
+      - "원칙 3개 (L203-273): 에러그대로/분석먼저/결과검증"
+      - "검증 루프 5단계 (L402-417): 호출/수신/검토/수정/재호출"
+
+  tools_and_frameworks:
+    new_tools:
+      playwright_mcp:
+        first_appearance: "L139"
+        context: "§2 시작, E2E 테스트 자동화"
+        description: "Claude Code가 Playwright를 자연어로 조작하는 통합"
+      scenario_verifier:
+        first_appearance: "L340"
+        context: "§3 시작, 새 sub-agent"
+        description: "시나리오 단위 PRD 검증 전문가"
+      e2e_folder:
+        first_appearance: "L609"
+        context: "Step 1 실습, 테스트 저장소"
+        description: "`planning_project/e2e/` 폴더"
+
+    continued_from_s6:
+      - "planning_project/ (작업 폴더)"
+      - "prd-reviewer sub-agent"
+      - "git-committer sub-agent"
+      - "PostToolUse + Stop hooks"
+
+  rules_applied:
+    A7_planning_project_fixed: "S3~S6 누적된 planning_project 폴더 그대로 사용, S7 e2e/ 폴더 추가"
+    A8_student_project_reference: "scenario-verifier.md + e2e/ 구조를 student-project-reference.md 확장 검토 대상"
+    D_043: "planning_project 일관 (Step 1 L609 'e2e/ 폴더에 둬' → 슬라이드에서 'planning_project/e2e/' 명시)"
+    D_044: "SSOT 충돌 시 SSOT 우선, 본 sprint 종료 후 reference.md 갱신"
+    D_049: "디자인 토큰 화이트리스트 — 모든 wrapper에서 미정의 토큰 금지"
+    D_050: "lecture.md 원문 보존 강화 — L840-848, L862-866 표 정확히 재현"
+    D_051: "pre 블록 폰트 >= text-xs (12px) — scenario-verifier markdown 포함"
+    D_052: "6+ vertical sequential 분할 — 자율 디버깅 3원칙, 검증 루프 5단계 검토"
+    D_053: "도구 이름 첫 등장 설명 — Playwright MCP, scenario-verifier, e2e/ 폴더"
+    D_054: "파일 경로 inline code + accent — `.claude/agents/scenario-verifier.md`, `planning_project/e2e/`"
+
+  testing_patterns:
+    e2e_test_writing: "Playwright MCP 자연어 작성 (테스트 코드 직접 작성 X)"
+    debugging_approach: "3원칙 (에러 그대로, 분석 먼저, 검증 후) 기반"
+    verification_loop: "검증 → 수정 → 재검증 (통과까지 반복)"
+    prd_alignment: "코드 단위 검증 (prd-reviewer) + 시나리오 단위 검증 (scenario-verifier)"
+
+  expected_instructor_feedback:
+    q1: "core_visual_kind: comparison vs diagram 선택?"
+    q2: "interactivity_density: medium 유지 vs high 강화?"
+    q3: "자율 디버깅 3원칙: 3개 슬라이드 분산 vs 1-2장 통합?"
+    q4: "검증 루프 5단계: ProcessSlide 시각화 vs 텍스트?"
+
+confirmed_by: null
+confirmed_at: null
+
+# Gate-1 체크리스트
+gate_1_checklist:
+  - "헤더 트리 분석 완료 (73 ####)"
+  - "8타입 자동 매핑 완료 (76장)"
+  - "coverage_map 100% 확정"
+  - "profile 5항목 도출 + 2항목 추론"
+  - "decisions_required 8건 검토 중"
+  - "D-049~D-054 신규 룰 적용 체크리스트 준비"

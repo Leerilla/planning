@@ -1,0 +1,126 @@
+# S3 Profile (v2, 2026-05-12) — 자동 도출 + 추론
+#
+# CLAUDE.md § 9 / docs/profile-system.md
+# status: draft → confirmed (Gate-1 강사 검토 후)
+
+session_id: s3
+session_title: "데이터를 PRD로 정제하기"
+session_subtitle: "NotebookLM로 분석하고 Manyfast로 정제하다"
+status: confirmed  # Gate-1 통과 (2026-05-12, reasonable defaults)
+
+# ═══════════════════════════════════════════════════
+# 자동 도출 항목 (lecture.md 파싱 결과)
+# ═══════════════════════════════════════════════════
+
+logic_structure: hierarchical
+# 근거: 이론 5 챕터 순차 (정의 → 5요소 → 변천 → 도구 → 실전)
+# 보조: parallel (NotebookLM/Manyfast 두 도구 분담 §4)
+# alternative: parallel — 그러나 챕터 순서가 학습 순서 SSOT
+
+core_visual_kind: comparison
+# 근거: 안티 vs 정상 (§1/§2/§4/§5, 4회) / 두 도구 분담 / 3시대 변천 / BAD/GOOD
+# 보조: diagram (4단계 워크플로, 3시대 타임라인, 효과 4-card)
+
+expected_slide_count: 87
+# 이론 46 + 실습 41 (옵션 B 통합 확정, HIGH-1 폐기)
+#
+# 이론 46장:
+#   - 자동 생성 2장 (# 세션 표지 + 이론 목차)
+#   - §1 PRD란 무엇인가: 7장 (챕터 표지 + 6 ### 콘텐츠)
+#   - §2 5요소: 10장 (챕터 표지 + 한눈 + 요소 1-5 통합 + 잘못된 + 비면 + 용어)
+#   - §3 3시대 변천: 8장 (챕터 표지 + 3시대 + 과거 + 한계 + 과도기 + 새문제 + 현재 + 단정)
+#   - §4 두 도구: 8장 (챕터 표지 + 소개 + 통합 2 + 효과 4-card + 분담 + 안티 + 용어)
+#   - §5 실전: 11장 (챕터 표지 + 도입 + 4단계 sequential + AI 한계 + 단정 + 5점검 + MVP + 표준 + 시드 + 안티 + 용어)
+#
+# 실습 41장:
+#   - 자동 생성 1장 (실습 목차)
+#   - Step 0 환경 진단: 6장
+#   - Step 1 NotebookLM: 7장
+#   - Step 2 Manyfast: 7장 (HIGH-1 폐기, 2-1~2-5 + 검증)
+#   - Step 3 prd.md export: 6장
+#   - Step 4 빌드 프로젝트 환경: 9장 (4-A 5 + 4-B 4)
+#   - Step N 정리·회고: 5장
+
+# ═══════════════════════════════════════════════════
+# 추론 항목 (lecture.md 신호 분석)
+# ═══════════════════════════════════════════════════
+
+interactivity_density: medium  # 6~9개 인터랙티브 후보
+# 신호:
+# - 안티패턴 BAD/GOOD toggle (§1/§2/§4/§5, 4회 — Comparison)
+# - 3시대 carousel (§3 과거→과도기→현재 — Process)
+# - 4단계 sequential reveal (§5 통합 1슬라이드 — Process)
+# - 효과 4-card grid (§4 — 사고 자원/검증 절차/추적 가능성/다음 연결)
+# - 메뉴 조작 + 시드 6 inline 2-area (실습 다수)
+# - 요소 1-5 정의·양식 통합 inline 2-area
+# 신뢰도: medium-high
+
+tone_strength: balanced
+# 신호:
+# - 단정문 3건 ("PRD = 합의 문서 / 두 도구 분담 / AI 검토 한계")
+# - 안티패턴 4건 (§1/§2/§4/§5)
+# - emoji 5 (1️⃣~5️⃣ — D-035 텍스트 변환)
+# - 메타 메시지 ("학생이 만들 PRD의 모범" — A4)
+# 신뢰도: high
+
+# ═══════════════════════════════════════════════════
+# 세션 특화 결정 (S3 only)
+# ═══════════════════════════════════════════════════
+
+session_specific_decisions:
+  content:
+    - C-S3-01: "PRD = 합의 문서 (정의) — A4 메타 메시지 (학생이 만들 PRD의 모범)"
+    - C-S3-02: "옵션 B 통합 — 요소 정의·양식 통합 / 메뉴+시드 통합 / 효과 4-card 1슬라이드"
+    - C-S3-03: "MCP 5건 삭제 / 2건 보존 (L425 특징 표 + L519 용어 해설) — 활용 흐름 배제, 소개만"
+    - C-S3-04: "Step 4 빌드 프로젝트 환경 신규 (D-043 planning_project + D-044 SSOT)"
+    - C-S3-05: "HIGH-1 폐기 — Step 2 2-6/2-7 미추가, 7장 확정"
+
+  interactivity:
+    - E-S3-01: "안티패턴 BAD/GOOD toggle (ComparisonSlide, §1/§2/§4/§5)"
+    - E-S3-02: "3시대 carousel (ProcessSlide, 과거→과도기→현재)"
+    - E-S3-03: "4단계 sequential reveal (ProcessSlide, §5 1슬라이드 통합)"
+    - E-S3-04: "효과 4-card grid (ConceptSlide 또는 ComparisonSlide 4-card)"
+    - E-S3-05: "메뉴 조작 + 시드 6 inline 2-area (좌 메뉴 / 우 시드 6, 실습 다수)"
+
+  format_handling:
+    # lecture.md 형식 deviation 처리 (S3-T0.2 점검 결과)
+    - "#### 미사용 — 모든 콘텐츠 ### 단위 (D-034 호환 모드)"
+    - "--- 미사용 (슬라이드 분할은 빌드 시 결정)"
+    - "### + emoji (1️⃣~5️⃣) = 챕터 표지 자동 (D-033 + strip_emoji D-035)"
+    - "### Step N / ### N-X = 실습 섹션/콘텐츠"
+    - "### + 한글 짧은 제목 (≤30자) = 콘텐츠 슬라이드"
+    - "## 이론 / ## 실습 = 덱 목차 자동 생성 (D-032)"
+    - "코드블록 안 # / ## (L1160+ README/CLAUDE.md 양식) = 헤더 인식 X (skipped — README 코드 일부)"
+
+# ═══════════════════════════════════════════════════
+# emoji 변환 매핑 (D-035)
+# ═══════════════════════════════════════════════════
+
+emoji_text_mapping:
+  "1️⃣": "Section 1"
+  "2️⃣": "Section 2"
+  "3️⃣": "Section 3"
+  "4️⃣": "Section 4"
+  "5️⃣": "Section 5"
+
+# ═══════════════════════════════════════════════════
+# Gate-1 강사 결정 사항 (draft → confirmed)
+# ═══════════════════════════════════════════════════
+
+decisions_required:
+  - "profile 자동 도출 (hierarchical / comparison / 87 / medium / balanced) 확정?"
+  - "미니 사이클 분할 — §2 3개(2-A/B/C) / §4 2개(4-A/B) / §5 2개(5-A/B) 통합?"
+  - "§4 효과 4 통합 = 4-card 1슬라이드 확정?"
+  - "메뉴 조작 캡처 — 실제 캡처 사용 / 시뮬 / 텍스트 설명만?"
+  - "강사 명시 @interactive 추가 위치?"
+
+# ═══════════════════════════════════════════════════
+# Gate-1 결정 (2026-05-12, reasonable defaults)
+# ═══════════════════════════════════════════════════
+
+decisions_resolved:
+  - "1. profile 자동 도출 → confirmed (그대로)"
+  - "2. 미니 사이클 분할 → Task.md 명시안 (§2 3개 / §4 2개 / §5 2개)"
+  - "3. §4 효과 4-card 1슬라이드 → 확정 (강사 결정 4번)"
+  - "4. 메뉴 조작 캡처 → 텍스트 설명 위주 + 필요 시 capture-checker가 빈 슬롯 알림"
+  - "5. @interactive 명시 → 0건, 8타입 기본 인터랙티브 (E10)"

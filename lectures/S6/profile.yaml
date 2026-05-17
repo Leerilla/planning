@@ -1,0 +1,131 @@
+# S6 Profile (v2, 2026-05-13) — 자동 도출 + 추론
+#
+# CLAUDE.md § 9 / docs/profile-system.md
+# status: confirmed (Gate-1 reasonable defaults, T1.2에서 자동 도출)
+
+session_id: s6
+session_title: "확장과 자동화"
+session_subtitle: "sub-agent와 hooks — 자동 검증과 자동 커밋"
+status: confirmed
+
+# ═══════════════════════════════════════════════════
+# 자동 도출 항목 (lecture.md 파싱 결과)
+# ═══════════════════════════════════════════════════
+
+logic_structure: hierarchical
+# 근거: 이론 4 챕터 순차 흐름 (확장과 자동화의 본질 → Agent 설계 6원칙 → hooks와 5개 lifecycle → 두 핵심 패턴 결합)
+# 보조: sequential (실습 Step 0-5, N 누적 구조 / 각 Step이 이전 산출물 위에 빌드 / 최종 화면 2개 동작 완성)
+
+core_visual_kind: comparison
+# 근거: 비교 표 다수 (확장 vs 자동화 / 자동화 대상 vs 부적합 / 매번 같은 방식 vs 부적합 조건 1~3 / 메인 vs sub-agent 4차이 / 원칙 6개 표 / hook type 2가지 / 5개 lifecycle / CLAUDE.md vs hook / Issue #1 vs Issue #5 시간 비교 / 자동화 효과 측정 표 = 11개 비교 표)
+# 보조: diagram (안티패턴 4회 BAD/GOOD toggle × 4 / PostToolUse hook 흐름 3단계 / Stop hook 흐름 3단계 / 두 패턴 결합 사이클 / 자동화 없음 vs 있음 흐름 / 6원칙 prd-reviewer 적용점검 = 프로세스 다이어그램 3개 + 플로우 3개)
+
+expected_slide_count: 109
+# 이론 57 + 실습 52
+#
+# 이론 57장 (Task.md Phase 2 청사진 일치):
+#   - 자동 생성 2장 (T2.0a # 세션 표지 + T2.0b 이론 목차)
+#   - §1 (1️⃣) T2.1: 12장 (챕터 표지 + 11 #### 콘텐츠 그대로)
+#   - §2 (2️⃣): 17장 = 2 미니 사이클 분할
+#       · T2.2 §2-A: 9장 (챕터 표지 + sub-agent 정체/4차이/격리/두 번째 단정/6원칙 한눈/원칙 1·2·3 = 8 콘텐츠)
+#       · T2.3 §2-B: 8장 (원칙 4·5·6/prd-reviewer 표준/점검/frontmatter/안티/용어 = 8 콘텐츠)
+#   - §3 (3️⃣): 15장 = 2 미니 사이클 분할
+#       · T2.4 §3-A: 8장 (챕터 표지 + hooks 정체/세 번째 단정/CLAUDE.md vs hook/type 2/5 lifecycle/Pre/Post 핵심 = 7 콘텐츠)
+#       · T2.5 §3-B: 7장 (UserPrompt/Stop 핵심/SubagentStop/matcher/timeout/안티/용어 = 7 콘텐츠)
+#   - §4 (4️⃣) T2.6: 11장 (챕터 표지 + 10 #### 콘텐츠 그대로)
+#
+# 실습 52장 (Task.md Phase 3 청사진 일치):
+#   - 자동 생성 1장 (T3.0 실습 목차)
+#   - T3.1 Step 0 환경 진단: 6장 (섹션 표지 + 0-1 + 0-2 + 0-3 + 0-4 + 검증)
+#   - T3.2 Step 1 prd-reviewer 작성: 5장 (섹션 표지 + 1-1 + 1-2 + 1-3 호출+시드 보고서 inline 2-area 통합 + 검증)
+#   - T3.3 Step 2 git-committer 작성: 4장 (섹션 표지 + 2-1 + 2-2 호출+시드 보고서 inline 2-area 통합 + 검증)
+#   - T3.4 Step 3 hook 작성: 5장 (섹션 표지 + 3-1 + 3-2 + 3-3 + 검증)
+#   - T3.5 Step 4 화면 1 Task: 8장 (섹션 표지 + 4-1 + 4-2 명령 + 4-2 자동화 흐름 + 4-3 + 4-4 + 4-5 + 검증)
+#   - T3.6 Step 5 화면 2 빌드: 7장 (섹션 표지 + 5-1 + 5-2 + 5-3 + 5-4 + 5-5 + 검증)
+#   - T3.7 Step N 정리·회고: 5장 (섹션 표지 + N-1 + N-2 + N-3 + 검증)
+#   - T3.8 과제: 1장 (assignment.md 요약)
+#   - T3.9 Tips: 10장 (5 카테고리 × 표지 + 통합)
+
+# ═══════════════════════════════════════════════════
+# 추론 항목 (lecture.md 신호 분석)
+# ═══════════════════════════════════════════════════
+
+interactivity_density: medium-high  # 9~10개 인터랙티브 후보
+# 신호:
+# - 안티패턴 BAD/GOOD toggle (§1 "두 번째 화면도 처음부터 새로 명령" vs "패턴 복사" / §2 "권한 너무 넓음" vs "분리" / §3 "공백 있음 매칭 실패" vs "정규식" = 4회 Comparison/toggle)
+# - Agent 설계 6원칙 6-card grid (원칙 1~6 이해 필요)
+# - hooks 5개 lifecycle 5-row table (5 이벤트 구분)
+# - PostToolUse 패턴 흐름 (작업자 → 메인 → hook → prd-reviewer → 보고서 / 자동화 없음 vs 있음 비교)
+# - Stop 패턴 흐름 (작업자 → 메인 → Stop hook → git-committer → 커밋)
+# - 두 패턴 결합 (한 Task 사이클 5단계)
+# - Issue #1 vs Issue #5 자동화 효과 비교 표 (빌드/검증/커밋 시간 차이)
+# - sub-agent markdown 코드블록 prd-reviewer/git-committer (학생이 직접 작성해야 함)
+# - hooks settings.json 코드블록 (PostToolUse + Stop 등록)
+# 신뢰도: high (신호 9건 명확, 실습 step 검증 기준 제시)
+
+tone_strength: balanced
+# 신호:
+# - 단정문 3건 ("자동화는 반복을 발견하는 데서 시작" §1 L57 / "sub-agent는 6원칙 위에서 만들어진다" §2 L179 / "hook은 결정적 동작을 보장" §3 L354)
+# - 안티패턴 4건 (§1 패턴 인식 실패/도구 놓침 / §2 권한 너무 넓음/단일책임 위반 / §3 정규식 공백/matcher 실패 / 검증우선주의 보고 신뢰 X)
+# - 메타 메시지 ("자료 5의 반복 압박 9개 Task" → "자료 6의 자동화 흐름으로 해결" = 학생이 만들 자동화 인프라의 모범, A4)
+# - emoji 4개 (1️⃣~4️⃣, D-035 텍스트 변환)
+# 신뢰도: high (단정 + 안티 + 메타 모두 명확)
+
+# ═══════════════════════════════════════════════════
+# 세션 특화 결정 (S6 only)
+# ═══════════════════════════════════════════════════
+
+session_specific_decisions:
+  content:
+    - C-S6-01: "확장(Expansion)과 자동화(Automation) 개념 분리 — 확장=패턴 복사, 자동화=도구 위임. 분리하면 S6 본질 명확 (§1 핵심)"
+    - C-S6-02: "자동화 가능한 반복 3조건 — 방식 일관성, 판단 기준 명확, 사람 매번 X (§1 L70-99, 실습 Step 1-2 기준)"
+    - C-S6-03: "Agent 설계 6원칙 — 단일 책임, 최소 권한, 결정적 출력, 책임 분리, 호출 시점, 입출력 계약 (§2 핵심, S6+ 재사용 기반)"
+    - C-S6-04: "hooks 5개 lifecycle 이벤트 — PreToolUse, PostToolUse, UserPromptSubmit, Stop, SubagentStop (§3 분류, 본 학습은 PostToolUse/Stop 2개 핵심)"
+    - C-S6-05: "두 핵심 패턴 결합 — PostToolUse→prd-reviewer(자동 검증) + Stop→git-committer(자동 커밋). 한 Task 명령 1줄 + hook 자동 처리 (§4, 자동화의 본질)"
+    - C-S6-06: "planning_project 폴더 그대로 — S4·S5 산출물(CLAUDE.md/docs/rules/settings.json) 위에 .claude/agents/(sub-agent 2개) + .claude/settings.json(hooks) 신규 추가"
+    - C-S6-07: "검증 우선주의 일관 적용 — sub-agent 보고도 AI 산출물, 자동 커밋 메시지도 직접 확인 (§4 L618-644, 자동화의 한계)"
+
+  interactivity:
+    - E-S6-01: "안티패턴 4회 BAD/GOOD toggle (ComparisonSlide, §1 / §2 / §3 / 검증우선주의 안티)"
+    - E-S6-02: "Agent 설계 6원칙 6-card grid (ConceptSlide 또는 TermsSlide 패턴, 원칙 1~6 카드식 전시)"
+    - E-S6-03: "hooks 5 lifecycle 5-row table (ComparisonSlide, 5개 이벤트 × 3열: 이벤트/시점/본학습사용)"
+    - E-S6-04: "두 핵심 패턴 흐름 sequential (ProcessSlide, PostToolUse 3단계 + Stop 3단계)"
+    - E-S6-05: "자동화 효과 비교 carousel (ComparisonSlide, Issue #1 수동 vs Issue #5 자동 / 시간 절반 이상 감소 시각화)"
+    - E-S6-06: "prd-reviewer/git-committer markdown 코드블록 (CodeBlock 패턴, S4 s27·s51 동일 처리 — frontmatter + 본문)"
+    - E-S6-07: "hooks settings.json 코드블록 (CodeBlock 패턴, PostToolUse + Stop 등록 구조 전시, matcher 정규식 강조)"
+    - E-S6-08: "자료 5→6 산출물 흐름도 (ActivitySlide 또는 ProcessSlide, 이전 산출물 → Step 1-5 진행 → 화면 2개 완성)"
+
+  format_handling:
+    - "표준 형식 채택 — #### 콘텐츠 분할 사용 (S3 호환 모드 X, S4·S5 동일)"
+    - "--- 미사용 (#### 단위가 슬라이드 분할 SSOT)"
+    - "### + emoji (1️⃣~4️⃣) = 챕터 표지 자동 (D-033 + strip_emoji D-035)"
+    - "### Step N = 실습 섹션 표지 자동"
+    - "### + 한글 (Tips 5 카테고리) = Tips 카테고리 표지 또는 통합 슬라이드"
+    - "## 이론/실습/과제/Tips = 덱 목차 자동 (이론/실습) + 콘텐츠 흡수 (과제/Tips)"
+    - "1-1/1-2/2-1/2-2/3-1 명령 + 코드블록 = CodeBlock 패턴 inline (설명 + 코드 한 슬라이드)"
+    - "3-1 json 코드블록 내 들여쓰기 + 주석 = 코드 가독성 유지 (mdx 헤더 인식 X)"
+    - "코드블록 내 마크다운 헤더(###) / json 형식 / bash 명령 = 헤더 인식 X (skipped — 코드블록 양식)"
+
+# ═══════════════════════════════════════════════════
+# emoji 변환 매핑 (D-035)
+# ═══════════════════════════════════════════════════
+
+emoji_text_mapping:
+  "1️⃣": "Section 1"
+  "2️⃣": "Section 2"
+  "3️⃣": "Section 3"
+  "4️⃣": "Section 4"
+
+# ═══════════════════════════════════════════════════
+# Gate-1 강사 결정 사항 (confirmed)
+# ═══════════════════════════════════════════════════
+
+decisions_resolved:
+  - "1. profile 자동 도출 → confirmed (reasonable defaults: hierarchical / comparison / 109 / medium-high / balanced)"
+  - "2. 미니 사이클 분할 — **의미 응집 단위 기준** (S1~S5 패턴 일관, lecture.md #### 순서 따름): 이론 13 + 실습 12 + 자동 3 = **총 28 미니사이클**"
+  - "3. 이론 13 미니사이클 — §1 3(T2.1a 도입+단정+정의 5장 / T2.1b 3조건 4장 / T2.1c 정리 3장) / §2 4(T2.2a 도입+개념+단정 5장 / T2.2b 6원칙 overview+1-3 4장 / T2.2c 원칙 4-6+양식 4장 / T2.2d 점검+안티+용어 4장) / §3 3(T2.3a 도입 5장 / T2.3b 5lifecycle overview+풀이 6장 / T2.3c 운영 4장) / §4 3(T2.4a Pattern 1 3장 / T2.4b Pattern 2+양식 4장 / T2.4c 결합+안티+용어 4장) = 55장 + 자동 2 = 57장"
+  - "4. 실습 12 미니사이클 — Step 0 2(T3.1a 3장+T3.1b 3장) / Step 1 1(T3.2 5장) / Step 2 1(T3.3 4장) / Step 3 1(T3.4 5장) / Step 4 2(T3.5a 4장+T3.5b 4장) / Step 5 2(T3.6a 4장+T3.6b 3장) / Step N 1(T3.7 5장) / 과제 1(T3.8 1장) / Tips 1(T3.9 10장, 5 카테고리 응집 1T) = 51장 + 자동 1 = 52장"
+  - "5. sub-agent 코드블록 양식 — markdown frontmatter + 본문 (S4 s27·s51 패턴 일관, S6 s27·s51·a10·a14에 적용)"
+  - "6. hooks settings.json 양식 — CodeBlock + 파일 경로 라벨 (a18 위치)"
+  - "7. Tips 5 카테고리 → 각 표지 + 통합 콘텐츠 짝 (10장 = 5×2, **1T 유지** — 본 sprint 학습 마무리 응집)"
+  - "8. KeyMessage size='sm' (S4 신규 prop, D-042) — 3 단정문 일관 (s6 / s19 / s34)"

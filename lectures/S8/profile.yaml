@@ -1,0 +1,193 @@
+# S8 Profile — 풀스택 배포와 분석 셋업
+# Generated: 2026-05-16 / lecture-translator α 자동 도출 + 메인 추론
+# Status: draft (Gate-1 강사 검토 대기)
+
+session_id: S8
+lecture_title: 풀스택 배포와 분석 셋업
+lecture_subtitle: Vercel·Railway·CORS·분석 도구 3종 (Clarity / Sentry / 이벤트 추적)
+lecture_lines: [1, 1721]
+lecture_format_version: v2
+lecture_path: lectures/S8/captures/lecture.md  # 강사 자료 보호 정책 (Phase 0 T0.3 결정)
+
+# ───────────────────────────────────────────
+# 자동 도출 항목 (lecture-translator α 결과)
+# ───────────────────────────────────────────
+
+auto_derived:
+  logic_structure:
+    kind: hierarchical
+    confidence: high
+    reasoning: "이론 5챕터가 저→중→고수준 위계 (FE/BE분리 → 최소 개발지식 → 플랫폼/환경변수 → CORS 정책 → 분석도구 메타). 실습 6 Step도 순차 의존 (Step 0 환경 → Step 1 BE → Step 2 FE → Step 3 CORS → Step 4 분석도구 → Step N 정리)"
+    theory_chapters: 5
+    activity_steps: 6
+    sub_topics_total: 114  # 이론 56 + 실습 43 + 과제 1 + Tips 15
+
+  core_visual_kind:
+    primary: comparison
+    secondary: process
+    confidence: high
+    reasoning: "FE/BE 비교, 신뢰 경계, 환경변수 3종, CORS 정책 비교, 분석 도구 3종 비교가 핵심 시각. process(빌드배포·자율디버깅·이벤트추적) 부차 신호."
+    distribution:
+      concept: 11
+      comparison: 10
+      terms: 6
+      example: 5
+      quote: 5
+      process: 4
+      diagram: 1
+      activity: 43
+
+  expected_slide_count: 122
+  expected_breakdown:
+    theory_auto_generated: 7  # t1 + t2 + 챕터 표지 5
+    theory_content: 56
+    activity_auto_generated: 1  # a1 (실습 목차)
+    activity_content: 43
+    assignment: 1
+    tips: 14  # Cover 7 + Content 7 (S7 패턴)
+
+# ───────────────────────────────────────────
+# 추론 항목 (메인 신호 분석)
+# ───────────────────────────────────────────
+
+inferred:
+  interactivity_density:
+    value: medium
+    confidence: medium
+    reasoning: "강사 @interactive 명시 0건. activity 43건 (모든 실습 Step) + 체크리스트 5건 + 명령 입력 다수. 명시 부재로 신뢰도 medium."
+    signal_count: 48
+    range_estimate: [7, 10]  # medium 권장 범위
+    fallback: low_to_medium
+
+  tone_strength:
+    value: strong
+    confidence: high
+    reasoning: "5 단정 blockquote 모두 강사 자료 원문 명시. tone 명확."
+    definitive_statements: 5
+    statement_locations:
+      - line: 57
+        chapter: "§1"
+        text: "비밀은 BE에 둔다. FE는 BE에게 물어본다."
+      - line: 318
+        chapter: "§2"
+        text: "AI에게 명령을 정확히 내리려면 개발 어휘가 필요하다. 코딩이 아닌 어휘다."
+      - line: 445
+        chapter: "§3"
+        text: "API 키는 환경 변수에 두고 .gitignore에 .env.local을 명시한다."
+      - line: 565
+        chapter: "§4"
+        text: "CORS는 처음 만나면 무조건 한 번 막힌다. 정상이다."
+      - line: 684
+        chapter: "§5"
+        text: "사용자가 들어오기 전에 분석 도구를 셋업한다. 들어온 후 셋업하면 그 사용자 데이터는 회수 불가능하다."
+
+# ───────────────────────────────────────────
+# 세션 특화 결정 (Gate-1 강사 결정 8건)
+# ───────────────────────────────────────────
+
+session_specific_decisions:
+  # 1. 표준 형식 (자동 — 모호 없음)
+  lecture_format:
+    decision: standard
+    detail: "#### 콘텐츠 분할, S4~S7과 동일"
+
+  # 2. Monorepo vs 분리 리포 — 양쪽 모두 슬라이드 작성
+  repo_structure_options:
+    decision: both
+    detail: "Step 0-3 옵션 비교 표 (2-card 또는 comparison)에 Monorepo·분리 양쪽 명시"
+    rationale: "강사 사용자 결정 — 학생이 자기 상황에 맞게 선택 가능"
+
+  # 3. CORS Step 3 → 자율 디버깅 3원칙 재활용 (S7 Step 2 패턴 미러)
+  cors_step3_pattern:
+    decision: reuse_s7_debug_pattern
+    detail: "명령 prompt + 점검 표 + 3원칙 점검 (S7 Step 2 t20-t25 패턴 재활용)"
+
+  # 4. 분석 도구 3종 의사결정 매핑 — Gate-2 추가
+  analytics_decision_mapping:
+    decision: gate_2
+    detail: "Phase 2 T2.5c 종료 후 강사 게이트 (analytics-plan.md 양식 + 작성 시기 확정)"
+
+  # 5. KeyMessage 5 단정 (S7 3건 → S8 5건)
+  key_messages:
+    decision: 5_assertions
+    locations:
+      - chapter: "§1"
+        line: 57
+        slide_id_candidate: "t8"  # § 1.6 명시
+      - chapter: "§2"
+        line: 318
+        slide_id_candidate: "t21"
+      - chapter: "§3"
+        line: 445
+        slide_id_candidate: "t31"
+      - chapter: "§4"
+        line: 565
+        slide_id_candidate: "t41"
+      - chapter: "§5"
+        line: 684
+        slide_id_candidate: "t52"
+
+  # 6. D-043 planning_project 고정 (A7)
+  planning_project_lock:
+    decision: locked
+    detail: "S7 누적 폴더 위에 Railway BE + Vercel FE + Clarity + Sentry + 이벤트 적층. 모든 Step 명령에 planning_project/ 접두사 명시"
+
+  # 7. D-044 SSOT 확장 (A8)
+  ssot_extensions:
+    decision: review_after_sprint
+    new_areas:
+      - "Railway/Vercel 환경변수 (.env.production)"
+      - "planning_project/docs/analytics-plan.md (의사결정 매핑)"
+      - "Clarity/Sentry 설정 파일 + 이벤트 추적 코드 위치"
+    detail: "sprint 종료 후 student-project-reference.md 갱신 검토 (강사 협업)"
+
+  # 8. ⭐ D-049~D-054 룰 강화 (S7 시험대 → S8 표준 정착)
+  design_rules_enforced:
+    decision: standard_operating
+    confirmed_rules:
+      D-049: 화이트리스트 토큰 (모든 wrapper)
+      D-050: lecture.md 원문 보존 (표/리스트)
+      D-051: pre 폰트 ≥ text-xs
+      D-052: 6+ vertical 분할 (Step 1 8단계 등)
+      D-053: 도구 첫 등장 설명 (Vercel/Railway/Clarity/Sentry/CORS)
+      D-054: 산출물 경로 inline code + accent
+    s7_lessons:
+      d003_recurrences: 21  # checkbox rounded-md 회귀
+      d046_recurrences: 1
+      d049_recurrences: 8
+      slideframe_double_wrap: 9
+      gamma_fallback: "27/27 (D-048 정식 운영)"
+
+# ───────────────────────────────────────────
+# Coverage Analysis
+# ───────────────────────────────────────────
+
+coverage_analysis:
+  total_lines: 1721
+  mapped_to_slides: 1721
+  coverage_percentage: 100
+  skipped_items: []  # 모두 매핑 (Tips는 Content 7장으로 매핑)
+
+# ───────────────────────────────────────────
+# Workflow Status
+# ───────────────────────────────────────────
+
+status: confirmed
+review_required:
+  - gate_id: Gate-1
+    phase: 1
+    task: T1.4
+    items:
+      - 8 강사 결정 확정
+      - D-049~D-054 적용 위치 확정
+      - Monorepo·분리 양쪽 슬라이드 작성 확정
+      - 5 단정 슬라이드 ID 후보 확정
+      - profile.yaml status → confirmed 승인
+  - gate_id: Gate-2
+    phase: 2
+    task: T2.5c 종료 후
+    items:
+      - 분석 도구 3종 의사결정 매핑 강사 승인
+      - analytics-plan.md 양식 + 작성 시기
+
+next_phase: Phase 2 (이론 미니사이클, T2.0a/b + T2.1a/b ~ T2.5a/b/c, 12 + 자동 2 미니사이클)

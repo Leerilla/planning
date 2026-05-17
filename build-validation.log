@@ -1,0 +1,41 @@
+
+> claude-curriculum-platform@0.2.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/9) ...
+   Generating static pages (2/9) 
+   Generating static pages (4/9) 
+   Generating static pages (6/9) 
+ ✓ Generating static pages (9/9)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    7 kB            103 kB
+├ ○ /_not-found                          873 B          88.1 kB
+├ ○ /admin                               4.45 kB         100 kB
+├ ƒ /api/admin/submissions               0 B                0 B
+├ ƒ /api/admin/toggle                    0 B                0 B
+├ ƒ /api/auth                            0 B                0 B
+├ ƒ /api/sessions-status                 0 B                0 B
+├ ƒ /api/submit-assignment               0 B                0 B
+├ ƒ /print/[slug]/[deck]/[page]          746 B           271 kB
+├ ƒ /sessions/[slug]                     203 B          99.4 kB
+├ ƒ /sessions/[slug]/[deck]              3.15 kB         274 kB
+└ ƒ /sessions/[slug]/submit              14.3 kB         110 kB
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-4e2744bdf8ceaf28.js       31.7 kB
+  ├ chunks/fd9d1056-1eecee4be4cc9813.js  53.6 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

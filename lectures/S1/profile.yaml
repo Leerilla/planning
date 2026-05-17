@@ -1,0 +1,215 @@
+session: S1
+status: confirmed
+inferred_at: "2026-05-11T12:00:00Z"
+confirmed_at: "2026-05-11T13:00:00Z"
+confirmed_by: instructor
+gate1_decisions:
+  interactivity_density: medium    # 추론값 유지
+  core_visual_kind: comparison      # 자동 도출 유지
+  profile_integration_model: 단일 profile (이론 + 실습 통합)
+
+profile:
+  logic_structure:
+    value: hierarchical
+    confidence: high
+    derivation_source: lecture_tree_analysis
+    signals:
+      - "### 챕터 3개 상위 개념 (기획의 본질, AI 시대, 출처 검증)"
+      - "각 상위 개념 아래 하위 세부 (정의, 사례, 용어, 프로세스)"
+      - "위->아래 계층적 깊이 관계"
+    hierarchy_depth: 3
+
+  core_visual_kind:
+    value: comparison
+    confidence: high
+    derivation_source: type_distribution
+    signals:
+      - "comparison 11개 (16.4%)"
+      - "process 13개 (19.4%)"
+      - "activity 14개 (20.9%)"
+      - "comparison + process + activity = 54.8% (우세)"
+    signal_dominance: 0.55
+    minimum_presence: 1
+    type_scores:
+      diagram: 0
+      comparison: 11
+      simulation: 14
+      data: 0
+    note: "Comparison이 최다 타입(표 비교 다수), process와 simulation도 강함. 복합 구조."
+
+  interactivity_density:
+    value: medium
+    confidence: medium
+    signals:
+      - "기본 인터랙티브 (8타입): activity 14 + process 13 + example 9 = 36개"
+      - "강사 명시 @interactive/@animation: 0건"
+      - "후보 총: ~36건 (54% 이상)"
+    range:
+      low:
+        min: 3
+        max: 5
+      medium:
+        min: 6
+        max: 9
+      high:
+        min: 10
+        max: 13
+    candidates:
+      - value: low
+        score: 0
+        consequence: "Activity 체크리스트가 모두 static 리스트면"
+        rationale: "interactive 구현 불필요"
+
+      - value: medium
+        score: 36
+        consequence: "Activity 체크리스트 일부만 clickable toggle"
+        rationale: "현재 설정 (36 > 9 구간이지만 신뢰도 낮음)"
+
+      - value: high
+        score: 36
+        consequence: "모든 process/example/activity가 실제 interactive"
+        rationale: "36은 고-중 경계, 전체 구현 시"
+
+    requires_decision: true
+    decision_note: "Activity 항목 (체크리스트)의 실제 구현 방식 확인 필수"
+
+  tone_strength:
+    value: balanced
+    confidence: medium
+    signals:
+      - "강한 톤 (절대/필수/반드시): 4회"
+        - "line 29: 기획이 아니다"
+        - "line 65: 기능을 정하기 전에 사람과 문제를 정한다"
+        - "line 281: 기획을 대신하지 않는다"
+        - "line 401: 출처를 검증하지 않으면 사용 불가"
+      - "약한 톤 (권장/경험/대체로): 3회"
+        - "권장하다" (5개 영역 정리)"
+        - "경험이 있다" (시드 예시)
+        - "선호하다" (페르소나 해석)
+
+    score:
+      strong: 4
+      soft: 3
+
+    conditions:
+      - if: "lecture.md 단정 키워드 포함 (4회)"
+        then: "strong 허용"
+      - if: "활동 묶음 체크리스트/워크시트"
+        then: "soft 권장 (작업자 심리 고려)"
+
+    candidates:
+      - value: strong
+        score: 4
+        consequence: "단정 명확 (좋은 기획 vs 나쁜 기획, 출처 검증 필수)"
+        rationale: "강한 표현 4회가 soft 3회보다 우선"
+
+      - value: balanced
+        score: 7
+        consequence: "단정 + 활동 조화 (현재값)"
+        rationale: "strong 4 ≈ soft 3, 차이 1회 (경계선)"
+
+      - value: soft
+        score: 3
+        consequence: "활동 중심, 탐색 톤"
+        rationale: "활동 묶음 1-3이 전체 38-40%"
+
+    requires_decision: false
+    recommended_value: "balanced (현재값 유지, 신뢰도 medium)"
+
+  expected_slide_count:
+    value:
+      min: 99
+      max: 111
+    actual: null
+    confidence: high
+    derivation_source: "auto_mapping (D-032/D-033/D-034 적용: 자동생성 3 + 섹션표지 ~30 + 콘텐츠 ~64)"
+    v1_value: "67-69 (섹션 표지 미포함)"
+    v2_rationale: "D-033에 따라 모든 ### 섹션에 표지 자동 생성 → 약 30개 추가"
+    note: "실측은 자동 매핑 완료 후 count 갱신. mini-cycle 단위: 이론 8 + 실습 9 = 총 17개"
+
+decisions_required:
+  - field: interactivity_density
+    current_value: medium
+    candidates:
+      - value: low
+        consequence: "Static activity (체크리스트 형태만)"
+
+      - value: medium
+        consequence: "일부만 interactive (현재 추론)"
+
+      - value: high
+        consequence: "전체 interactive"
+
+    reason: "activity 14개 항목의 실제 UI/UX 구현 방식에 따라 변동"
+    deadline: "Gate-1 강사 검증 시"
+    depends_on: "layer-composer β'.2 인터랙티브 카탈로그"
+
+  - field: core_visual_kind_verification
+    current_value: comparison
+    alternative: process
+    reason: "comparison (11개) vs process (13개) — 최다는 process이나, 표 비교가 교육 의도상 핵심인가?"
+    deadline: "Gate-1 강사 검증 시 (선택, 의견용)"
+
+  - field: profile_integration_model
+    decision: "이론/실습 단일 profile vs 분리"
+    current: "단일 (S1은 실습이 이론의 워크시트)"
+    rationale: "S1은 이론->실습 일관성이 강함 (분리 불필요)"
+    deadline: "Gate-1 (확인용)"
+
+session_specific_decisions:
+  flow:
+    deductive_only_in:
+      - "이론 섹션 (## 이론)"
+      - "기획의 본질 개념 정의부터 출처 검증까지 순차적 논리"
+
+    inductive_domains:
+      - "실습 섹션 (## 실습)"
+      - "활동 묶음 1-3 워크시트 기반 체험"
+
+  content:
+    persona_axes:
+      - axis: "역할"
+        description: "학생 (아이디어 기획자)"
+
+      - axis: "문제"
+        description: "1차 가설 부족 (검증 가능한 기획 부족)"
+
+      - axis: "맥락"
+        description: "기획의 5단계 프레임 학습 후 워크시트 작성"
+
+    assertions:
+      - "기획은 누구·문제·방법 3개 질문의 답"
+      - "페르소나에서 출발하면 검증 가능"
+      - "5 Whys로 증상에서 진짜 문제로 내려감"
+      - "AI는 속도를 바꾸지 품질을 대신 안 함"
+      - "출처는 클릭해서 직접 검증 필수"
+
+    assertions_source:
+      - lecture.md line 3 (강의 목표)
+      - lecture.md line 27-41 (기획 정의)
+      - lecture.md line 97-121 (5 Whys)
+      - lecture.md line 281-284 (AI의 역할)
+      - lecture.md line 401-404 (출처 검증 원칙)
+
+  interactivity:
+    density_min: medium
+    catalog_min: 4
+    note: "activity 14개 + process 13개 최소 교육 기반. 추가 interactive 강화 권장."
+
+    interactive_opportunities:
+      - "활동 묶음 1-3: 클릭식 토글 (체크리스트)"
+      - "5 Whys 사례: step-by-step reveal"
+      - "3단계 검증 프로세스: carousel or interactive diagram"
+      - "가설 페르소나: 입력 폼 또는 수정 가능 영역"
+
+analysis_notes:
+  - "S1은 강사가 작성한 표준 자료 (호환 모드 적응)"
+  - "이론(9 챕터) + 실습(3 활동 + 기타 4)"
+  - "모든 ### 헤더를 정확히 분류: 9 chapter + ~21 slide_group"
+  - "comparison 비중 높음 (표 비교형 슬라이드)"
+  - "실습 섹션 자체가 폐쇄적 워크시트 (S2와 다른 특수성)"
+
+---
+# v2 Profile System 참조
+# docs/profile-system.md § 2-5
+# CLAUDE.md § 9

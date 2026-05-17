@@ -1,0 +1,121 @@
+# S4 Profile (v2, 2026-05-12) — 자동 도출 + 추론
+#
+# CLAUDE.md § 9 / docs/profile-system.md
+# status: draft → confirmed (Gate-1 강사 검토 후)
+
+session_id: s4
+session_title: "PRD를 에이전트에게 전달하기"
+session_subtitle: "CLAUDE.md는 프로젝트의 헌법 — OODA 루프와 Permissions"
+status: confirmed  # Gate-1 통과 (2026-05-12, reasonable defaults)
+
+# ═══════════════════════════════════════════════════
+# 자동 도출 항목 (lecture.md 파싱 결과)
+# ═══════════════════════════════════════════════════
+
+logic_structure: hierarchical
+# 근거: 이론 3 챕터 순차 (컨텍스트/무상태성 → 4영역 → OODA·Permissions)
+# 보조: sequential (실습 6 Step + git/GitHub 셋업 누적)
+
+core_visual_kind: comparison
+# 근거: 4영역 한눈 표 / PRD vs CLAUDE.md / 사람 vs AI 검증 / 권장 vs 안티 / Permissions 3단계 등 다수
+# 보조: diagram (OODA 4단계, AI 검증 루프 5단계, Claude Code OODA flow)
+
+expected_slide_count: 85
+# 이론 41 + 실습(과제 + Tips 포함) 44
+#
+# 이론 41장:
+#   - 자동 생성 2장 (# 세션 표지 + 이론 목차)
+#   - §1 AI 에이전트와 대화하는 법: 8장 (챕터 표지 + 7 #### 콘텐츠)
+#   - §2 CLAUDE.md 4영역: 16장 (챕터 표지 + 15 #### 콘텐츠) — 3 미니 사이클 분할
+#   - §3 OODA·Permissions: 15장 (챕터 표지 + 14 #### 콘텐츠) — 2 미니 사이클 분할
+#
+# 실습 44장:
+#   - 자동 생성 1장 (실습 목차)
+#   - Step 0 환경 진단: 5장 (표지 + 0-1/0-2/0-3 + 검증)
+#   - Step 1 CLAUDE.md 협업 작성: 8장 (표지 + 1-1~1-4 통합 inline 2-area + 1-5 + 검증)
+#   - Step 2 PRD 참조 + 환경 구축: 6장 (표지 + 2-1/2-2 통합 + 2-3 + 2-4 + 검증)
+#   - Step 3 settings.json + Permissions: 5장 (표지 + 3-1/3-2/3-3 + 검증)
+#   - Step 4 GitHub 셋업: 7장 (표지 + 4-1/4-2/4-3/4-4 통합 + 4-5 + 검증)
+#   - Step N 정리·회고: 5장 (표지 + N-1/N-2/N-3 + 검증)
+#   - 과제 1장 (assignment.md 요약)
+#   - Tips 6장 (6 ### 카테고리, 각 2~3 #### 통합 card)
+
+# ═══════════════════════════════════════════════════
+# 추론 항목 (lecture.md 신호 분석)
+# ═══════════════════════════════════════════════════
+
+interactivity_density: medium  # 6~9개 인터랙티브 후보
+# 신호:
+# - 안티패턴 BAD/GOOD toggle (§1/§2/§3 = 3회 Comparison)
+# - 4영역 한눈 → 1+2+3+4 시드 6 4-card grid
+# - OODA 4단계 sequential reveal
+# - Permissions 3단계 carousel (auto / ask / deny)
+# - AI 검증 루프 5단계 sequential
+# - 1-1~1-4 시드 6 통합 inline 2-area (실습 다수)
+# 신뢰도: medium-high
+
+tone_strength: balanced
+# 신호:
+# - 단정문 3건 ("CLAUDE.md는 프로젝트의 헌법" / "PRD는 무엇을, CLAUDE.md는 어떻게" / "Decide↔Act 사이 Permissions = 작업자 개입")
+# - 안티패턴 3건 (§1/§2/§3 각 1회)
+# - emoji 3 (1️⃣~3️⃣, D-035 텍스트 변환)
+# - 메타 메시지 ("학생이 만들 CLAUDE.md의 모범" — A4)
+# 신뢰도: high
+
+# ═══════════════════════════════════════════════════
+# 세션 특화 결정 (S4 only)
+# ═══════════════════════════════════════════════════
+
+session_specific_decisions:
+  content:
+    - C-S4-01: "PRD vs CLAUDE.md 차이 — A4 메타 메시지 (학생이 만들 CLAUDE.md의 모범)"
+    - C-S4-02: "AI 검증 루프 — 작업자 1차 초안 + AI 개선 협업 + 검증 (기존 'AI에게 처음부터 맡기기' 안티패턴)"
+    - C-S4-03: "OODA Decide↔Act 사이 Permissions = 작업자 개입 지점"
+    - C-S4-04: "권장 settings.json 템플릿 그대로 사용 (자유 변형은 자가 학습 영역)"
+    - C-S4-05: "planning_project 폴더 + GitHub repo 이름 일치 (D-043, A7) — S3에서 만든 폴더 위에 누적"
+    - C-S4-06: "docs/와 rules/는 필수, 디자인 가이드는 다음 단계 (S5)"
+
+  interactivity:
+    - E-S4-01: "안티패턴 BAD/GOOD toggle (ComparisonSlide, §1/§2/§3)"
+    - E-S4-02: "1+2+3+4영역 시드 6 4-card grid (옵션 B 통합)"
+    - E-S4-03: "OODA 4단계 sequential reveal (ProcessSlide)"
+    - E-S4-04: "Permissions 3단계 carousel — auto_allow / ask_before / deny"
+    - E-S4-05: "AI 검증 루프 5단계 sequential (ProcessSlide)"
+    - E-S4-06: "1-1~1-4 시드 6 통합 inline 2-area (실습 다수)"
+
+  format_handling:
+    # lecture.md 형식 deviation 처리 (S4-T0.2 점검 결과)
+    - "표준 형식 채택 — #### 콘텐츠 분할 사용 (S3 호환 모드와 다름)"
+    - "--- 미사용 (#### 단위가 슬라이드 분할 SSOT)"
+    - "### + emoji (1️⃣~3️⃣) = 챕터 표지 자동 (D-033 + strip_emoji D-035)"
+    - "### Step N = 실습 섹션 표지 자동"
+    - "### + 한글 (Tips 6개) = Tips 카테고리 표지 또는 통합 슬라이드"
+    - "## 이론 / ## 실습 / ## 과제 / ## Tips = 덱 목차 자동 (이론/실습) + 콘텐츠 흡수 (과제/Tips)"
+    - "코드블록 안 # CLAUDE.md / ## 4영역 (L556, L582 등) = 헤더 인식 X (skipped — CLAUDE.md 양식 코드 일부)"
+
+# ═══════════════════════════════════════════════════
+# emoji 변환 매핑 (D-035)
+# ═══════════════════════════════════════════════════
+
+emoji_text_mapping:
+  "1️⃣": "Section 1"
+  "2️⃣": "Section 2"
+  "3️⃣": "Section 3"
+
+# ═══════════════════════════════════════════════════
+# Gate-1 강사 결정 사항 (draft → confirmed)
+# ═══════════════════════════════════════════════════
+
+decisions_required:
+  - "profile 자동 도출 (hierarchical / comparison / 85 / medium / balanced) 확정?"
+  - "미니 사이클 분할 — §2 3개(2-A/B/C) / §3 2개(3-A/B) 통합?"
+  - "옵션 B 통합 — 1-4영역 시드 6 4-card / 1-1~1-4 시드 6 inline 2-area 확정?"
+  - "Tips 6 카테고리 → 각 1슬라이드 통합 (총 6장)?"
+  - "메뉴 조작 캡처 (Step 4-1 GitHub 메뉴) — 텍스트 설명 / 실제 캡처?"
+
+decisions_resolved:
+  - "1. profile 자동 도출 → confirmed (reasonable defaults)"
+  - "2. 미니 사이클 분할 → Task.md 명시안 (§2 3개 / §3 2개)"
+  - "3. 옵션 B 통합 → 확정 (S3 패턴 일관)"
+  - "4. Tips 6 카테고리 → 각 1슬라이드 (6장) — 카테고리 안 2-3 #### 통합 card"
+  - "5. 메뉴 캡처 → 텍스트 설명 위주 (S3와 동일, ε.2 capture-checker가 빈 슬롯 알림)"

@@ -1,0 +1,127 @@
+# S5 Profile (v2, 2026-05-13) — 자동 도출 + 추론
+#
+# CLAUDE.md § 9 / docs/profile-system.md
+# status: draft → confirmed (Gate-1 강사 검토 후)
+
+session_id: s5
+session_title: "수직 슬라이스와 위임 3원칙"
+session_subtitle: "한 화면을 통째로 완성한다 — Stitch와 동작의 정의"
+status: confirmed  # Gate-1 통과 (2026-05-13, reasonable defaults)
+
+# ═══════════════════════════════════════════════════
+# 자동 도출 항목 (lecture.md 파싱 결과)
+# ═══════════════════════════════════════════════════
+
+logic_structure: hierarchical
+# 근거: 이론 3 챕터 순차 (수직 슬라이스 → 위임 3원칙 → Stitch+동작 정의)
+# 보조: sequential (실습 7 Step + 화면 분석 → Issue → Stitch → Build → Review 누적)
+
+core_visual_kind: comparison
+# 근거: 수직 vs 수평 / 광범위 vs 위임 3원칙 / 동작 vs 예쁨 / 광범위 명령 vs 적용 / 시드 6번 화면 1/2 task 비교 다수
+# 보조: diagram (Stitch ↔ Claude Code 4단계 / 라벨 필터 4단계 / PR 워크플로 6단계)
+
+expected_slide_count: 93
+# 이론 39 + 실습(과제 + Tips 포함) 54
+#
+# 이론 39장:
+#   - 자동 생성 2장 (# 세션 표지 + 이론 목차)
+#   - §1 수직 슬라이스: 8장 (챕터 표지 + 7 #### 콘텐츠)
+#   - §2 위임 3원칙: 13장 (챕터 표지 + 12 #### 콘텐츠) — 2 미니 사이클 분할 가능
+#   - §3 Stitch와 동작 정의: 16장 (챕터 표지 + 15 #### 콘텐츠) — 2 미니 사이클 분할
+#
+# 실습 54장:
+#   - 자동 생성 1장 (실습 목차)
+#   - Step 0 환경 진단: 6장 (표지 + 0-1/0-2/0-3/0-4 + 검증)
+#   - Step 1 화면 분석과 Task 매칭: 10장 (표지 + 1-1 + 1-2 통합 + 1-3 통합 + 1-4 통합 + 1-5 명령 + 1-5 화면 1 task + 1-5 화면 2 task + 1-6 + 검증)
+#   - Step 2 GitHub Issue: 4장 (표지 + 2-1 통합 + 2-2 + 검증)
+#   - Step 3 Stitch 시안: 5장 (표지 + 3-1/3-2/3-3 + 검증)
+#   - Step 4 첫 Task 빌드: 8장 (표지 + 4-1 + 4-2 통합 + 4-3 + 4-4 + 4-5 + 4-6 통합 + 검증)
+#   - Step 5 셀프 코드 리뷰: 4장 (표지 + 5-1 + 5-2 + 검증)
+#   - Step N 정리·회고: 5장 (표지 + N-1/N-2/N-3 + 검증)
+#   - 과제 1장 (assignment.md 요약)
+#   - Tips 10장 (5 ### 카테고리 × 각 표지 1 + 통합 콘텐츠 1)
+
+# ═══════════════════════════════════════════════════
+# 추론 항목 (lecture.md 신호 분석)
+# ═══════════════════════════════════════════════════
+
+interactivity_density: medium  # 6~9개 인터랙티브 후보
+# 신호:
+# - 안티패턴 BAD/GOOD toggle (§1/§2/§3 = 3회 Comparison)
+# - 수직 vs 수평 비교 표 → ComparisonSlide
+# - 위임 3원칙 3-card grid (원칙 1/2/3)
+# - 동작 3요소 3-card grid (뜸/인터랙션/반응)
+# - Stitch ↔ Claude Code 4단계 sequential
+# - PR 워크플로 6단계 sequential (4-6)
+# - 시드 6번 화면 1/2 task carousel
+# 신뢰도: medium-high
+
+tone_strength: balanced
+# 신호:
+# - 단정문 3건 ("한 기능을 UI부터 데이터까지 한 번에" / "위임 3원칙을 모든 빌드 명령에" / "동작은 예쁨이 아니다")
+# - 안티패턴 3건 (§1/§2/§3 각 1회)
+# - emoji 3 (1️⃣~3️⃣, D-035 텍스트 변환)
+# - 메타 메시지 ("학생이 만들 첫 동작 화면의 모범" — A4)
+# 신뢰도: high
+
+# ═══════════════════════════════════════════════════
+# 세션 특화 결정 (S5 only)
+# ═══════════════════════════════════════════════════
+
+session_specific_decisions:
+  content:
+    - C-S5-01: "수직 vs 수평 슬라이스 핵심 비교 — A4 메타 메시지 (학생이 만들 첫 화면의 모범)"
+    - C-S5-02: "위임 3원칙 — 범위/결과물/검증 (S5에서 정식 도입, S6+ 재사용)"
+    - C-S5-03: "동작 3요소 — 페이지 뜸 / 인터랙션 / 반응 (디자인 정제는 다음 단계)"
+    - C-S5-04: "Stitch는 UI 시안 도구. Stitch가 막히면 v0/Lovable로 폴백 (자가 학습 영역)"
+    - C-S5-05: "planning_project + GitHub repo 그대로. S4 산출물(CLAUDE.md/docs/rules/settings.json) 활용"
+    - C-S5-06: "시드 6번 화면 2개로 압축 (화면 1: 카피 입력 / 화면 2: 카피 결과 / 화면 3은 다음 사이클)"
+    - C-S5-07: "PR 크기 원칙 1-2개 파일 (검토 가능한 균형)"
+
+  interactivity:
+    - E-S5-01: "안티패턴 BAD/GOOD toggle (ComparisonSlide, §1/§2/§3)"
+    - E-S5-02: "위임 3원칙 3-card grid (원칙 1/2/3 - ConceptSlide 3-card)"
+    - E-S5-03: "동작 3요소 3-card grid (요소 1/2/3 - ConceptSlide 3-card)"
+    - E-S5-04: "Stitch ↔ Claude Code 4단계 sequential reveal (ProcessSlide)"
+    - E-S5-05: "PR 워크플로 6단계 sequential (Step 4-6, ProcessSlide)"
+    - E-S5-06: "1-5 시드 6번 화면 1/2 task carousel (10 Task, ActivitySlide)"
+    - E-S5-07: "Tips 5 카테고리 표지 + 통합 콘텐츠 슬라이드 짝 (ActivitySlide 2-card/3-card)"
+
+  format_handling:
+    # lecture.md 형식 deviation 처리 (S5-T0.2 점검 결과)
+    - "표준 형식 채택 — #### 콘텐츠 분할 사용 (S3 호환 모드 X, S4와 동일)"
+    - "--- 미사용 (#### 단위가 슬라이드 분할 SSOT)"
+    - "### + emoji (1️⃣~3️⃣) = 챕터 표지 자동 (D-033 + strip_emoji D-035)"
+    - "### Step N = 실습 섹션 표지 자동"
+    - "### + 한글 (Tips 5개) = Tips 카테고리 표지 또는 통합 슬라이드"
+    - "## 이론 / ## 실습 / ## 과제 / ## Tips = 덱 목차 자동 (이론/실습) + 콘텐츠 흡수 (과제/Tips)"
+    - "Step 1 안 ## 화면 1 / ## 화면 2 (L593, L618) = lecture.md 본문 내 강조용 ## 헤더. 슬라이드 분할 X — 1-5 시드 6번 화면 1/2 Task 결과 안에 흡수"
+    - "Step 1 안 ### Task 1.1~2.6 (L595~L640) = lecture.md 본문 내 강조용 ### 헤더. 슬라이드 분할 X — 위 ##와 동일하게 흡수"
+    - "코드블록 안 # / ## / ### 등 (L593~L640 일부) = 헤더 인식 X (skipped — Task 매핑 양식 코드 일부)"
+
+# ═══════════════════════════════════════════════════
+# emoji 변환 매핑 (D-035)
+# ═══════════════════════════════════════════════════
+
+emoji_text_mapping:
+  "1️⃣": "Section 1"
+  "2️⃣": "Section 2"
+  "3️⃣": "Section 3"
+
+# ═══════════════════════════════════════════════════
+# Gate-1 강사 결정 사항 (draft → confirmed)
+# ═══════════════════════════════════════════════════
+
+decisions_required:
+  - "profile 자동 도출 (hierarchical / comparison / 93 / medium / balanced) 확정?"
+  - "미니 사이클 분할 — §2 2개 분할 (2-A 본질/원칙/양식 / 2-B 습관/안티/적용) / §3 2개 분할 (3-A Stitch / 3-B 동작 정의)?"
+  - "Step 1 안 ## 화면 1/2 + ### Task 1.1~2.6은 본문 내 강조 헤더로 처리, 슬라이드 분할 X?"
+  - "Tips 5 카테고리 → 각 표지 1 + 통합 1 (10장)?"
+  - "PR 워크플로 메뉴 캡처 (Step 4-6 GitHub Files changed) — 텍스트 설명 / 실제 캡처?"
+
+decisions_resolved:
+  - "1. profile 자동 도출 → confirmed (reasonable defaults)"
+  - "2. 미니 사이클 분할 → §2 2개(2-A/2-B) / §3 2개(3-A/3-B), 이론 5 미니 사이클"
+  - "3. Step 1 내부 ## ### → 본문 강조 헤더 처리 (코드블록 안 헤더와 동일하게 슬라이드 분할 X)"
+  - "4. Tips 5 카테고리 → 표지 + 통합 (10장) — S4 6 카테고리 패턴 일관"
+  - "5. 메뉴 캡처 → 텍스트 설명 위주 (S3/S4 동일, ε.2 capture-checker가 빈 슬롯 알림)"

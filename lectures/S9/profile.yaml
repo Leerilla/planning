@@ -1,0 +1,194 @@
+# S9 Profile — 노출과 재피드백
+# Generated: 2026-05-17 / lecture-translator α 자동 도출 (Phase 1 T1.1) + 메인 추론 보완
+# Status: draft (Gate-1 강사 검토 대기)
+
+session_id: S9
+lecture_title: 노출과 재피드백
+lecture_subtitle: 검증된 MVP를 노출하고 4종 데이터로 살아있는 페르소나로 진화 — Pivot · Persevere · Kill
+lecture_lines: [1, 1118]
+lecture_format_version: v2
+lecture_path: lectures/S9/lecture.md  # 직속 (S8 captures/와 다름)
+final_session: true  # ⭐ 9세션 학습의 마지막 자료
+
+# ───────────────────────────────────────────
+# 자동 도출 항목 (lecture-translator α 결과, T1.1)
+# ───────────────────────────────────────────
+
+auto_derived:
+  logic_structure:
+    kind: hierarchical
+    confidence: high
+    reasoning: "이론 4 챕터가 선형 + 계층 (노출 정체 → 4종 데이터 → 페르소나 진화 → 다음 사이클 결정). 실습 8 Step 순서 강제 (Step 2는 Step 1 응답 대기 포함). 9세션 사슬의 마지막 단계."
+    theory_chapters: 4
+    activity_steps: 8
+    sub_topics_total: 79  # 37 이론 + 42 실습
+
+  core_visual_kind:
+    primary: comparison
+    secondary: concept
+    confidence: high
+    reasoning: "8타입 측정 — comparison 15(19%) 분포. 3축 비교 표 多 (Pivot/Persevere/Kill / 페르소나 3단계 / 4종 데이터). concept 38(48%)이지만 정의·원칙 위주이므로 secondary."
+    distribution:
+      concept: 38
+      comparison: 15
+      terms: 8
+      example: 8
+      process: 5
+      quote: 3
+      activity: 2
+      diagram: 0
+
+  expected_slide_count: 92
+  expected_breakdown:
+    auto_generated: 15  # t1+t2+a1+챕터4+Step8
+    theory_content: 37
+    activity_content: 35
+    termination_slide: 1  # ⭐ Step N 학습 종착
+    assignment: 1
+    tips: 3  # Cover 1 + Content 2
+
+# ───────────────────────────────────────────
+# 추론 항목 (메인 신호 분석 + agent 보고)
+# ───────────────────────────────────────────
+
+inferred:
+  interactivity_density:
+    value: medium
+    confidence: medium
+    reasoning: "강사 @interactive 명시 0건. 신호 카운트 4 (체크리스트 7건 + 데이터 수집 3건 + 선택지 결정 + 교차 분석). 정적 설명 多 / 실습은 수동 작업 중심."
+    signal_count: 4
+    range_estimate: [6, 9]
+    fallback: medium  # 협업 시 high 상향 가능
+
+  tone_strength:
+    value: strong
+    confidence: high
+    reasoning: "4 단정 blockquote 명시 (L35/L121/L265/L381) + 의사결정 강조 톤. 5단계 사슬 마지막 단계의 무게."
+    definitive_statements: 4
+    statement_locations:
+      - line: 37
+        chapter: "§1"
+        text: "검증된 MVP는 시장이 원하는 것과 다르다."
+      - line: 123
+        chapter: "§2"
+        text: "한 사용자의 한 행동은 신호가 아니다. 패턴이 신호다."
+      - line: 267
+        chapter: "§3"
+        text: "본 단계가 두 번째에서 세 번째로 가는 다리다."
+      - line: 383
+        chapter: "§4"
+        text: "학습 종착점은 다음 결정을 손에 쥐는 것이다."
+
+# ───────────────────────────────────────────
+# 세션 특화 결정 (Gate-1 강사 결정 8건)
+# ───────────────────────────────────────────
+
+session_specific_decisions:
+  # 1. 표준 형식
+  lecture_format:
+    decision: standard
+    detail: "#### 콘텐츠 분할, S4~S8과 동일"
+
+  # 2. lecture.md 위치
+  lecture_md_location:
+    decision: root_direct
+    detail: "lectures/S9/lecture.md 직속 유지. captures/ 빈 채로 보존"
+
+  # 3. KeyMessage 4 단정
+  key_messages:
+    decision: 4_assertions
+    locations:
+      - chapter: "§1"
+        line: 37
+        slide_id_candidate: "t6"  # ChapterCover(t3) + 노출정의(t4) + 본질(t5) 후 — 실제 매핑은 미니사이클에서 확정
+      - chapter: "§2"
+        line: 123
+        slide_id_candidate: "t14"
+      - chapter: "§3"
+        line: 267
+        slide_id_candidate: "t26"
+      - chapter: "§4"
+        line: 383
+        slide_id_candidate: "t36"
+    size_default: sm
+
+  # 4. 3갈래 의사결정 — Gate-2
+  three_path_decision_visualization:
+    decision: gate_2
+    detail: "Phase 2 T2.4a 종료 후 강사 게이트 (3-card 가로 vs 세로 트리 vs comparison 표 형식 확정)"
+    options:
+      - "가로 3-card (각 결정의 신호·예시 묶음)"
+      - "comparison 표 (3행 × N열)"
+      - "트리 다이어그램"
+
+  # 5. D-043 planning_project 고정
+  planning_project_lock:
+    decision: locked
+    detail: "S8 누적 위에 7종 신규 docs 적층"
+    new_docs:
+      - "planning_project/docs/dispatch-memo.md"
+      - "planning_project/docs/analysis-memo.md"
+      - "planning_project/docs/synthesis-memo.md"
+      - "planning_project/docs/persona.md (살아있는 단계)"
+      - "planning_project/docs/prd.md (최종 갱신)"
+      - "planning_project/docs/next-cycle-decision.md"
+      - "planning_project/docs/learning-retrospective.md"
+
+  # 6. D-044 SSOT 확장
+  ssot_extensions:
+    decision: review_after_sprint
+    new_areas:
+      - "살아있는 페르소나 양식"
+      - "갱신된 PRD 양식"
+      - "5종 메모 양식 (발송·분석·종합·결정·회고)"
+
+  # 7. D-049~D-054 정상 운영
+  design_rules_enforced:
+    decision: standard_operating
+    confirmed_rules:
+      D-049: 화이트리스트 토큰
+      D-050: lecture.md 원문 보존 (표/리스트)
+      D-051: pre 폰트 ≥ text-xs
+      D-052: 6+ vertical 분할 (Step 0 산출물 7행 / Step N 결과 정리 7행)
+      D-053: 도구 첫 등장 설명 (신규 도구 거의 X)
+      D-054: 산출물 경로 inline code + accent
+
+  # 8. ⭐ 학습 종착 슬라이드
+  termination_slide:
+    decision: separate_cover_slide
+    detail: "Step N의 N-3 (본 학습 종료) 메시지를 별도 1장 슬라이드로 강조. Cover 패턴 응용"
+    placement: "T3.8 마지막 (a44 또는 a45)"
+    rationale: "9세션 닫는 마지막 화면"
+
+# ───────────────────────────────────────────
+# Coverage Analysis
+# ───────────────────────────────────────────
+
+coverage_analysis:
+  total_lines: 1118
+  mapped_to_slides: 1118
+  coverage_percentage: 100
+  skipped_items: []
+
+# ───────────────────────────────────────────
+# Workflow Status
+# ───────────────────────────────────────────
+
+status: confirmed
+gate_1_confirmed_at: 2026-05-17
+gate_1_resolution:
+  - "8 강사 결정 확정 (Task.md 후보 그대로)"
+  - "KeyMessage 4 단정 위치 확정 (L37/L123/L267/L383, size='sm' 일관)"
+  - "Tips 분할: Cover 1 + Content 2 (5+5 bullets)"
+  - "lecture.md 직속 위치 유지"
+  - "profile.yaml status → confirmed 승인"
+
+review_required:
+  - gate_id: Gate-2
+    phase: 2
+    task: T2.4a 종료 후
+    items:
+      - 3갈래 의사결정 시각화 방식 (3-card / 트리 / comparison) 확정
+      - Pivot·Persevere·Kill 신호 표 형식 확정
+
+next_phase: Phase 2 (이론 미니사이클, T2.0a/b + T2.1 ~ T2.4a/b, 9 + 자동 2 미니사이클) — 각 T 4단계 sub-agent 시퀀스 의무

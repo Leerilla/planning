@@ -1,0 +1,42 @@
+{
+  "name": "claude-curriculum-platform",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Claude Code 풀사이클 21시간 학습 플랫폼 — lecture.md를 분석해 PPT 슬라이드로 큐레이션하는 인터랙티브 시스템",
+  "scripts": {
+      "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "validate-captures": "node scripts/validate-captures.js",
+    "export:s1": "node scripts/export-slides.mjs --session s1 --deck both --format pdf",
+    "export:s1:theory": "node scripts/export-slides.mjs --session s1 --deck theory --format pdf",
+    "export:s1:activity": "node scripts/export-slides.mjs --session s1 --deck activity --format pdf",
+    "export:all": "node scripts/export-all.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:update": "playwright test --update-snapshots"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "@vercel/kv": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^1.14.0",
+    "next": "^14.2.0",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

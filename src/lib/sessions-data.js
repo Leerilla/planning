@@ -1,0 +1,77 @@
+// 9세션 정적 데이터. 모든 세션 active 상태 (잠금 로직은 Phase F에서 KV 연동)
+// tag 필드는 세션의 콘텐츠 성격 — 강사 명시 결정으로 모든 세션 동일 형식
+
+export const SESSIONS = [
+  {
+    num: 1,
+    slug: 's1',
+    title: '기획의 본질 + 문제 발견',
+    desc: '"내가 풀려는 문제와 페르소나의 1차 가설"을 손에 쥐는 단계.',
+    date: '5/18 · 일 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 2,
+    slug: 's2',
+    title: '고객 검증의 두 축',
+    desc: '능동(메일/DM) + 수동(스크래핑) 두 축으로 가설을 시험합니다.',
+    date: '5/20 · 화 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 3,
+    slug: 's3',
+    title: '데이터를 PRD로 정제',
+    desc: 'NotebookLM으로 분석 + Manyfast로 정제 = 코드로 옮길 수 있는 PRD.',
+    date: '5/21 · 수 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 4,
+    slug: 's4',
+    title: 'PRD를 에이전트에게',
+    desc: 'CLAUDE.md는 프로젝트의 헌법. MCP 연동으로 자동 반영.',
+    date: '5/22 · 목 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 5,
+    slug: 's5',
+    title: '수직 슬라이스 + UI',
+    desc: '한 화면이 끝까지 동작하는 경험. Stitch UI + 위임 3원칙.',
+    date: '5/26 · 월 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 6,
+    slug: 's6',
+    title: 'sub-agent + hooks 자동화',
+    desc: '반복을 도구가 대신하게. hook이 sub-agent를 자동 호출하는 패턴.',
+    date: '5/27 · 화 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 7,
+    slug: 's7',
+    title: '통합 · 디버깅 · E2E',
+    desc: 'PRD대로 동작한다는 증거 = 테스트가 통과한다.',
+    date: '5/28 · 수 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 8,
+    slug: 's8',
+    title: '풀스택 배포 + 분석',
+    desc: 'Vercel·Railway 배포. Microsoft Clarity + Sentry 셋업.',
+    date: '5/29 · 목 · 2h',
+    tag: '이론 + 활동',
+  },
+  {
+    num: 9,
+    slug: 's9',
+    title: '실유저 노출 + 노션',
+    desc: '5시간 풀데이. 진짜 사람이 쓰고 답을 받고 개선하고 노션 소개서 완성.',
+    date: '5/30 · 금 · 5h',
+    tag: '이론 + 활동',
+  },
+];
