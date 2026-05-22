@@ -20,7 +20,7 @@ export default function S5TheoryC2Principle1() {
       </p>
 
       <div className="grid grid-cols-2 gap-6 max-w-5xl">
-        <div className="border border-line rounded p-6 bg-bg-soft">
+        <div className="border border-divider rounded p-6 bg-bg-soft">
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2 font-semibold">
             광범위 (피함)
           </div>

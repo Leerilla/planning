@@ -87,10 +87,12 @@ export default function KeyMessage({
                   ? 'text-success bg-success-soft border border-success'
                   : 'text-text-muted bg-bg-soft border border-divider';
             // grid로 라벨 폭 고정 — 강사 #3 (라벨/텍스트 라인 정렬)
+            // label 부재 시 좁은 컬럼 + dot 좌측 정렬 (S1 request #7)
+            const hasLabel = !!label;
             return (
               <li
                 key={i}
-                className="grid grid-cols-[180px_1fr] gap-4 items-start text-base font-medium text-text tracking-tight"
+                className={`grid ${hasLabel ? 'grid-cols-[180px_1fr] gap-4' : 'grid-cols-[16px_1fr] gap-2'} items-start text-base font-medium text-text tracking-tight`}
               >
                 {label ? (
                   <span
@@ -99,8 +101,8 @@ export default function KeyMessage({
                     {label}
                   </span>
                 ) : (
-                  <span className="flex justify-center items-center h-7 mt-0.5">
-                    <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent" />
+                  <span className="flex justify-start items-center h-7 mt-0.5">
+                    <span className="inline-block w-2 h-2 rounded-full bg-accent" />
                   </span>
                 )}
                 <span className="leading-relaxed pt-1">{text}</span>

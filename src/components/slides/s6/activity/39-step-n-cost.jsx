@@ -20,7 +20,7 @@ export default function S6ActivityStepNCost() {
         본 sprint 자동화 도구 개발 비용 (토큰)을 확인
       </p>
 
-      <pre className="bg-bg-soft border border-divider rounded-md px-6 py-4 mb-6 text-sm font-semibold text-text leading-relaxed overflow-x-auto max-w-4xl">
+      <pre className="bg-bg-soft border border-divider rounded-xl px-6 py-4 mb-6 text-sm font-semibold text-text leading-relaxed overflow-x-auto max-w-4xl">
         <code>/cost</code>
       </pre>
 

@@ -32,24 +32,24 @@ export default function S4TheoryC1OpsEffect() {
         무상태성을 보완하는 가장 단순한 방법 — 자동 로드되는 헌법.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">
             운영 방식
           </div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">
             비용 / 효과
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className={`px-5 py-4 text-base font-bold ${r.tone === 'good' ? 'text-accent' : 'text-text-sub'}`}>
               {r.method}
             </div>
-            <div className="px-5 py-4 text-base text-text border-l border-line">
+            <div className="px-5 py-4 text-base text-text border-l border-divider">
               {r.effect}
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function S6TheoryC3Timeout() {
       label: 'prd-reviewer',
       timeout: '60-90초',
       note: 'PRD 검토 작업 시간',
-      color: 'bg-state-success-soft',
+      color: 'bg-success-soft',
       borderColor: 'border-state-success',
       textColor: 'text-state-success',
     },
@@ -16,7 +16,7 @@ export default function S6TheoryC3Timeout() {
       label: 'git-committer',
       timeout: '60초',
       note: '커밋 작성 작업 시간',
-      color: 'bg-state-info-soft',
+      color: 'bg-accent-soft',
       borderColor: 'border-state-info',
       textColor: 'text-state-info',
     },
@@ -36,7 +36,7 @@ export default function S6TheoryC3Timeout() {
         {timeoutData.map((item, idx) => (
           <div
             key={idx}
-            className={`${item.color} ${item.borderColor} border-l-4 rounded-md p-6 flex flex-col gap-4`}
+            className={`${item.color} ${item.borderColor} border-l-4 rounded-xl p-6 flex flex-col gap-4`}
           >
             <div className={`${item.textColor} text-sm font-semibold tracking-wider uppercase`}>
               {item.label}
@@ -55,7 +55,7 @@ export default function S6TheoryC3Timeout() {
         ))}
       </div>
 
-      <div className="flex items-start gap-3 rounded-md bg-highlight-soft p-4">
+      <div className="flex items-start gap-3 rounded-xl bg-accent-soft p-4">
         <span className="inline-block w-1 h-5 bg-accent mt-1 rounded-full" />
         <p className="text-sm text-text-sub leading-relaxed">
           권장 timeout을 초과하면 작업 실패 또는 부분 결과.

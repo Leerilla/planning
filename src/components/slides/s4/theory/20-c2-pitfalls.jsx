@@ -21,20 +21,20 @@ export default function S4TheoryC2Pitfalls() {
         CLAUDE.md 작성에서 자주 발생하는 실수
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[60px_2fr_2.4fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[60px_2fr_2.4fr] bg-bg-soft border-b border-divider">
           <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub text-center">#</div>
-          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">함정</div>
-          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">결과</div>
+          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">함정</div>
+          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">결과</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[60px_2fr_2.4fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[60px_2fr_2.4fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-4 py-4 text-2xl font-bold text-accent text-center">{r.n}</div>
-            <div className="px-4 py-4 text-base text-text font-medium border-l border-line">{r.pitfall}</div>
-            <div className="px-4 py-4 text-base text-text-sub border-l border-line">{r.result}</div>
+            <div className="px-4 py-4 text-base text-text font-medium border-l border-divider">{r.pitfall}</div>
+            <div className="px-4 py-4 text-base text-text-sub border-l border-divider">{r.result}</div>
           </div>
         ))}
       </div>

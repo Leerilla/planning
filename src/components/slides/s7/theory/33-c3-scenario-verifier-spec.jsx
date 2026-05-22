@@ -35,7 +35,7 @@ export default function S7TheoryC3ScenarioVerifierSpec() {
       </div>
 
       {/* Code block with markdown structure */}
-      <pre className="bg-bg-soft border border-divider rounded-md p-4 text-xs whitespace-pre-wrap leading-relaxed max-w-4xl overflow-auto">
+      <pre className="bg-bg-soft border border-divider rounded-xl p-4 text-xs whitespace-pre-wrap leading-relaxed max-w-4xl overflow-auto">
         <code>{`---
 name: scenario-verifier
 description: 빌드 완료 후 호출.

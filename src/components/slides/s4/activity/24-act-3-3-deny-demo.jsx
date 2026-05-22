@@ -18,7 +18,7 @@ export default function S4Activity_3_3_DenyDemo() {
         시스템 파일 수정 명령으로 deny 동작이 작동하는지 확인.
       </p>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl mb-4">{`"시스템 파일 /etc/hosts를 수정해줘"`}</pre>
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl mb-4">{`"시스템 파일 /etc/hosts를 수정해줘"`}</pre>
 
       <div className="border-l-2 border-accent pl-4 py-2 max-w-3xl">
         <div className="text-xs uppercase tracking-wider text-text-sub mb-1">

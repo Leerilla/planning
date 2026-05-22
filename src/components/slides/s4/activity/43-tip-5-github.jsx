@@ -16,7 +16,7 @@ export default function S4Tip5Github() {
       </h2>
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             Issue 등록은 다음 단계로
           </div>
@@ -27,14 +27,14 @@ export default function S4Tip5Github() {
           </p>
         </div>
 
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             자연어 커밋
           </div>
           <p className="text-base text-text leading-relaxed">
             git 명령 직접 입력 안 함.
             <br />
-            "현재 셋업을 커밋해줘"로 운영. CLAUDE.md 규칙을 따른 커밋 메시지 자동 생성.
+            "현재 셋업을 커밋해줘"로 운영. /project/claude.md 규칙을 따른 커밋 메시지 자동 생성.
           </p>
         </div>
       </div>

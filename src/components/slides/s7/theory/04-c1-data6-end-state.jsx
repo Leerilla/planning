@@ -59,7 +59,7 @@ export default function S7TheoryC1Data6EndState() {
       </div>
 
       {/* Aside note */}
-      <div className="bg-bg-soft rounded-md p-4 border-l-2 border-divider">
+      <div className="bg-bg-soft rounded-xl p-4 border-l-2 border-divider">
         <p className="text-sm text-text-sub">
           화면별 동작은 확인됐지만 <span className="font-bold text-text">시나리오 통과</span>는 별개의 검증. 본 단계가 그 빈자리를 채운다.
         </p>

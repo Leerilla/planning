@@ -31,7 +31,7 @@ export default function S3TheoryC5FiveChecks() {
         {checks.map((c, i) => (
           <div
             key={i}
-            className="flex items-start gap-4 border border-line rounded px-5 py-4"
+            className="flex items-start gap-4 border border-divider rounded px-5 py-4"
           >
             <span className="text-2xl font-bold text-accent leading-none mt-0.5 w-7 shrink-0">
               {i + 1}

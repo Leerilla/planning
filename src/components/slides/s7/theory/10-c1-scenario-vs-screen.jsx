@@ -14,7 +14,7 @@ export default function S7TheoryC1ScenarioVsScreen() {
       </div>
 
       {/* Quote / Question block */}
-      <div className="bg-bg-soft rounded-md p-5 border-l-4 border-divider">
+      <div className="bg-bg-soft rounded-xl p-5 border-l-4 border-divider">
         <p className="italic text-text-sub text-sm leading-relaxed">
           "화면이 떴으면 동작하는 것 아닌가?"
         </p>
@@ -29,34 +29,34 @@ export default function S7TheoryC1ScenarioVsScreen() {
       <div className="flex-1 flex flex-col gap-3 overflow-y-auto">
         <div className="grid grid-cols-2 gap-3">
           {/* Header */}
-          <div className="bg-bg-soft rounded-md p-3 border border-divider text-xs font-semibold uppercase tracking-wider text-text-sub">
+          <div className="bg-bg-soft rounded-xl p-3 border border-divider text-xs font-semibold uppercase tracking-wider text-text-sub">
             화면 떰
           </div>
-          <div className="bg-bg-soft rounded-md p-3 border border-divider text-xs font-semibold uppercase tracking-wider text-text-sub">
+          <div className="bg-bg-soft rounded-xl p-3 border border-divider text-xs font-semibold uppercase tracking-wider text-text-sub">
             시나리오 통과
           </div>
 
           {/* Row 1 */}
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-text-sub leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-text-sub leading-relaxed">
             카피 입력 화면 렌더링 OK
           </div>
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
             입력 → 결과 화면 라우팅 OK
           </div>
 
           {/* Row 2 */}
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-text-sub leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-text-sub leading-relaxed">
             결과 화면 렌더링 OK
           </div>
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
             데이터가 화면 간 정상 전달
           </div>
 
           {/* Row 3 */}
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-text-sub leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-text-sub leading-relaxed">
             각 화면 단독 동작
           </div>
-          <div className="bg-bg rounded-md p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
+          <div className="bg-bg rounded-xl p-3 border border-divider text-sm text-accent font-semibold leading-relaxed">
             전체 흐름 한 번에 통과
           </div>
         </div>

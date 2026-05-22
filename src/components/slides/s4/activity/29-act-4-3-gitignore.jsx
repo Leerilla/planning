@@ -19,7 +19,7 @@ export default function S4Activity_4_3_Gitignore() {
         Next.js 기준. <span className="highlight-mark">.claude/는 제외하지 말고 포함</span> — 팀 단위 헌법.
       </p>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`"이 프로젝트에 맞는 .gitignore를 만들어줘.
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`"이 프로젝트에 맞는 .gitignore를 만들어줘.
  Next.js 기준이고, .claude/는 제외하지 말고 포함.
  node_modules, .env, build 결과물은 제외."`}</pre>
     </>

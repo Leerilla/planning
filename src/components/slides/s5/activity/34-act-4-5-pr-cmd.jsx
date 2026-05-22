@@ -18,7 +18,7 @@ export default function S5Activity_4_5_PrCmd() {
         Issue 자동 닫힘을 위해 본문에 <span className="highlight-mark">Closes #1</span> 명시.
       </p>
 
-      <pre className="bg-bg-soft border border-line rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
+      <pre className="bg-bg-soft border border-divider rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
 {`"Issue #1 작업을 PR로 만들어줘.
 
  PR 제목: 'feat: Issue #1 입력 폼 UI 추가'

@@ -1,7 +1,7 @@
 // Source: lectures/S6/lecture.md lines 398-409
 // Type: concept (default, 2-area: definition + use cases, ACCENT visual)
 // Profile: tone=balanced, strength=4 (핵심 패턴)
-// Visual: border-l-4 border-accent-strong or bg-accent-soft
+// Visual: border-l-4 border-accent or bg-accent-soft
 
 'use client';
 
@@ -30,7 +30,7 @@ export default function S6TheoryC3PostToolUse() {
         </div>
 
         {/* 우측 콘텐츠 — accent 강조 */}
-        <div className="flex-1 border-l-4 border-accent-strong bg-accent-soft bg-opacity-30 pl-6 py-6 rounded-r-lg flex flex-col gap-6">
+        <div className="flex-1 border-l-4 border-accent bg-accent-soft bg-opacity-30 pl-6 py-6 rounded-r-lg flex flex-col gap-6">
           {/* 정의 */}
           <div>
             <p className="text-2xl text-text tracking-tight leading-snug font-medium">
@@ -48,8 +48,8 @@ export default function S6TheoryC3PostToolUse() {
                 <span className="shrink-0 inline-block w-2 h-2 rounded-full bg-accent mt-[10px]" />
                 <span>코드 수정 후 자동 검증 — matcher "Edit|Write" 패턴으로 매번 자동 실행</span>
               </li>
-              <li className="grid grid-cols-[16px_1fr] gap-3 items-start text-base text-accent-strong tracking-tight font-semibold leading-relaxed">
-                <span className="shrink-0 inline-block w-2 h-2 rounded-full bg-accent-strong mt-[10px]" />
+              <li className="grid grid-cols-[16px_1fr] gap-3 items-start text-base text-accent tracking-tight font-semibold leading-relaxed">
+                <span className="shrink-0 inline-block w-2 h-2 rounded-full bg-accent mt-[10px]" />
                 <span>본 학습 첫 번째 핵심 패턴: prd-reviewer 자동 호출</span>
               </li>
             </ul>

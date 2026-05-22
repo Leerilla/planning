@@ -9,7 +9,7 @@ export default function S4TheoryC3Antipattern() {
       <Warning
         level="안티패턴"
         title={`"Permissions를 너무 느슨하게 두면"`}
-        description="모든 도구를 auto_allow에 두는 운영."
+        description="모든 도구를 allow에 두는 운영."
         reason="에이전트가 시스템 파일까지 만지게 됨"
         avoidance={[
           'BashWithSudo도 자동 허용',
@@ -23,7 +23,7 @@ export default function S4TheoryC3Antipattern() {
         tone="good"
         title={`"권장 settings.json 템플릿을 그대로 적용"`}
         description="안전과 속도의 균형이 자동으로 갖춰진다."
-        reason="auto_allow / ask_before / deny가 도구 위험도에 맞게 분배됨"
+        reason="allow / ask / deny가 도구 위험도에 맞게 분배됨"
         avoidance="자유 변형은 자가 학습 영역 — 본 학습은 템플릿 그대로"
       />
     </div>

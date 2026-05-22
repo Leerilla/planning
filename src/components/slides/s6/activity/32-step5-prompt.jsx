@@ -22,7 +22,7 @@ export default function S6ActivityStep5Prompt() {
       </p>
 
       <div className="max-w-4xl">
-        <pre className="bg-bg-soft px-6 py-5 rounded-md border border-divider text-xs font-medium leading-6 text-text overflow-x-auto whitespace-pre-wrap">
+        <pre className="bg-bg-soft px-6 py-5 rounded-xl border border-divider text-xs font-medium leading-6 text-text overflow-x-auto whitespace-pre-wrap">
           <code>{`"Issue #5를 진행해줘.
  CLAUDE.md와 rules/architecture.md를 참조해.
 

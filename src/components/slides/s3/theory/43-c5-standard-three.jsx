@@ -28,7 +28,7 @@ export default function S3TheoryC5StandardThree() {
       <div className="flex items-stretch gap-4 max-w-5xl">
         {parts.map((p, i) => (
           <div key={i} className="contents">
-            <div className="flex-1 border border-line rounded p-5">
+            <div className="flex-1 border border-divider rounded p-5">
               <div className="text-xs uppercase tracking-wider text-accent mb-2">{p.role}</div>
               <div className="text-lg font-bold text-text mb-2">{p.n}</div>
               <div className="text-sm text-text-sub leading-relaxed">{p.desc}</div>

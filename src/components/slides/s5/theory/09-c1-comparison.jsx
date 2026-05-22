@@ -26,20 +26,20 @@ export default function S5TheoryC1Comparison() {
         본 학습은 수직 슬라이스 채택 — 짧은 시간 안에 동작하는 화면 확보.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">비교 축</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-line">수직 슬라이스</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">수평 슬라이스</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-divider">수직 슬라이스</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">수평 슬라이스</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">{r.axis}</div>
-            <div className="px-5 py-4 text-base text-accent border-l border-line">{r.vertical}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.horizontal}</div>
+            <div className="px-5 py-4 text-base text-accent border-l border-divider">{r.vertical}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.horizontal}</div>
           </div>
         ))}
       </div>

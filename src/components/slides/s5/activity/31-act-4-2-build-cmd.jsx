@@ -29,7 +29,7 @@ export default function S5Activity_4_2_BuildCmd() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             Claude Code 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`"Issue #1을 진행해줘.
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`"Issue #1을 진행해줘.
  CLAUDE.md와 rules/architecture.md,
  rules/coding-style.md를 참조해.
 
@@ -54,7 +54,7 @@ export default function S5Activity_4_2_BuildCmd() {
           </div>
           <div className="space-y-3">
             {principles.map((p, i) => (
-              <div key={i} className="border border-line rounded p-4 bg-bg-soft">
+              <div key={i} className="border border-divider rounded p-4 bg-bg-soft">
                 <div className="text-xs uppercase tracking-wider text-accent mb-2 font-semibold">
                   {p.p}
                 </div>

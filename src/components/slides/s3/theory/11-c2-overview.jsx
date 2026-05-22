@@ -27,19 +27,19 @@ export default function S3TheoryC2Overview() {
         좋은 PRD는 다섯 가지 요소가 모두 갖춰진 합의 문서이다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[60px_180px_1fr] items-center ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[60px_180px_1fr] items-center ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-2xl font-bold text-accent text-center">
               {r.n}
             </div>
-            <div className="px-5 py-4 text-base font-bold text-text border-l border-line">
+            <div className="px-5 py-4 text-base font-bold text-text border-l border-divider">
               {r.name}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {r.desc}
             </div>
           </div>

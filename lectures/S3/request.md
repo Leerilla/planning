@@ -1,10 +1,2 @@
 [이론]
-#12 "문제는 PRD의 출발점이다. <br> 무엇을 위해 이 제품이 존재하는지의 핵심 질문에 답한다." 
-#12 ~ 15 본문 텍스트 크기 키우기 및 디자인 개선.
-#15 "측정 불가능하면 지표가 아니다.<br> Before / After / 측정 방법 세 축으로 정의한다."
-#17 본문 텍스트 크기 키우기 및 디자인 개선.
-
-[실습]
-#11 1번에서 인용 부분 수정필요.
-#13 현대 대안을 파악하고 이후 액션이 누락됨 -> 대안 파악 후 무엇을 거쳐서 ManyFast로 전달되는지 필요한거야.
-#17 시드 6번의 입력 양식 텍스트 크기 키우기 
+#30 `<div class="grid grid-cols-[140px_1fr] border-b border-line"><div class="px-4 py-3 text-sm font-medium text-text">노트북 단위 보존</div><div class="px-4 py-3 text-sm text-text-sub border-l border-line">같은 노트북에 답변 누적</div></div>`로 변경하고 하단의 여백 표 하단의 여백 제거.

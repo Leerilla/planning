@@ -15,7 +15,7 @@ export default function S4TheoryC2Area2Seed() {
         2영역 — 스택 + 폴더 구조
       </h2>
 
-      <pre className="text-xs text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`[기술 스택]
+      <pre className="text-xs text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`[기술 스택]
 - FE: Next.js + Tailwind CSS
 - BE: Node.js + Express
 - AI API: OpenAI GPT-4o

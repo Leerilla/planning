@@ -16,7 +16,7 @@ export default function S4Tip6System() {
       </h2>
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             docs/와 rules/는 필수, 디자인 가이드는 다음 단계
           </div>
@@ -27,12 +27,12 @@ export default function S4Tip6System() {
           </p>
         </div>
 
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             헌법 위반은 조항 번호로 지적
           </div>
           <p className="text-base text-text leading-relaxed">
-            "CLAUDE.md 3조의 커밋 메시지 형식을 어겼다"라고 명시.
+            "/project/claude.md 3조의 커밋 메시지 형식을 어겼다"라고 명시.
             <br />
             에이전트가 정확히 인식.
           </p>

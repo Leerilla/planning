@@ -58,7 +58,7 @@ export default function S6TheoryC2PrinciplesOverview() {
         {principles.map((p, i) => (
           <div
             key={i}
-            className="border border-line rounded-2xl p-6 bg-bg-soft hover:shadow-lg transition-shadow duration-200"
+            className="border border-divider rounded-2xl p-6 bg-bg-soft hover:shadow-lg transition-shadow duration-200"
           >
             <div className="text-lg font-bold text-accent mb-2">
               {String(p.number).padStart(2, '0')}

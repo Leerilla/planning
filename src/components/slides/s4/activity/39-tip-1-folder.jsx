@@ -16,7 +16,7 @@ export default function S4Tip1Folder() {
       </h2>
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             planning_project로 고정
           </div>
@@ -25,7 +25,7 @@ export default function S4Tip1Folder() {
           </p>
         </div>
 
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             저장소 이름도 폴더와 일치
           </div>

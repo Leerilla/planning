@@ -28,7 +28,7 @@ export default function S6ActivityStep5RepeatFlow() {
         같은 패턴으로 진행. 각 Task는 PostToolUse + Stop 자동화 적용.
       </p>
 
-      <div className="max-w-4xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">
         <div className="grid grid-cols-[160px_1fr] bg-bg-soft px-6 py-3 border-b border-divider">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">Issue</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">작업</span>

@@ -53,15 +53,15 @@ export default function S3Activity_2_5_Narrow() {
           <div className="text-base font-semibold text-text-sub mb-3">
             시드 6번 3개 기능
           </div>
-          <div className="rounded border border-line overflow-hidden">
+          <div className="rounded border border-divider overflow-hidden">
             {features.map((f, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-[50px_2fr_1.4fr] ${i < features.length - 1 ? 'border-b border-line' : ''}`}
+                className={`grid grid-cols-[50px_2fr_1.4fr] ${i < features.length - 1 ? 'border-b border-divider' : ''}`}
               >
                 <div className="px-3 py-3 text-xl font-bold text-accent text-center">{f.n}</div>
-                <div className="px-4 py-3 text-base text-text font-medium border-l border-line">{f.feat}</div>
-                <div className="px-4 py-3 text-sm text-text-sub border-l border-line">{f.map}</div>
+                <div className="px-4 py-3 text-base text-text font-medium border-l border-divider">{f.feat}</div>
+                <div className="px-4 py-3 text-sm text-text-sub border-l border-divider">{f.map}</div>
               </div>
             ))}
           </div>

@@ -30,7 +30,7 @@ export default function S5Activity_5_1_SelfReview() {
         {items.map((i, idx) => (
           <div
             key={idx}
-            className="grid grid-cols-[40px_1fr_180px] gap-3 items-center p-3 border border-line rounded"
+            className="grid grid-cols-[40px_1fr_180px] gap-3 items-center p-3 border border-divider rounded"
           >
             <span className="text-accent text-base font-bold tabular-nums">
               {String(idx + 1).padStart(2, '0')}

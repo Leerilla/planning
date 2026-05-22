@@ -60,7 +60,7 @@ export default function S6TheoryC3Matcher() {
         {matcherExamples.map((example, idx) => (
           <div
             key={idx}
-            className={`${example.color} ${example.borderColor} border-l-4 rounded-md p-4 cursor-pointer transition-all duration-200 hover:shadow-lg`}
+            className={`${example.color} ${example.borderColor} border-l-4 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:shadow-lg`}
             onClick={() => setActiveIndex(idx)}
           >
             <div className="flex items-start justify-between gap-4">
@@ -83,7 +83,7 @@ export default function S6TheoryC3Matcher() {
         ))}
       </div>
 
-      <div className="flex items-start gap-3 rounded-md border-l-4 border-accent bg-bg-soft p-3">
+      <div className="flex items-start gap-3 rounded-xl border-l-4 border-accent bg-bg-soft p-3">
         <p className="text-sm text-text leading-relaxed">
           <span className="font-semibold text-accent">주의: </span>
           공백 넣으면 안 됨. <code className="text-accent">"Edit | Write"</code>는 잘못된 정규식. PreToolUse와 PostToolUse 모두 필요.

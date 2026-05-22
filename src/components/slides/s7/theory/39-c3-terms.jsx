@@ -21,7 +21,7 @@ export default function Slide39({ deckMeta }) {
       </h2>
 
       {/* Terms table */}
-      <div className="max-w-4xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">
         {/* Header */}
         <div className="grid grid-cols-[180px_1fr] gap-0 bg-bg-soft border-b border-divider px-6 py-3">
           <div className="font-semibold text-text">용어</div>

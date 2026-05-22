@@ -48,7 +48,7 @@ export default function S5TheoryC1FourBenefits() {
 
       <div className="grid grid-cols-2 gap-4 max-w-6xl">
         {benefits.map((b, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs uppercase tracking-wider text-accent font-semibold">
                 {b.label}

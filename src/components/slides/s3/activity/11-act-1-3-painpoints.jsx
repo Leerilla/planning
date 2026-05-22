@@ -65,7 +65,7 @@ export default function S3Activity_1_3_Painpoints() {
             {seedResults.map((r, i) => (
               <div
                 key={i}
-                className={`flex items-baseline gap-3 px-3 py-2.5 rounded border ${r.strong ? 'border-accent bg-bg-soft' : 'border-line'}`}
+                className={`flex items-baseline gap-3 px-3 py-2.5 rounded border ${r.strong ? 'border-accent bg-bg-soft' : 'border-divider'}`}
               >
                 <span className={`font-bold text-base w-5 shrink-0 ${r.strong ? 'text-accent' : 'text-text-sub'}`}>{r.n}</span>
                 <span className="text-sm text-text leading-relaxed flex-1">{r.text}</span>

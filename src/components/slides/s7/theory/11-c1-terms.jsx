@@ -34,7 +34,7 @@ export default function S7TheoryC1Terms() {
 
       {/* Terms table */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        <div className="max-w-4xl overflow-y-auto rounded-md border border-divider">
+        <div className="max-w-4xl overflow-y-auto rounded-xl border border-divider">
           {/* Header row */}
           <div className="grid grid-cols-[140px_1fr] bg-bg-soft border-b border-divider sticky top-0">
             <div className="px-6 py-3">

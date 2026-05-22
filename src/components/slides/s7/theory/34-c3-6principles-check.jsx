@@ -46,7 +46,7 @@ export default function S7TheoryC36PrinciplesCheck() {
       </h2>
 
       {/* Comparison table: 2-col */}
-      <div className="grid grid-cols-[160px_1fr] gap-0 max-w-4xl rounded-md border border-divider overflow-hidden">
+      <div className="grid grid-cols-[160px_1fr] gap-0 max-w-4xl rounded-xl border border-divider overflow-hidden">
         {/* Header row */}
         <div className="bg-bg-soft px-5 py-3 border-b border-divider text-base font-semibold text-text-sub">
           원칙

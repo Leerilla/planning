@@ -26,24 +26,24 @@ export default function S3TheoryC3TransitionIssue() {
         "78%가 카피에 30분을 쓴다" 같은 통계가 환각으로 만들어져 PRD로 옮겨지는 사고가 잦았다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">
             문제
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">
             의미
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-medium">
               {r.issue}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {r.meaning}
             </div>
           </div>

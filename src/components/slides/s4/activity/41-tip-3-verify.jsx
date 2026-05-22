@@ -16,7 +16,7 @@ export default function S4Tip3Verify() {
       </h2>
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             AI 답변이 매번 다르면 모호 신호
           </div>
@@ -25,7 +25,7 @@ export default function S4Tip3Verify() {
           </p>
         </div>
 
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             답변이 의도와 다르면 못 짚은 부분이 모호
           </div>

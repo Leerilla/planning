@@ -26,13 +26,14 @@ export default function S4Activity_1_4_Verify() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             검증 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-line mb-3">{`"이 CLAUDE.md만 보고 우리 프로젝트가
- 무엇인지 한 문장으로 요약해줘"`}</pre>
+          <pre className="text-sm text-text bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-divider mb-3">{`"이 /project/claude.md만 보고
+ 우리 프로젝트가 무엇인지
+ 한 문장으로 요약해줘"`}</pre>
 
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2 mt-3">
             AI 답변 (시드 6)
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-line">{`"1인 스마트스토어 셀러를 위한
+          <pre className="text-sm text-text bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-divider">{`"1인 스마트스토어 셀러를 위한
  차별화 카피 자동 생성 도구.
  상품 사진과 키워드를 입력하면
  5초 이내에 카피 3개를 출력.

@@ -16,7 +16,7 @@ export default function S4Tip4Ooda() {
       </h2>
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             Permissions는 단순 차단이 아님
           </div>
@@ -27,7 +27,7 @@ export default function S4Tip4Ooda() {
           </p>
         </div>
 
-        <div className="border border-line rounded p-5">
+        <div className="border border-divider rounded p-5">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             권장 템플릿을 그대로 사용
           </div>

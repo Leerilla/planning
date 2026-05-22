@@ -16,7 +16,7 @@ export default function S3TheoryC2E2Persona() {
       </h2>
 
       <div className="grid grid-cols-2 gap-6 max-w-6xl">
-        <div className="border border-line rounded p-6 bg-bg-soft">
+        <div className="border border-divider rounded p-6 bg-bg-soft">
           <div className="text-xs font-semibold tracking-wider uppercase text-accent mb-3">
             정의와 목적
           </div>
@@ -30,7 +30,7 @@ export default function S3TheoryC2E2Persona() {
           </ul>
         </div>
 
-        <div className="border border-line rounded p-6">
+        <div className="border border-divider rounded p-6">
           <div className="text-xs font-semibold tracking-wider uppercase text-text-sub mb-3">
             6줄 양식 + 시드 6 예시
           </div>

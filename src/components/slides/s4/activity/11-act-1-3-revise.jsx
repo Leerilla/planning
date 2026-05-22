@@ -13,7 +13,7 @@ export default function S4Activity_1_3_Revise() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 1-3 · 산출물: 작업자 수정 후 CLAUDE.md
+          활동 1-3 · 산출물: 작업자 수정 후 /project/claude.md
         </span>
       </div>
 
@@ -29,14 +29,14 @@ export default function S4Activity_1_3_Revise() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             수정 3 원칙
           </div>
-          <div className="rounded border border-line overflow-hidden">
+          <div className="rounded border border-divider overflow-hidden">
             {principles.map((r, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-[80px_1fr] ${i < principles.length - 1 ? 'border-b border-line' : ''}`}
+                className={`grid grid-cols-[80px_1fr] ${i < principles.length - 1 ? 'border-b border-divider' : ''}`}
               >
                 <div className="px-3 py-3 text-base text-text font-bold">{r.p}</div>
-                <div className="px-3 py-3 text-sm text-text-sub border-l border-line">{r.m}</div>
+                <div className="px-3 py-3 text-sm text-text-sub border-l border-divider">{r.m}</div>
               </div>
             ))}
           </div>
@@ -46,7 +46,7 @@ export default function S4Activity_1_3_Revise() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 1영역 정제 결과
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`월 매출 100-500만원 규모의
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`월 매출 100-500만원 규모의
 1인 스마트스토어 셀러를 위한
 차별화 카피 자동 생성 도구.
 상품 사진과 키워드 5개를 입력하면

@@ -32,7 +32,7 @@ export default function S5TheoryC3StitchConnection() {
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl border-2 border-accent text-accent text-base font-bold tabular-nums shrink-0">
               {s.num}
             </span>
-            <div className="flex-1 border border-line rounded p-4">
+            <div className="flex-1 border border-divider rounded p-4">
               <p className="text-base text-text leading-relaxed">{s.text}</p>
             </div>
           </div>

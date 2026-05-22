@@ -9,10 +9,9 @@ export default function S4ActivityToc() {
       eyebrow="실습의 흐름"
       items={[
         'Step 0 — 환경 진단 (git/gh 추가)',
-        'Step 1 — CLAUDE.md 협업 작성 + AI 검증 루프',
-        'Step 2 — PRD 참조 + docs·rules 환경 구축',
-        'Step 3 — settings.json + Permissions',
-        'Step 4 — GitHub 저장소 셋업 + 초기 커밋',
+        'Step 1 — /project/claude.md 협업 작성 + AI 검증 루프',
+        'Step 2 — settings.json + Permissions',
+        'Step 3 — GitHub 저장소 셋업 + 초기 커밋',
         'Step N — 정리와 비용 비교',
         '과제 + Tips 6',
       ]}

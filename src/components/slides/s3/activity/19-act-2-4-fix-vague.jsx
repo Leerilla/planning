@@ -50,18 +50,18 @@ export default function S3Activity_2_4_FixVague() {
           <div className="text-base font-semibold text-text-sub mb-3">
             시드 6번 Before / After
           </div>
-          <div className="rounded border border-line overflow-hidden">
-            <div className="grid grid-cols-2 bg-bg-soft border-b border-line">
+          <div className="rounded border border-divider overflow-hidden">
+            <div className="grid grid-cols-2 bg-bg-soft border-b border-divider">
               <div className="px-4 py-3 text-base font-semibold text-text-sub">Before (모호)</div>
-              <div className="px-4 py-3 text-base font-semibold text-accent border-l border-line">After (명확)</div>
+              <div className="px-4 py-3 text-base font-semibold text-accent border-l border-divider">After (명확)</div>
             </div>
             {rows.map((r, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-2 ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+                className={`grid grid-cols-2 ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
               >
                 <div className="px-4 py-3 text-sm text-text-sub">{r.before}</div>
-                <div className="px-4 py-3 text-sm text-text font-medium border-l border-line">{r.after}</div>
+                <div className="px-4 py-3 text-sm text-text font-medium border-l border-divider">{r.after}</div>
               </div>
             ))}
           </div>

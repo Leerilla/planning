@@ -25,24 +25,24 @@ export default function S3TheoryC5AiLimit() {
         누락·모호 표현은 지적해 주지만, 다음 세 가지를 놓친다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">
             한계
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">
             의미
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-medium">
               {r.limit}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {r.meaning}
             </div>
           </div>

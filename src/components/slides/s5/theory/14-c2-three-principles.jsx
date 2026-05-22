@@ -34,12 +34,12 @@ export default function S5TheoryC2ThreePrinciples() {
       </h2>
 
       <p className="text-base text-text-sub mb-8 max-w-3xl">
-        본 학습 빌드 명령부터 시작해 평생 쓰는 사고 양식.
+        본 학습 빌드 명령부터 시작해 유용하게 쓰는 사고 양식.
       </p>
 
       <div className="grid grid-cols-3 gap-5 max-w-6xl">
         {principles.map((p, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="flex items-center gap-3 mb-3">
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl border-2 border-accent text-accent text-base font-bold tabular-nums">
                 {p.num}

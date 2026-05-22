@@ -29,19 +29,19 @@ export default function S3TheoryC4Notebooklm() {
         특징과 장점
       </h2>
 
-      <div className="grid grid-cols-2 gap-6 max-w-6xl items-stretch">
+      <div className="grid grid-cols-2 gap-6 max-w-6xl items-start">
         <div className="flex flex-col">
           <div className="text-sm font-semibold text-text-sub mb-3">
             특징 (일반 LLM과의 차이)
           </div>
-          <div className="rounded border border-line overflow-hidden flex-1">
+          <div className="rounded border border-divider overflow-hidden">
             {features.map((f, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-[140px_1fr] ${i < features.length - 1 ? 'border-b border-line' : ''}`}
+                className="grid grid-cols-[140px_1fr] border-b border-divider last:border-b-0"
               >
                 <div className="px-4 py-3 text-sm font-medium text-text">{f.feat}</div>
-                <div className="px-4 py-3 text-sm text-text-sub border-l border-line">{f.diff}</div>
+                <div className="px-4 py-3 text-sm text-text-sub border-l border-divider">{f.diff}</div>
               </div>
             ))}
           </div>

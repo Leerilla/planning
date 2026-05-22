@@ -27,7 +27,7 @@ export default function Slide36({ deckMeta }) {
           <p className="text-text-sub font-semibold text-xs uppercase tracking-wider mb-2">
             자료 6 prd-reviewer (코드 단위)
           </p>
-          <pre className="bg-bg border border-divider rounded-md p-3 text-sm whitespace-pre-line text-text">
+          <pre className="bg-bg border border-divider rounded-xl p-3 text-sm whitespace-pre-line text-text">
 {`@prd-reviewer src/components/InputForm.tsx를 검토해줘`}
           </pre>
         </div>
@@ -37,7 +37,7 @@ export default function Slide36({ deckMeta }) {
           <p className="text-accent font-semibold text-xs uppercase tracking-wider mb-2">
             자료 7 scenario-verifier (시나리오 단위)
           </p>
-          <pre className="bg-bg border border-divider rounded-md p-3 text-sm whitespace-pre-line text-text">
+          <pre className="bg-bg border border-divider rounded-xl p-3 text-sm whitespace-pre-line text-text">
 {`@scenario-verifier 다음 시나리오를 검증해줘:
 
 "셀러가 카피 입력 화면에 상품 사진과
@@ -55,7 +55,7 @@ docs/prd.md를 읽고 현재 코드가 이 시나리오를
         <p className="text-accent font-semibold text-xs uppercase tracking-wider mb-2">
           시드 6번 첫 검증 후 보고서
         </p>
-        <div className="bg-bg-soft border border-divider rounded-md p-4 grid grid-cols-1 gap-3">
+        <div className="bg-bg-soft border border-divider rounded-xl p-4 grid grid-cols-1 gap-3">
           {/* Row 1: 통과 여부 */}
           <div className="border-l-4 border-success bg-success-soft rounded-r px-4 py-2">
             <p className="text-success font-bold text-xs mb-1">[시나리오 통과 여부]</p>

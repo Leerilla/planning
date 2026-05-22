@@ -44,7 +44,7 @@ export default function S6TheoryC35LifecycleOverview() {
 
       <div className="grid grid-cols-[1.5fr_1fr] gap-6 items-start">
         {/* 좌측: 표 */}
-        <div className="flex flex-col gap-1 border border-divider rounded-md overflow-hidden">
+        <div className="flex flex-col gap-1 border border-divider rounded-xl overflow-hidden">
           <div className="grid grid-cols-[1.2fr_1fr_1.2fr] bg-bg-soft">
             <div className="px-3 py-2 text-xs font-bold text-text-sub uppercase tracking-wider border-r border-divider">
               이벤트
@@ -87,7 +87,7 @@ export default function S6TheoryC35LifecycleOverview() {
           <div className="text-xs font-bold text-text-sub uppercase tracking-wider">
             동작 다이어그램
           </div>
-          <div className="rounded-md border border-divider bg-bg-soft p-2">
+          <div className="rounded-xl border border-divider bg-bg-soft p-2">
             <img
               src="/lectures/s6/hooks-lifecycle.svg"
               alt="hooks lifecycle 동작 단계"

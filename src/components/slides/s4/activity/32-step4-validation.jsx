@@ -6,7 +6,7 @@ export default function S4ActivityStep4Validation() {
     'GitHub 저장소가 planning_project 이름으로 생성됐는가',
     '로컬과 원격이 연결됐는가',
     '초기 셋업이 첫 커밋으로 푸시됐는가',
-    '커밋 메시지가 CLAUDE.md 형식을 따르는가',
+    '커밋 메시지가 /project/claude.md 형식을 따르는가',
   ];
 
   return (
@@ -14,7 +14,7 @@ export default function S4ActivityStep4Validation() {
       <div className="flex items-center gap-3 mb-4">
         <span className="block w-10 h-[3px] bg-success rounded-full" />
         <span className="text-success text-sm font-semibold tracking-wider uppercase">
-          Step 4 · 검증 / 성공 기준
+          Step 3 · 검증 / 성공 기준
         </span>
       </div>
 

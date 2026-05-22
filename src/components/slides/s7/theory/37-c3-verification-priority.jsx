@@ -26,7 +26,7 @@ export default function Slide37({ deckMeta }) {
       </p>
 
       {/* Table */}
-      <div className="max-w-4xl rounded-md border border-divider overflow-hidden">
+      <div className="max-w-4xl rounded-xl border border-divider overflow-hidden">
         {/* Header */}
         <div className="grid grid-cols-[200px_1fr] gap-0 bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 font-semibold text-text">점검 항목</div>

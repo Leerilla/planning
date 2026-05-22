@@ -15,6 +15,18 @@
 
 ---
 
+## 1.1 `claude.md` 표준 경로 (2026-05-21 신규)
+
+**위치**: 프로젝트 **루트** — `planning_project/claude.md` (lowercase)
+
+- S3~S9 슬라이드에서 Claude Code 컨텍스트 파일을 표기할 때 `claude.md` (lowercase, 루트) 로 통일
+- 슬라이드 본문에 등장하는 코드/명령어/파일 경로 맥락에서는 `<code>/project/claude.md</code>` 또는 `<code>planning_project/claude.md</code>` 형식 사용 (D20 룰 — `text-accent font-semibold` 강조)
+- `.claude/CLAUDE.md` (uppercase, .claude 하위)·루트 `CLAUDE.md` 등의 표기는 **사용 금지**
+- lecture.md 원문이 다른 표기를 사용해도 슬라이드 빌드 시 본 SSOT를 따른다 (A2 자동 수정 금지 원칙은 lecture.md 파일 자체 한정 — 슬라이드 표기는 SSOT 우선)
+- 본 룰은 S3·S4·S5·S6 기존 슬라이드를 일괄 치환하며, S7~S9 신규 빌드 시 사전 적용
+
+---
+
 ## 2. 표준 폴더 구조 (S3 Step 4-1 기반 + S4 보강)
 
 ```
@@ -22,7 +34,8 @@ planning_project/
 ├── docs/
 │   ├── prd.md                ← S3 Manyfast export
 │   ├── persona.md            ← S3 페르소나 워크시트
-│   └── painpoints.md         ← S3 NotebookLM 메모
+│   ├── painpoints.md         ← S3 NotebookLM 메모
+│   └── workflow.md           ← S5 활동 1-2 (사용자 흐름·화면 시퀀스)
 ├── rules/                    ← S4 Step 2 (코딩 규칙 3개)
 │   ├── coding-style.md       ← 네이밍·포맷·들여쓰기
 │   ├── commit-convention.md  ← 커밋 type 목록과 예시
@@ -31,9 +44,9 @@ planning_project/
 ├── tests/                    ← S4+ 테스트 코드
 ├── data/                     ← S2/S3 수집 CSV·인터뷰
 ├── README.md                 ← S3 프로젝트 개요
+├── claude.md                 ← S3 Claude Code 컨텍스트 (S4에서 4영역 + 참조 지침으로 진화) · **프로젝트 루트, lowercase**
 ├── .gitignore                ← S4 Step 4-3
 └── .claude/
-    ├── CLAUDE.md             ← S3 Claude Code 컨텍스트 (S4에서 4영역 + 참조 지침으로 진화)
     └── settings.json         ← S4 Step 3 (Permissions 3단계)
 ```
 
@@ -237,7 +250,7 @@ rules/
 
 **갱신**:
 - S5+ 빌드 진행하며 새 규칙 누적 (테스트 규칙 / 디자인 토큰 등)
-- 변경 시 CLAUDE.md § 5 참조 지침과 동기화
+- 변경 시 CLAUDE.md 5번 영역 참조 지침과 동기화
 
 ### 3.7 `.claude/settings.json`
 
@@ -276,6 +289,33 @@ rules/
 - 새 빌드 도구 도입 시 산출물 ignore 추가
 - 비밀키 파일 발견 시 즉시 ignore 추가
 
+### 3.9 `docs/workflow.md` (2026-05-21 신규)
+
+**출처**: S5 활동 1-2 (사용자 흐름·화면 시퀀스 도출)
+
+**역할**: PRD 핵심 기능을 사용자 행동 순서로 정리한 흐름 문서. 화면 도출(활동 1-3)과 Task 재구성(활동 1-5)의 입력 자료.
+
+**양식**:
+```markdown
+# Workflow — {프로젝트}
+
+## 사용자 흐름 (User Flow)
+1. {진입} → {행동 1} → {행동 2} → {결과}
+2. {대안 경로}
+
+## 화면 시퀀스
+- 화면 1: {목적} · 입력 {기능 N} / 출력 {기능 M}
+- 화면 2: {목적} · …
+
+## 의존성
+- 화면 X는 화면 Y의 산출물 필요
+```
+
+**갱신**:
+- 활동 1-3 화면 도출 결과 반영 (강사 협업으로 정제)
+- 활동 1-5 Task 재구성 후 의존성 정확히 명시
+- S6+ 빌드 진행하며 실제 사용 흐름과 차이 발견 시 동기화
+
 ---
 
 ## 4. 세션별 docs 매핑
@@ -283,8 +323,9 @@ rules/
 | 세션 | 신규 docs | 갱신 docs | 비고 |
 |---|---|---|---|
 | **S3** | persona.md / painpoints.md / prd.md / README.md / CLAUDE.md(초안) | — | 초기 생성 (Step 4) |
-| **S4** | rules/coding-style.md / rules/commit-convention.md / rules/architecture.md / .claude/settings.json / .gitignore | CLAUDE.md (4영역 + § 5 참조 지침) | Step 1~4 환경 본격화 |
-| **S5~S9** | (각 세션 진입 시 강사 협업으로 갱신) | (TBD) | — |
+| **S4** | rules/coding-style.md / rules/commit-convention.md / rules/architecture.md / .claude/settings.json / .gitignore | claude.md (4영역 + 5번 영역 참조 지침) | Step 1~4 환경 본격화 |
+| **S5** | docs/workflow.md | docs/tasks.md (활동 1-5에서 화면 단위로 재작성) | 활동 1-2 흐름 도출 → 1-3 화면 도출 → 1-5 Task 재구성 |
+| **S6~S9** | (각 세션 진입 시 강사 협업으로 갱신) | (TBD) | — |
 
 **갱신 규칙**:
 - 각 세션 진입 시 lecture.md 분석 → 본 표 매핑 갱신
@@ -300,21 +341,21 @@ S3~S9 실습 슬라이드 빌드 시 본 SSOT를 참조:
 1. **폴더 경로** — `planning_project/docs/{file}.md` 형식 통일
 2. **명령 예시** — `cd planning_project`로 시작 (작업 디렉토리 진입)
 3. **docs 양식** — 본 SSOT 양식 그대로 사용. lecture.md 양식과 차이 시 본 SSOT 우선
-4. **CLAUDE.md 갱신** — 새 컨텍스트 파일 추가 시 본 SSOT § 3.5 영역에도 동시 반영
-5. **rules/ 참조** — S4+ 슬라이드에서 코딩 규칙 언급 시 본 SSOT § 3.6 그대로 사용
-6. **settings.json 참조** — Permissions 슬라이드는 본 SSOT § 3.7 권장 템플릿 사용
-7. **.gitignore 원칙** — `.claude/` 제외 X 룰 슬라이드 빌드 시 본 SSOT § 3.8 명시
+4. **CLAUDE.md 갱신** — 새 컨텍스트 파일 추가 시 본 SSOT 3.5절에도 동시 반영
+5. **rules/ 참조** — S4+ 슬라이드에서 코딩 규칙 언급 시 본 SSOT 3.6절 그대로 사용
+6. **settings.json 참조** — Permissions 슬라이드는 본 SSOT 3.7절 권장 템플릿 사용
+7. **.gitignore 원칙** — `.claude/` 제외 X 룰 슬라이드 빌드 시 본 SSOT 3.8절 명시
 8. **충돌 보고** — lecture.md와 본 SSOT 불일치 시 강사에게 보고 → SSOT 갱신 권고
 
 ---
 
 ## 6. 관련 SSOT
 
-- **CLAUDE.md § 6 A7**: 프로젝트명 `planning_project` 고정 룰 (D-043)
-- **CLAUDE.md § 6 A8**: 본 SSOT 참조 의무 (D-044)
+- **CLAUDE.md 6절 A7**: 프로젝트명 `planning_project` 고정 룰 (D-043)
+- **CLAUDE.md 6절 A8**: 본 SSOT 참조 의무 (D-044)
 - **docs/decisions.md D-043**: 폴더명 고정 정식 결정
 - **docs/decisions.md D-044**: 본 SSOT 신설 정식 결정
 
 ---
 
-**[학생 프로젝트 구조 SSOT — 2026-05-13 S4 산출물 반영 (§3.5 4영역 + §3.6 rules + §3.7 settings.json + §3.8 .gitignore + § 5 참조 룰 4건), S5~S9 진입 시 강사 협업 갱신]**
+**[학생 프로젝트 구조 SSOT — 2026-05-13 S4 산출물 반영 (3.5절 4영역 + 3.6절 rules + 3.7절 settings.json + 3.8절 .gitignore + 5번 영역 참조 룰 4건), S5~S9 진입 시 강사 협업 갱신]**

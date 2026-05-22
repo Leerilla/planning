@@ -56,7 +56,7 @@ export default function S5Activity_2_0_GithubMcp() {
               </div>
             ))}
           </div>
-          <pre className="bg-bg-soft rounded p-3 text-sm text-text leading-relaxed whitespace-pre-wrap border border-line">
+          <pre className="bg-bg-soft rounded p-3 text-sm text-text leading-relaxed whitespace-pre-wrap border border-divider">
 {`# 환경변수로 등록
 export GITHUB_PERSONAL_ACCESS_TOKEN=ghp_...
 

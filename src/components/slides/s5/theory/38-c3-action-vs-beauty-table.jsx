@@ -25,20 +25,20 @@ export default function S5TheoryC3ActionVsBeautyTable() {
         같은 화면을 두 관점에서 본 차이.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">비교 축</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-line">동작 (본 단계)</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">예쁨 (다음 단계)</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-divider">동작 (본 단계)</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">예쁨 (다음 단계)</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">{r.axis}</div>
-            <div className="px-5 py-4 text-base text-accent border-l border-line">{r.action}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.beauty}</div>
+            <div className="px-5 py-4 text-base text-accent border-l border-divider">{r.action}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.beauty}</div>
           </div>
         ))}
       </div>

@@ -62,7 +62,7 @@ export default function S5Activity_3_4_DesignToRules() {
 
 ## 컴포넌트
 - 입력 폼: 라벨 위 + 입력 박스 아래
-- 버튼: bg-accent, rounded-md, py-3 px-6
+- 버튼: bg-accent, rounded-xl, py-3 px-6
 - 업로드 영역: 점선 border, 드래그앤드롭`}
           </pre>
         </div>

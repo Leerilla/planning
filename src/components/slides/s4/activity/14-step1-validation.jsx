@@ -6,7 +6,7 @@ export default function S4ActivityStep1Validation() {
     '1차 초안이 작업자 손으로 작성됐는가',
     'AI 개선 제안을 검토·수용·거부했는가',
     'AI 검증 답변이 작업자 의도와 일치하는가',
-    'CLAUDE.md가 200줄 미만인가',
+    '/project/claude.md가 200줄 미만인가',
     '4영역이 모두 채워졌는가',
   ];
 
@@ -23,7 +23,7 @@ export default function S4ActivityStep1Validation() {
         Step 2 진입 가능한가
       </h2>
       <p className="text-sm font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
-        5개 항목 모두 통과 시 Step 2 (PRD 참조 + 환경 구축)로 진입.
+        5개 항목 모두 통과 시 Step 2 (settings.json + Permissions)로 진입.
       </p>
 
       <ul className="grid grid-cols-2 gap-3 max-w-5xl">

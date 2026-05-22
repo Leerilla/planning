@@ -6,8 +6,8 @@ export default function S4TheoryC3Terms() {
     { term: 'OODA 루프', definition: 'Observe-Orient-Decide-Act 의사결정 사이클' },
     { term: 'settings.json', definition: '프로젝트별 Claude Code 설정 파일' },
     { term: 'Permissions', definition: '자율 권한 정의. 자동 / 확인 / 금지' },
-    { term: 'auto_allow', definition: '확인 없이 사용 가능' },
-    { term: 'ask_before', definition: '사용 전 확인 필요' },
+    { term: 'allow', definition: '확인 없이 사용 가능' },
+    { term: 'ask', definition: '사용 전 확인 필요' },
     { term: 'deny', definition: '권한 자체 차단' },
   ];
 

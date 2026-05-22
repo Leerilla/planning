@@ -18,7 +18,7 @@ export default function S5Activity_1_5_Screen2Tasks() {
         우선순위 2. 화면 1 완성 후 진입.
       </p>
 
-      <pre className="bg-bg-soft border border-line rounded p-5 text-xs text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
+      <pre className="bg-bg-soft border border-divider rounded p-5 text-xs text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
 {`Task 2.1: OpenAI API 클라이언트
 - 파일: src/lib/openai-client.ts (1)
 

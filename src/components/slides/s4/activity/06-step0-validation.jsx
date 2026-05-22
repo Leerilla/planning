@@ -23,7 +23,7 @@ export default function S4ActivityStep0Validation() {
         Step 1 진입 가능한가
       </h2>
       <p className="text-sm font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
-        5개 항목 모두 통과 시 Step 1 (CLAUDE.md 협업 작성)로 진입.
+        5개 항목 모두 통과 시 Step 1 (/project/claude.md 협업 작성)로 진입.
       </p>
 
       <ul className="grid grid-cols-2 gap-3 max-w-5xl">

@@ -30,7 +30,7 @@ export default function S5TheoryC2BroadApplication() {
 
       <div className="grid grid-cols-3 gap-4 max-w-6xl">
         {areas.map((a, i) => (
-          <div key={i} className="border border-line rounded p-4">
+          <div key={i} className="border border-divider rounded p-4">
             <div className="text-xs uppercase tracking-wider text-accent mb-2 font-semibold">
               {a.when}
             </div>

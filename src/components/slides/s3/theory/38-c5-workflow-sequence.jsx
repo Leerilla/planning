@@ -48,14 +48,14 @@ export default function S3TheoryC5WorkflowSequence() {
 
       <div className="grid grid-cols-4 gap-3 max-w-6xl">
         {steps.map((s, i) => (
-          <div key={i} className="border border-line rounded p-4">
+          <div key={i} className="border border-divider rounded p-4">
             <div className="flex items-baseline gap-2 mb-2">
               <span className="text-2xl font-bold text-accent leading-none">{s.n}</span>
               <span className="text-sm font-semibold text-accent">{s.tool}</span>
             </div>
             <div className="text-base font-bold text-text mb-2 leading-snug">{s.title}</div>
             <div className="text-xs text-text leading-relaxed mb-2">{s.detail}</div>
-            <div className="text-[11px] text-text-sub leading-relaxed border-t border-line pt-2 mt-2">{s.hint}</div>
+            <div className="text-xs text-text-sub leading-relaxed border-t border-divider pt-2 mt-2">{s.hint}</div>
           </div>
         ))}
       </div>

@@ -6,7 +6,7 @@ export default function S2Activity_3_2_Retrospective() {
     {
       num: '1',
       question: '메타 프롬프팅 효과',
-      good: '"가이드라인 3개 중 \'첫 줄 후크에 페인포인트 키워드 박기\'가 카피를 강하게 만들었다"',
+      good: '"가이드라인 3개 중 \'첫 줄 후크에 페인포인트 키워드 넣기\'가 카피를 강하게 만들었다"',
       bad: '"더 좋아진 것 같다"',
     },
     {

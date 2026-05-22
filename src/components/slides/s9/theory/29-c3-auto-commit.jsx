@@ -34,7 +34,7 @@ export default function S9TheoryC3AutoCommit() {
         </p>
 
         {/* Pre block with code */}
-        <pre className="bg-bg-soft border border-divider rounded-xl p-4 mb-4 text-sm leading-relaxed max-w-4xl whitespace-pre-line font-mono">
+        <pre className="bg-bg-soft border border-divider rounded-xl p-4 mb-4 text-sm leading-relaxed max-w-4xl whitespace-pre-line">
 {`refactor: persona·prd 갱신 — Clarity 데이터 기반
  키워드 가변 입력으로 변경`}
         </pre>

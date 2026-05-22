@@ -3,8 +3,8 @@
 
 export default function S4TheoryC3OodaPermissions() {
   const rows = [
-    { perm: 'auto_allow', ooda: 'Decide → 바로 Act', intervention: '없음' },
-    { perm: 'ask_before', ooda: 'Decide → 확인 → Act', intervention: '매번' },
+    { perm: 'allow', ooda: 'Decide → 바로 Act', intervention: '없음' },
+    { perm: 'ask', ooda: 'Decide → 확인 → Act', intervention: '매번' },
     { perm: 'deny', ooda: 'Decide → 차단', intervention: '시스템 차원' },
   ];
 
@@ -21,20 +21,20 @@ export default function S4TheoryC3OodaPermissions() {
         Decide → Act 사이가 작업자 개입 지점
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-[1.2fr_2fr_1.4fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-[1.2fr_2fr_1.4fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">Permissions</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">OODA 흐름</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">작업자 개입</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">OODA 흐름</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">작업자 개입</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.2fr_2fr_1.4fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.2fr_2fr_1.4fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-bold">{r.perm}</div>
-            <div className="px-5 py-4 text-base text-text border-l border-line">{r.ooda}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.intervention}</div>
+            <div className="px-5 py-4 text-base text-text border-l border-divider">{r.ooda}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.intervention}</div>
           </div>
         ))}
       </div>

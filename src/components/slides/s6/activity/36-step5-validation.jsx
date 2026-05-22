@@ -31,9 +31,9 @@ export default function S6ActivityStep5Validation() {
         {ITEMS.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-4 px-6 py-4 border border-divider rounded-md bg-bg-soft"
+            className="flex items-start gap-4 px-6 py-4 border border-divider rounded-xl bg-bg-soft"
           >
-            <span className="flex-shrink-0 w-6 h-6 mt-0.5 border-2 border-divider rounded-md" />
+            <span className="flex-shrink-0 w-6 h-6 mt-0.5 border-2 border-divider rounded-xl" />
             <span className="text-base font-medium text-text leading-relaxed">{item}</span>
           </div>
         ))}

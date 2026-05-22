@@ -20,7 +20,7 @@ export default function S7TheoryC1IntegrationTest() {
         </p>
 
         {/* Code block */}
-        <div className="bg-bg-soft rounded-md p-4 border border-divider text-sm text-text-sub leading-relaxed">
+        <div className="bg-bg-soft rounded-xl p-4 border border-divider text-sm text-text-sub leading-relaxed">
           <div className="whitespace-pre-wrap break-words">
             "이 화면에서 저 화면으로 데이터가 잘 넘어가는가"
           </div>
@@ -28,7 +28,7 @@ export default function S7TheoryC1IntegrationTest() {
       </div>
 
       {/* Aside note */}
-      <div className="bg-bg-soft rounded-md p-4 border-l-2 border-divider">
+      <div className="bg-bg-soft rounded-xl p-4 border-l-2 border-divider">
         <p className="text-sm text-text-sub leading-relaxed">
           단위보다 큰 범위. 모듈 간 연결 확인.
         </p>

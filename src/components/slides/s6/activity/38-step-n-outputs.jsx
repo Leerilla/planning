@@ -30,7 +30,7 @@ export default function S6ActivityStepNOutputs() {
         7개 산출물의 다음 단계 활용처
       </p>
 
-      <div className="max-w-4xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">
         <div className="grid grid-cols-2 bg-bg-soft px-6 py-3 border-b border-divider">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">산출물</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">다음 단계 활용</span>

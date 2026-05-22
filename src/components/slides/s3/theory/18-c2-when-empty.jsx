@@ -22,24 +22,24 @@ export default function S3TheoryC2WhenEmpty() {
         하나라도 비면 PRD가 메모로 전락한다
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">
             누락 요소
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">
             결과
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-medium">
               {r.miss}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {r.result}
             </div>
           </div>

@@ -53,17 +53,17 @@ export default function S5Activity_4_6_ReviewMerge() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             PR 크기 원칙
           </div>
-          <div className="rounded border border-line overflow-hidden">
-            <div className="grid grid-cols-[1fr_0.8fr_0.8fr] bg-bg-soft border-b border-line">
-              <div className="px-3 py-2 text-[10px] uppercase tracking-wider text-text-sub">축</div>
-              <div className="px-3 py-2 text-[10px] uppercase tracking-wider text-accent border-l border-line">권장</div>
-              <div className="px-3 py-2 text-[10px] uppercase tracking-wider text-text-sub border-l border-line">피함</div>
+          <div className="rounded border border-divider overflow-hidden">
+            <div className="grid grid-cols-[1fr_0.8fr_0.8fr] bg-bg-soft border-b border-divider">
+              <div className="px-3 py-2 text-xs uppercase tracking-wider text-text-sub">축</div>
+              <div className="px-3 py-2 text-xs uppercase tracking-wider text-accent border-l border-divider">권장</div>
+              <div className="px-3 py-2 text-xs uppercase tracking-wider text-text-sub border-l border-divider">피함</div>
             </div>
             {sizes.map((s, i) => (
-              <div key={i} className={`grid grid-cols-[1fr_0.8fr_0.8fr] ${i < sizes.length - 1 ? 'border-b border-line' : ''}`}>
+              <div key={i} className={`grid grid-cols-[1fr_0.8fr_0.8fr] ${i < sizes.length - 1 ? 'border-b border-divider' : ''}`}>
                 <div className="px-3 py-2 text-xs font-semibold text-text">{s.axis}</div>
-                <div className="px-3 py-2 text-xs text-accent border-l border-line">{s.good}</div>
-                <div className="px-3 py-2 text-xs text-text-sub border-l border-line">{s.bad}</div>
+                <div className="px-3 py-2 text-xs text-accent border-l border-divider">{s.good}</div>
+                <div className="px-3 py-2 text-xs text-text-sub border-l border-divider">{s.bad}</div>
               </div>
             ))}
           </div>

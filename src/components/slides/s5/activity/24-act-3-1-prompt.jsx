@@ -23,7 +23,7 @@ export default function S5Activity_3_1_Prompt() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             작업자 → Claude Code 명령
           </div>
-          <pre className="bg-bg-soft border border-line rounded p-4 text-sm text-text leading-relaxed whitespace-pre-wrap">
+          <pre className="bg-bg-soft border border-divider rounded p-4 text-sm text-text leading-relaxed whitespace-pre-wrap">
 {`"PRD docs/prd.md와 첫 화면 결정(1-4 산출물)을 참조해서
  Stitch에 그대로 붙여 넣을 자연어 프롬프트를 만들어줘.
 

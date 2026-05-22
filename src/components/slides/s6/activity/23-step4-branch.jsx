@@ -19,7 +19,7 @@ export default function S6ActivityStep4Branch() {
         새 feature 브랜치를 생성하고 최신 main에서 시작합니다.
       </p>
 
-      <div className="rounded-xl border border-line bg-bg-soft p-5 mb-4 max-w-4xl">
+      <div className="rounded-xl border border-divider bg-bg-soft p-5 mb-4 max-w-4xl">
         <p className="text-xs text-text bg-transparent leading-relaxed whitespace-pre-wrap font-medium">{`git checkout main
 git pull origin main
 git checkout -b feat/task-1-2-image-upload`}</p>

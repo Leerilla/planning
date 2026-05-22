@@ -13,7 +13,7 @@ export default function S4TheoryC3AutoAllow() {
       <div className="flex items-center gap-3 mb-4">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          자동 허용 (auto_allow)
+          자동 허용 (allow)
         </span>
       </div>
 
@@ -25,18 +25,18 @@ export default function S4TheoryC3AutoAllow() {
         매번 확인하면 작업자 부담만 커진다 — 자율에 맡긴다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">도구</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">이유</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">이유</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-bold">{r.tool}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.reason}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.reason}</div>
           </div>
         ))}
       </div>

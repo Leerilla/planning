@@ -23,7 +23,7 @@ export default function S5Activity_1_4_FirstScreen() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             결정 기준 (2개)
           </div>
-          <div className="bg-bg-soft rounded p-4 border border-line space-y-3">
+          <div className="bg-bg-soft rounded p-4 border border-divider space-y-3">
             <div className="border-l-2 border-accent pl-3">
               <div className="text-sm font-bold text-text">페르소나 진입점</div>
               <div className="text-xs text-text-sub">가장 처음 만나는 화면</div>
@@ -39,7 +39,7 @@ export default function S5Activity_1_4_FirstScreen() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 첫 화면 = 카피 입력 화면
           </div>
-          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`이유:
+          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`이유:
 - 셀러가 가장 처음 진입
 - 핵심 가설("작성 시간 1-2시간 → 5분")
   가장 빨리 검증

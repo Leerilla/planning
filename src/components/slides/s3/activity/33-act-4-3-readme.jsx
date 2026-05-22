@@ -24,7 +24,7 @@ export default function S3Activity_4_3_Readme() {
           <div className="text-base font-semibold text-text-sub mb-3">
             빈 양식
           </div>
-          <pre className="text-xs text-text-sub bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-line">{`# {프로젝트 이름}
+          <pre className="text-xs text-text-sub bg-bg-soft rounded p-4 leading-relaxed whitespace-pre-wrap border border-divider">{`# {프로젝트 이름}
 
 > {한 줄 요약}
 

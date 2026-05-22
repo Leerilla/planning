@@ -26,20 +26,20 @@ export default function S5TheoryC2BroadRisk() {
         속도는 비슷하지만 일관성·검증 가능성에서 큰 차이.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[1.2fr_1.6fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">비교 축</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">광범위한 명령</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-line">위임 3원칙 적용</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">광범위한 명령</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-accent border-l border-divider">위임 3원칙 적용</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.2fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">{r.axis}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.broad}</div>
-            <div className="px-5 py-4 text-base text-accent border-l border-line">{r.applied}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.broad}</div>
+            <div className="px-5 py-4 text-base text-accent border-l border-divider">{r.applied}</div>
           </div>
         ))}
       </div>

@@ -23,7 +23,7 @@ export default function S5Activity_2_1_IssueCmd() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             Claude Code 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`"docs/tasks.md의 모든 Task를
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`"docs/tasks.md의 모든 Task를
  GitHub Issue로 등록해줘.
 
  각 Issue 제목: 'Task {ID}: {제목}'
@@ -44,7 +44,7 @@ export default function S5Activity_2_1_IssueCmd() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 Issue 등록 결과 (10개)
           </div>
-          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`#1: Task 1.1: 입력 폼 UI (screen-1)
+          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`#1: Task 1.1: 입력 폼 UI (screen-1)
 #2: Task 1.2: 이미지 업로드 (screen-1)
 #3: Task 1.3: 키워드 검증 (screen-1)
 #4: Task 1.4: 입력 화면 라우팅 (screen-1)

@@ -13,15 +13,15 @@ export default function S4ActivityStep3Validation() {
       <div className="flex items-center gap-3 mb-4">
         <span className="block w-10 h-[3px] bg-success rounded-full" />
         <span className="text-success text-sm font-semibold tracking-wider uppercase">
-          Step 3 · 검증 / 성공 기준
+          Step 2 · 검증 / 성공 기준
         </span>
       </div>
 
       <h2 className="text-4xl font-bold tracking-tight text-text leading-snug mb-1">
-        Step 4 진입 가능한가
+        Step 3 진입 가능한가
       </h2>
       <p className="text-sm font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
-        3개 항목 모두 통과 시 Step 4 (GitHub 셋업)로 진입.
+        3개 항목 모두 통과 시 Step 3 (GitHub 셋업)로 진입.
       </p>
 
       <ul className="grid grid-cols-3 gap-3 max-w-5xl">

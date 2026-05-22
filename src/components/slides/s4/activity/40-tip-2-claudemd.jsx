@@ -4,8 +4,8 @@
 export default function S4Tip2Claudemd() {
   const tips = [
     {
-      title: 'PRD와 CLAUDE.md의 차이',
-      body: 'PRD는 무엇을, CLAUDE.md는 어떻게. 둘이 헷갈리면 자료가 부풀거나 모호해진다.',
+      title: 'PRD와 /project/claude.md의 차이',
+      body: 'PRD는 무엇을, /project/claude.md는 어떻게. 둘이 헷갈리면 자료가 부풀거나 모호해진다.',
     },
     {
       title: '1차 초안은 거칠어도 된다',
@@ -22,7 +22,7 @@ export default function S4Tip2Claudemd() {
       <div className="flex items-center gap-3 mb-4">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-text-sub text-sm font-semibold tracking-wider uppercase">
-          Tips 2 · CLAUDE.md 작성 팁
+          Tips 2 · /project/claude.md 작성 팁
         </span>
       </div>
 
@@ -32,7 +32,7 @@ export default function S4Tip2Claudemd() {
 
       <div className="grid grid-cols-3 gap-4 max-w-6xl">
         {tips.map((t, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="text-base font-bold text-text mb-3 leading-snug">{t.title}</div>
             <p className="text-sm text-text-sub leading-relaxed">{t.body}</p>
           </div>

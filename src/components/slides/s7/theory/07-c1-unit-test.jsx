@@ -20,7 +20,7 @@ export default function S7TheoryC1UnitTest() {
           </p>
 
           {/* Code block */}
-          <div className="bg-bg-soft rounded-md p-4 border border-divider text-sm text-text-sub leading-relaxed">
+          <div className="bg-bg-soft rounded-xl p-4 border border-divider text-sm text-text-sub leading-relaxed">
             <div className="whitespace-pre-wrap break-words">
               "이 함수에 입력 A를 주면 출력 B가 나오는가"
             </div>
@@ -28,7 +28,7 @@ export default function S7TheoryC1UnitTest() {
         </div>
 
         {/* Aside note */}
-        <div className="bg-bg-soft rounded-md p-4 border-l-2 border-divider">
+        <div className="bg-bg-soft rounded-xl p-4 border-l-2 border-divider">
           <p className="text-sm text-text-sub leading-relaxed">
             가장 작은 단위. 빠르게 실행. 하지만 전체 흐름은 알 수 없다.
           </p>

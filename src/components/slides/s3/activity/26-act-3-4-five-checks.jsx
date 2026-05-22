@@ -31,7 +31,7 @@ export default function S3Activity_3_4_FiveChecks() {
         {checks.map((c, i) => (
           <div
             key={i}
-            className="flex items-start gap-4 border border-line rounded px-5 py-3.5"
+            className="flex items-start gap-4 border border-divider rounded px-5 py-3.5"
           >
             <span className="text-xl font-bold text-accent leading-none mt-0.5 w-7 shrink-0">
               {i + 1}

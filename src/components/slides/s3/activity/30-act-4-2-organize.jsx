@@ -26,7 +26,7 @@ export default function S3Activity_4_2_Organize() {
 
       <div className="space-y-3 max-w-5xl">
         {steps.map((s, i) => (
-          <div key={i} className="grid grid-cols-[50px_2fr_3fr] items-center gap-4 border border-line rounded px-4 py-4">
+          <div key={i} className="grid grid-cols-[50px_2fr_3fr] items-center gap-4 border border-divider rounded px-4 py-4">
             <span className="text-2xl font-bold text-accent leading-none">{s.n}</span>
             <span className="text-base text-text font-bold">{s.target}</span>
             <span className="text-base text-text-sub leading-relaxed">{s.content}</span>

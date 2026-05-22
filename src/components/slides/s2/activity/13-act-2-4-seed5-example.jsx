@@ -15,7 +15,9 @@ export default function S2Activity_2_4_Seed5Example() {
       {/* 흐름 도입 */}
       <div className="rounded-2xl border border-divider bg-bg-soft p-3 mb-4 max-w-5xl">
         <p className="text-sm text-text-sub leading-relaxed tracking-tight">
-          <span className="font-bold text-text">2-1 ~ 2-3까지는 시드 1·6 PM/셀러 흐름을 가정했다.</span> 본인이 선택한 시드가 다르다면 채널과 키워드도 달라진다. 시드 5(동호회 총무·소모임 리더)를 비교 예로 본다.
+          <span className="font-bold text-text">2-1 ~ 2-3까지는 시드 1·6 PM/셀러 흐름을 가정했다.</span>
+          <br />
+          본인이 선택한 시드가 다르다면 채널과 키워드도 달라진다. 시드 5(동호회 총무·소모임 리더)를 비교 예로 본다.
         </p>
       </div>
 

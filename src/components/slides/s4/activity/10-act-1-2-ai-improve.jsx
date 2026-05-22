@@ -23,7 +23,7 @@ export default function S4Activity_1_2_AiImprove() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             Claude Code 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`"현재 작성된 CLAUDE.md를 읽고
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`"현재 작성된 /project/claude.md를 읽고
  docs/prd.md를 참조해서 개선해줘.
  다음 기준으로 검토:
  - 4영역이 모두 충분히 채워졌는가
@@ -37,7 +37,7 @@ export default function S4Activity_1_2_AiImprove() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 AI 개선 답변
           </div>
-          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`1. 1영역 개선:
+          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`1. 1영역 개선:
    - "빠르게" → "5초 이내에"
    - 페르소나 모호 → "월 매출 100-500만원 1인 셀러"
 

@@ -29,7 +29,7 @@ export default function S5Activity_N_1_Outputs() {
 
       <div className="grid grid-cols-3 gap-3 max-w-6xl">
         {outputs.map((o, i) => (
-          <div key={i} className="border border-line rounded p-4">
+          <div key={i} className="border border-divider rounded p-4">
             <div className="flex items-center gap-2 mb-2">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded border border-accent text-accent text-xs font-bold tabular-nums">
                 {o.n}

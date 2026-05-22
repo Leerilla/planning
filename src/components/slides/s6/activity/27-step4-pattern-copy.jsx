@@ -35,7 +35,7 @@ export default function S6ActivityStep4PatternCopy() {
         {rows.map((row, idx) => (
           <div
             key={idx}
-            className="flex flex-col gap-3 p-6 border border-divider bg-bg-soft rounded-md"
+            className="flex flex-col gap-3 p-6 border border-divider bg-bg-soft rounded-xl"
           >
             <div className="text-sm font-bold text-accent uppercase tracking-wider">
               {row.label}

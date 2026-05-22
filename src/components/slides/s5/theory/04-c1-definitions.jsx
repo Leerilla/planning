@@ -20,7 +20,7 @@ export default function S5TheoryC1Definitions() {
       </p>
 
       <div className="grid grid-cols-2 gap-6 max-w-5xl">
-        <div className="border border-line rounded p-6">
+        <div className="border border-divider rounded p-6">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             수직 슬라이스
           </div>
@@ -35,7 +35,7 @@ export default function S5TheoryC1Definitions() {
           </div>
         </div>
 
-        <div className="border border-line rounded p-6">
+        <div className="border border-divider rounded p-6">
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             수평 슬라이스
           </div>

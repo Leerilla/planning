@@ -49,7 +49,7 @@ export default function S7TheoryC2AntiVs3Principles() {
           <p className="mb-3 text-xs font-bold uppercase tracking-wider text-accent">
             무한 루프 정리 명령 (같은 자리 3회 이상 맴돌면)
           </p>
-          <div className="overflow-auto rounded-md border border-divider bg-bg px-3 py-3">
+          <div className="overflow-auto rounded-xl border border-divider bg-bg px-3 py-3">
             <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text">
 {`이 디버깅의 어디서 막혔는지 정리해줘.
 지금까지 시도한 수정 3개와 각 수정 후의 에러를

@@ -15,7 +15,7 @@ export default function S4TheoryC2Area1Seed() {
         1영역 — 한 단락 + 참조 한 줄
       </h2>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`월 매출 100-500만원 1인 스마트스토어 셀러 대상.
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`월 매출 100-500만원 1인 스마트스토어 셀러 대상.
 상품 사진과 키워드 5개를 입력하면
 차별화 카피 3개 후보를 5초 이내에 생성.
 스마트스토어 형식 텍스트 출력 지원.

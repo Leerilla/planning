@@ -28,13 +28,13 @@ export default function S6TheoryC3VsClaudeMd() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-start border-b border-line pb-3">
+        <div className="grid grid-cols-3 gap-4 items-start border-b border-divider pb-3">
           <div className="text-sm text-text font-semibold">강제력</div>
           <div className="text-sm text-text">권고 (약 70% 준수)</div>
           <div className="text-sm text-text">강제 (100% 실행)</div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-start border-b border-line pb-3">
+        <div className="grid grid-cols-3 gap-4 items-start border-b border-divider pb-3">
           <div className="text-sm text-text font-semibold">용도</div>
           <div className="text-sm text-text">권장 가이드</div>
           <div className="text-sm text-text">반드시 일어나야 하는 검증</div>

@@ -19,7 +19,7 @@ export default function S5TheoryC2StandardForm() {
         본 학습 모든 빌드 명령에 이 양식을 적용한다.
       </p>
 
-      <pre className="bg-bg-soft border border-line rounded p-5 text-sm text-text leading-relaxed max-w-4xl whitespace-pre-wrap">
+      <pre className="bg-bg-soft border border-divider rounded p-5 text-sm text-text leading-relaxed max-w-4xl whitespace-pre-wrap">
 {`PRD의 [화면명]을 [기술 스택]으로 만들어줘.
 첨부한 시안을 참조해.
 

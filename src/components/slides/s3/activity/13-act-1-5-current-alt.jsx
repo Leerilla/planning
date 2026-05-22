@@ -42,7 +42,7 @@ export default function S3Activity_1_5_CurrentAlt() {
           </div>
           <ol className="space-y-2 mb-3">
             {alternatives.map((a, i) => (
-              <li key={i} className="flex gap-3 text-base border border-line rounded px-4 py-3">
+              <li key={i} className="flex gap-3 text-base border border-divider rounded px-4 py-3">
                 <span className="font-bold text-accent w-6 shrink-0">{i + 1}</span>
                 <span className="text-text leading-relaxed">{a}</span>
               </li>
@@ -60,12 +60,12 @@ export default function S3Activity_1_5_CurrentAlt() {
           다음 액션 · Manyfast로 전달
         </div>
         <div className="flex items-center gap-3 flex-wrap">
-          <div className="flex-1 min-w-[180px] border border-line rounded p-3 bg-bg-soft">
+          <div className="flex-1 min-w-[180px] border border-divider rounded p-3 bg-bg-soft">
             <div className="text-xs text-text-sub mb-1">NotebookLM 산출</div>
             <div className="text-sm text-text leading-snug">페인포인트 5개 + 현재 대안 3개 + 페르소나 검증</div>
           </div>
           <span className="text-accent text-xl font-bold">→</span>
-          <div className="flex-1 min-w-[180px] border border-line rounded p-3 bg-bg-soft">
+          <div className="flex-1 min-w-[180px] border border-divider rounded p-3 bg-bg-soft">
             <div className="text-xs text-text-sub mb-1">통합 정리</div>
             <div className="text-sm text-text leading-snug">NotebookLM 요약 + 페르소나 6줄을 한 블록으로 묶기</div>
           </div>

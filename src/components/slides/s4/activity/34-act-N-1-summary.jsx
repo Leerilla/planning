@@ -3,7 +3,7 @@
 
 export default function S4Activity_N_1_Summary() {
   const items = [
-    { n: '1', name: 'CLAUDE.md (검증 통과)', use: '자동 컨텍스트' },
+    { n: '1', name: '/project/claude.md (검증 통과)', use: '자동 컨텍스트' },
     { n: '2', name: '.claude/settings.json', use: 'Permissions' },
     { n: '3', name: 'docs/ (3개 파일)', use: '시스템 설계 참조' },
     { n: '4', name: 'rules/ (3개 파일)', use: '코딩 규칙' },
@@ -29,12 +29,12 @@ export default function S4Activity_N_1_Summary() {
 
       <div className="grid grid-cols-3 gap-3 max-w-6xl">
         {items.map((it, i) => (
-          <div key={i} className="border border-line rounded p-4">
+          <div key={i} className="border border-divider rounded p-4">
             <div className="flex items-baseline gap-2 mb-2">
               <span className="text-2xl font-bold text-accent leading-none">{it.n}</span>
               <span className="text-sm font-bold text-text leading-snug">{it.name}</span>
             </div>
-            <div className="text-[10px] uppercase tracking-wider text-text-sub mb-1">
+            <div className="text-xs uppercase tracking-wider text-text-sub mb-1">
               활용
             </div>
             <div className="text-xs text-text-sub leading-relaxed">{it.use}</div>

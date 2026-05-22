@@ -98,7 +98,7 @@ lecture.md (LECTURE_FORMAT 표준)
     · ## 이론 직속 → 이론 목차 (Objectives)
     · ## 실습 직속 → 실습 목차 (Objectives)
     · ### → 섹션 표지 (Cover, D-033)
-  - #### 콘텐츠 매핑 (8타입 § 2.2 우선순위)
+  - #### 콘텐츠 매핑 (8타입 2.2절 우선순위)
   - lecture.md 100% coverage 검증
   - profile 자동 도출 + 일부 추론
   ↓
@@ -128,7 +128,7 @@ for ### in lecture.md.sections:         # ← 미니 사이클 = ### 섹션 단�
 
 ## 6. 강사 누적 결정 — 32개 공통 SSOT
 
-> 9세션 공통. 세션 특화는 `lectures/S{N}/profile.yaml § session_specific_decisions`로 분리.
+> 9세션 공통. 세션 특화는 `lectures/S{N}/profile.yaml`의 `session_specific_decisions`로 분리.
 
 ### A. 콘텐츠 원칙 (7개)
 - **A1**. lecture.md 표준 형식 (LECTURE_FORMAT.md) 준수. 자유 형식 X
@@ -152,12 +152,13 @@ for ### in lecture.md.sections:         # ← 미니 사이클 = ### 섹션 단�
 - **D1~D12**: emoji 0건 (학생 화면, 메타 표기 포함 — D-035) / 토큰만 / rounded-lg 금지 / 미정의 토큰 금지 / 폰트 4종 / gap-6 p-7 표준 / KeyMessage footer+subtext 동시 X / message 배열 / \\n 줄바꿈 / emphasis 절제 / 특수문자 학생 화면 X / 시각 폭 검증
 - **D13** ⭐ 2026-05-13 신규 (D-045). **백그라운드 `#0F172A` (`bg-bg-elev` / `--code-bg`) 사용 금지** — wrapper 안 어두운 톤 직접 사용 X. 코드/표 헤더는 `bg-bg-soft` 사용. 학생 화면 가독성 저하 방지.
 - **D14** ⭐ 2026-05-13 신규 (D-046). **`font-mono` 클래스 사용 금지** — wrapper 안 모노 폰트 직접 적용 X. 코드 블록은 `<pre>` 기본 또는 패턴 컴포넌트가 처리. 학생 화면 폰트 일관성.
-- **D15** ⭐ 2026-05-15 신규 (D-049). **디자인 토큰 화이트리스트 SSOT** — `tailwind.config.js` + `globals.css` 정의 토큰만 사용. 미정의 토큰 (`border-line`, `bg-bg-primary`, `accent-strong`, `bg-state-*`, `bg-bg-elevated`, `highlight-soft`) 사용 시 FAIL. 화이트리스트 SSOT: `docs/design-system.md § 2`.
-- **D16** ⭐ 2026-05-15 신규 (D-050). **lecture.md 원문 보존 강화 (A2 강화)** — 표/리스트 데이터 임의 변경 X. spec § 2 작성 시 `lecture_range: [N1, N2]` 인용 의무. β' agent가 원문 데이터를 재구성/요약/대체 시 FAIL.
+- **D15** ⭐ 2026-05-15 신규 (D-049). **디자인 토큰 화이트리스트 SSOT** — `tailwind.config.js` + `globals.css` 정의 토큰만 사용. 미정의 토큰 (`border-line`, `bg-bg-primary`, `accent-strong`, `bg-state-*`, `bg-bg-elevated`, `highlight-soft`) 사용 시 FAIL. 화이트리스트 SSOT: `docs/design-system.md` 2절.
+- **D16** ⭐ 2026-05-15 신규 (D-050). **lecture.md 원문 보존 강화 (A2 강화)** — 표/리스트 데이터 임의 변경 X. spec 2절 작성 시 `lecture_range: [N1, N2]` 인용 의무. β' agent가 원문 데이터를 재구성/요약/대체 시 FAIL.
 - **D17** ⭐ 2026-05-15 신규 (D-051). **pre 블록 폰트 최소 `text-xs` (12px)** — `text-[11px]` / `text-[10px]` / `text-2xs` 사용 X. 학생 화면 가독성 보장. design-checker grep 패턴: `text-\[1[01]px\]` / `text-2xs`.
 - **D18** ⭐ 2026-05-15 신규 (D-052). **6+ vertical sequential 카드 분할 의무** — 6개 이상 카드를 단일 column으로 720px viewport에 배치 X. 2-column grid 또는 통합/요약화. 폰트 축소로 해결 X (D-051 우선).
 - **D19** ⭐ 2026-05-15 신규 (D-053). **도구 이름 첫 등장 시 설명 의무** — `Bash`, `Read`, `Grep`, `Glob`, `Write`, `Edit`, `WebFetch`, `SubagentStop` 등 도구 이름이 슬라이드에 처음 등장할 때 인라인 설명 또는 footer 1줄 명시. 학생 학습 경험.
 - **D20** ⭐ 2026-05-15 신규 (D-054). **산출물 파일 경로 inline code + accent 강조 의무** — wrapper 안 산출물 위치는 `<code>` 태그 + `text-accent font-semibold` 강조. Cover 슬라이드에 "산출물 위치" 박스 권장.
+- **D21** ⭐ 2026-05-21 신규. **비-ASCII 특수문자(section sign / pilcrow / reference mark 등) 사용 금지** — 학생 화면(슬라이드 본문)에 이미 D11로 금지되어 있던 것을 메타 문서 전체로 확장. 적용 범위: `CLAUDE.md` / `docs/` / `lectures/{Sn}/` / `.claude/agents/` / `plans/` / `history.md` / `progress.md` 및 슬라이드 코드 주석. 절·섹션 인용은 `N절` / `의 X` / markdown 헤더 텍스트 그대로 사용. 도구 호환·검색 편의·표기 일관성을 위해 강제. D11과 중복되더라도 메타 문서 적용 명문화 차원에서 분리 유지. 검증: ripgrep으로 코드포인트 매칭(U+00A7 / U+00B6 / U+203B 등).
 
 ### E. 인터랙티브 (6개)
 - **E1**. 실제 통합 강제 — placeholder 빌드 X
@@ -242,8 +243,8 @@ for ### in lecture.md.sections:         # ← 미니 사이클 = ### 섹션 단�
 ## 10. 작업 시작 전 체크리스트
 
 **필수**:
-- [ ] `history.md § active_rules` (만료 검사 후)
-- [ ] `history.md § pattern_counts`
+- [ ] `history.md`의 `active_rules` (만료 검사 후)
+- [ ] `history.md`의 `pattern_counts`
 - [ ] `lectures/S{N}/profile.yaml`
 - [ ] `docs/decisions.md`, `docs/curation-workflow.md`, `docs/design-system.md`
 - [ ] `docs/lecture-format.md` (lecture.md 작성/검증 시)
@@ -259,11 +260,11 @@ for ### in lecture.md.sections:         # ← 미니 사이클 = ### 섹션 단�
 진척 추적 방식은 **운영자 자유** (progress.md 또는 별도 트래커 또는 추적 X 모두 허용).
 
 **새 결정 발생 시** (방식 무관 필수):
-- 9세션 공통 → § 6 추가 + § 7 분류
+- 9세션 공통 → 6절 추가 + 7절 분류
 - 세션 특화 → `lectures/S{N}/profile.yaml`
 
 **결함 발생 시** (방식 무관 필수):
-- `history.md § defects`에 yaml 형식 1행
+- `history.md`의 `defects`에 yaml 형식 1행
 
 ---
 

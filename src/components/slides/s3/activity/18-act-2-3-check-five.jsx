@@ -47,7 +47,7 @@ export default function S3Activity_2_3_CheckFive() {
           </div>
           <ul className="space-y-2">
             {sections.map((s, i) => (
-              <li key={i} className="flex items-center gap-3 px-4 py-3 border border-line rounded">
+              <li key={i} className="flex items-center gap-3 px-4 py-3 border border-divider rounded">
                 <span className="w-4 h-4 rounded border-2 border-accent shrink-0"></span>
                 <span className="text-base text-text">{s}</span>
               </li>

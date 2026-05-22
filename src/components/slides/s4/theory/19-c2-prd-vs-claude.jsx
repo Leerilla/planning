@@ -23,20 +23,20 @@ export default function S4TheoryC2PrdVsClaude() {
         다섯 축에서 두 문서는 다르다
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-[1fr_1.6fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-[1fr_1.6fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">비교</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">PRD</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-accent border-l border-line">CLAUDE.md</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">PRD</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-accent border-l border-divider">CLAUDE.md</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_1.6fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-3.5 text-base font-semibold text-text">{r.axis}</div>
-            <div className="px-5 py-3.5 text-base text-text-sub border-l border-line">{r.prd}</div>
-            <div className="px-5 py-3.5 text-base text-text font-medium border-l border-line">{r.cmd}</div>
+            <div className="px-5 py-3.5 text-base text-text-sub border-l border-divider">{r.prd}</div>
+            <div className="px-5 py-3.5 text-base text-text font-medium border-l border-divider">{r.cmd}</div>
           </div>
         ))}
       </div>

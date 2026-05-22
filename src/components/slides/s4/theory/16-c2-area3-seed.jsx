@@ -15,7 +15,7 @@ export default function S4TheoryC2Area3Seed() {
         3영역 — 네이밍 · 커밋 · 테스트 · 포맷
       </h2>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`- 함수명: camelCase
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`- 함수명: camelCase
 - 컴포넌트명: PascalCase
 - 파일명: kebab-case
 - 커밋 메시지: [type] description

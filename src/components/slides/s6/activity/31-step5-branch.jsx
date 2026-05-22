@@ -21,7 +21,7 @@ export default function S6ActivityStep5Branch() {
       </p>
 
       <div className="max-w-4xl">
-        <pre className="bg-bg-soft px-6 py-5 rounded-md border border-divider text-sm font-medium leading-6 text-text overflow-x-auto">
+        <pre className="bg-bg-soft px-6 py-5 rounded-xl border border-divider text-sm font-medium leading-6 text-text overflow-x-auto">
           <code>{`git checkout main && git pull origin main
 git checkout -b feat/task-2-1-openai-client`}</code>
         </pre>

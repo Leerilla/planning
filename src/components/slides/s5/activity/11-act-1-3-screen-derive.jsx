@@ -23,7 +23,7 @@ export default function S5Activity_1_3_ScreenDerive() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             Claude Code 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`"docs/prd.md의 핵심 기능 3개를
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`"docs/prd.md의 핵심 기능과 docs/workflow.md를 확인해서
  사용자 흐름 순서로 화면 단위로 나눠줘.
 
  각 화면에 어떤 기능이 매핑되는지 명시.
@@ -34,7 +34,7 @@ export default function S5Activity_1_3_ScreenDerive() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 화면 도출 결과
           </div>
-          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`화면 1: 카피 입력 화면
+          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`화면 1: 카피 입력 화면
   - 기능 1 (입력): 사진 업로드 + 키워드 5
   - "카피 생성" 버튼
 

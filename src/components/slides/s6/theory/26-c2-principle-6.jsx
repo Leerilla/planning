@@ -17,7 +17,7 @@ export default function S6TheoryC2Principle6() {
         명확한 계약으로 신뢰성 확보
       </h2>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`**입력**: 방금 수정된 파일 경로
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`**입력**: 방금 수정된 파일 경로
 
 **출력**: 일치/불일치/검토 외 3카테고리 보고서
 

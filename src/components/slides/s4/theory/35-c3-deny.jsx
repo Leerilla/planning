@@ -24,18 +24,18 @@ export default function S4TheoryC3Deny() {
         권한 자체를 차단 — 작업자도 안 한다는 시스템 차원의 결정.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">도구</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">이유</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">이유</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-bold">{r.tool}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.reason}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.reason}</div>
           </div>
         ))}
       </div>

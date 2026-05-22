@@ -20,7 +20,7 @@ export default function S7TheoryC2Step2NaturalTest({ deckMeta }) {
 
       {/* Code block */}
       <div className="space-y-6 max-w-3xl">
-        <pre className="whitespace-pre-wrap rounded-md border border-divider bg-bg-soft px-5 py-4 text-sm text-text">
+        <pre className="whitespace-pre-wrap rounded-xl border border-divider bg-bg-soft px-5 py-4 text-sm text-text">
 PRD의 핵심 시나리오를 E2E 테스트로 만들어줘:
 "셀러가 카피 입력 화면에 상품 사진과
  키워드 5개를 입력하고 '카피 생성' 버튼을 클릭하면

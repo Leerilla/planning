@@ -29,7 +29,7 @@ export default function S5TheoryC3PassLine() {
           </ul>
         </div>
 
-        <div className="border border-line rounded p-6 bg-bg-soft">
+        <div className="border border-divider rounded p-6 bg-bg-soft">
           <div className="text-xs uppercase tracking-wider text-text-sub mb-3 font-semibold">
             합격선 외 (다음 단계)
           </div>

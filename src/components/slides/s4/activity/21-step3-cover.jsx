@@ -6,13 +6,13 @@ import Cover from '@/components/slides/patterns/Cover';
 export default function S4ActivityStep3Cover() {
   return (
     <Cover
-      eyebrow="Step 3"
+      eyebrow="Step 2"
       title="settings.json과 Permissions"
       subtitle="권장 템플릿 적용 + 의도된 차단 확인"
       objectives={[
-        '3-1. .claude/settings.json 생성',
-        '3-2. 권장 템플릿 입력 (auto_allow / ask_before / deny)',
-        '3-3. 의도된 차단 시연 (/etc/hosts 차단 확인)',
+        '2-1. .claude/settings.json 생성',
+        '2-2. 권장 템플릿 입력 (allow / ask / deny)',
+        '2-3. 의도된 차단 시연 (/etc/hosts 차단 확인)',
       ]}
     />
   );

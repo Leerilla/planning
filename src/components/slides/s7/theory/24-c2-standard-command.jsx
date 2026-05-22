@@ -19,7 +19,7 @@ export default function S7TheoryC2StandardCommand() {
       </h1>
 
       {/* Code block */}
-      <div className="max-w-4xl flex-1 overflow-auto rounded-md border border-divider bg-bg-soft px-5 py-4">
+      <div className="max-w-4xl flex-1 overflow-auto rounded-xl border border-divider bg-bg-soft px-5 py-4">
         <pre className="whitespace-pre-wrap text-sm leading-relaxed text-text">
 {`다음 E2E 테스트 실패 메시지를 분석해주세요:
 

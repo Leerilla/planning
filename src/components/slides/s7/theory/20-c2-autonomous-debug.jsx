@@ -32,7 +32,7 @@ export default function S7TheoryC2AutonomousDebug({ deckMeta }) {
         {/* Role breakdown */}
         <div className="grid grid-cols-2 gap-4">
           {/* Card 1: 작업자 */}
-          <div className="rounded-md border border-divider bg-bg-soft px-5 py-4">
+          <div className="rounded-xl border border-divider bg-bg-soft px-5 py-4">
             <p className="text-xs uppercase tracking-wider text-text-sub">
               작업자
             </p>
@@ -42,7 +42,7 @@ export default function S7TheoryC2AutonomousDebug({ deckMeta }) {
           </div>
 
           {/* Card 2: 에이전트 */}
-          <div className="rounded-md border border-divider bg-bg-soft px-5 py-4">
+          <div className="rounded-xl border border-divider bg-bg-soft px-5 py-4">
             <p className="text-xs uppercase tracking-wider text-text-sub">
               에이전트
             </p>

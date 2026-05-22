@@ -28,7 +28,7 @@ export default function S5ActivityTips1Content() {
 
       <div className="grid grid-cols-2 gap-5 max-w-6xl">
         {tips.map((t, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="text-base font-bold text-text mb-3 leading-snug">{t.title}</div>
             <p className="text-sm text-text-sub leading-relaxed">{t.body}</p>
           </div>

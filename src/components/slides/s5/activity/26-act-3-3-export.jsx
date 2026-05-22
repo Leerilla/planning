@@ -35,7 +35,7 @@ export default function S5Activity_3_3_Export() {
 
       <div className="space-y-4 max-w-6xl">
         {exports_.map((e, i) => (
-          <div key={i} className="border border-line rounded p-5 bg-bg-soft">
+          <div key={i} className="border border-divider rounded p-5 bg-bg-soft">
             <div className="grid grid-cols-[1.2fr_2fr_2fr] gap-5 items-start">
               <div>
                 <div className="text-xs uppercase tracking-wider text-accent mb-2 font-semibold">

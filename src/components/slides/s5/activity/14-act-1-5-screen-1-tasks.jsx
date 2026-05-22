@@ -18,7 +18,7 @@ export default function S5Activity_1_5_Screen1Tasks() {
         우선순위 1. 각 Task <span className="highlight-mark">1-3개 파일 수정</span> 단위.
       </p>
 
-      <pre className="bg-bg-soft border border-line rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
+      <pre className="bg-bg-soft border border-divider rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
 {`Task 1.1: 입력 폼 UI
 - 파일: src/components/InputForm.tsx (1)
 - 의존성: 없음

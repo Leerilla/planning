@@ -25,7 +25,7 @@ export default function S7TheoryC1E2ETest() {
         </p>
 
         {/* Code block */}
-        <div className="bg-bg-soft rounded-md p-4 border border-divider text-sm text-text-sub leading-relaxed">
+        <div className="bg-bg-soft rounded-xl p-4 border border-divider text-sm text-text-sub leading-relaxed">
           <div className="whitespace-pre-line break-words">
             {"셀러가 카피 입력 화면에 상품 사진과 키워드 5개를 입력하고\n'카피 생성' 버튼을 클릭하면 결과 화면에\n차별화 카피 3개가 표시된다"}
           </div>
@@ -33,7 +33,7 @@ export default function S7TheoryC1E2ETest() {
       </div>
 
       {/* Aside note */}
-      <div className="bg-bg-soft rounded-md p-4 border-l-2 border-divider">
+      <div className="bg-bg-soft rounded-xl p-4 border-l-2 border-divider">
         <p className="text-sm text-text-sub leading-relaxed">
           가장 큰 범위. 실제 사용자 경험 시뮬레이션.
         </p>

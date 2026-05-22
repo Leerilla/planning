@@ -23,20 +23,20 @@ export default function S3Activity_0_4_Accounts() {
         본 세션 직전에 두 도구 모두 로그인 가능한 상태인지 확인한다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_2fr_1.4fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_2fr_1.4fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">도구</div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">URL</div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">계정</div>
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">URL</div>
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">계정</div>
         </div>
         {tools.map((t, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr_1.4fr] ${i < tools.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr_1.4fr] ${i < tools.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-bold">{t.name}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{t.url}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{t.account}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{t.url}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{t.account}</div>
           </div>
         ))}
       </div>

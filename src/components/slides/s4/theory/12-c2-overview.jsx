@@ -26,22 +26,22 @@ export default function S4TheoryC2Overview() {
         매 명령마다 자동 로드 — 길수록 비용 증가. 200줄 미만이 균형.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[60px_1.6fr_2fr_1fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[60px_1.6fr_2fr_1fr] bg-bg-soft border-b border-divider">
           <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub text-center">#</div>
-          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">영역</div>
-          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">답하는 질문</div>
-          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">분량</div>
+          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">영역</div>
+          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">답하는 질문</div>
+          <div className="px-4 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">분량</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[60px_1.6fr_2fr_1fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[60px_1.6fr_2fr_1fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-4 py-4 text-2xl font-bold text-accent text-center">{r.n}</div>
-            <div className="px-4 py-4 text-base text-text font-bold border-l border-line">{r.area}</div>
-            <div className="px-4 py-4 text-base text-text-sub border-l border-line">{r.q}</div>
-            <div className="px-4 py-4 text-sm text-text-sub border-l border-line">{r.size}</div>
+            <div className="px-4 py-4 text-base text-text font-bold border-l border-divider">{r.area}</div>
+            <div className="px-4 py-4 text-base text-text-sub border-l border-divider">{r.q}</div>
+            <div className="px-4 py-4 text-sm text-text-sub border-l border-divider">{r.size}</div>
           </div>
         ))}
       </div>

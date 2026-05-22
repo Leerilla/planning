@@ -36,20 +36,20 @@ export default function S5Activity_N_3_Retrospective() {
         구체성이 회고의 품질을 결정.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-[1fr_2fr_1fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-[1fr_2fr_1fr] bg-bg-soft border-b border-divider">
           <div className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-text-sub">질문</div>
-          <div className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-accent border-l border-line">좋은 답 (구체)</div>
-          <div className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-text-sub border-l border-line">나쁜 답 (추상)</div>
+          <div className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-accent border-l border-divider">좋은 답 (구체)</div>
+          <div className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-text-sub border-l border-divider">나쁜 답 (추상)</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr_1fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr_1fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-4 py-3 text-sm font-semibold text-text">{r.q}</div>
-            <div className="px-4 py-3 text-sm text-text border-l border-line">{r.good}</div>
-            <div className="px-4 py-3 text-sm text-text-sub border-l border-line italic">{r.bad}</div>
+            <div className="px-4 py-3 text-sm text-text border-l border-divider">{r.good}</div>
+            <div className="px-4 py-3 text-sm text-text-sub border-l border-divider italic">{r.bad}</div>
           </div>
         ))}
       </div>

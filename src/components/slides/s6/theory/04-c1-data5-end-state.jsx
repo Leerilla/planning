@@ -21,7 +21,7 @@ export default function S6TheoryC1Data5EndState() {
       </p>
 
       <div className="grid grid-cols-2 gap-6 max-w-5xl">
-        <div className="border border-line rounded p-6">
+        <div className="border border-divider rounded p-6">
           <div className="text-xs uppercase tracking-wider text-accent mb-2">
             손에 있는 것
           </div>
@@ -49,7 +49,7 @@ export default function S6TheoryC1Data5EndState() {
           </ul>
         </div>
 
-        <div className="border border-line rounded p-6">
+        <div className="border border-divider rounded p-6">
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             미작업 9개
           </div>
@@ -63,7 +63,7 @@ export default function S6TheoryC1Data5EndState() {
               <span>화면 2: Issue #5-#10</span>
             </li>
           </ul>
-          <p className="text-sm text-text-sub italic mt-6 pt-4 border-t border-line">
+          <p className="text-sm text-text-sub italic mt-6 pt-4 border-t border-divider">
             같은 흐름의 반복 = 자동화 대상
           </p>
         </div>

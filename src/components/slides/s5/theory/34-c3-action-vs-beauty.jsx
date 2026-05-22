@@ -24,18 +24,18 @@ export default function S5TheoryC3ActionVsBeauty() {
         디자인은 사용자 행동 데이터 위에서 정제될 때 가장 효과적. 행동 데이터 없이 정제하면 직감 의존.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1.6fr_1fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1.6fr_1fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">신호</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">합격선 관계</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">합격선 관계</div>
         </div>
         {signals.map((s, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.6fr_1fr] ${i < signals.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.6fr_1fr] ${i < signals.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text">{s.signal}</div>
-            <div className="px-5 py-4 text-base text-danger border-l border-line font-semibold">{s.verdict}</div>
+            <div className="px-5 py-4 text-base text-danger border-l border-divider font-semibold">{s.verdict}</div>
           </div>
         ))}
       </div>

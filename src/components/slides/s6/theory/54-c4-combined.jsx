@@ -1,7 +1,7 @@
 // Source: lectures/S6/lecture.md lines 598-616
 // Type: process (6-step combined Task cycle)
 // D-041: SVG-like connector arrows (CSS), natural language labels
-// D-046: No font-mono in content text
+// D-046: No in content text
 // D11: Natural language labels only (no regex/special chars in text)
 // Interactive: step-reveal sequential (6-step flow)
 // Sprint core diagram: Pattern 1 + Pattern 2 combined workflow
@@ -63,9 +63,9 @@ export default function S6TheoryC4Combined() {
         {steps.map((s, i) => (
           <li key={i} className="flex flex-col items-stretch">
             {/* Step item with left accent border */}
-            <div className="border-l-4 border-accent-strong bg-bg-soft rounded-r-2xl px-7 py-5 flex gap-6 items-start">
+            <div className="border-l-4 border-accent bg-bg-soft rounded-r-2xl px-7 py-5 flex gap-6 items-start">
               {/* Step number */}
-              <span className="text-2xl font-bold tabular-nums tracking-wider text-accent-strong shrink-0 w-8 text-center">
+              <span className="text-2xl font-bold tabular-nums tracking-wider text-accent shrink-0 w-8 text-center">
                 {s.step}
               </span>
 
@@ -84,7 +84,7 @@ export default function S6TheoryC4Combined() {
             {i < steps.length - 1 ? (
               <div className="flex justify-center py-1">
                 <div
-                  className="w-0.5 h-3 bg-accent-strong"
+                  className="w-0.5 h-3 bg-accent"
                   aria-hidden="true"
                 />
               </div>

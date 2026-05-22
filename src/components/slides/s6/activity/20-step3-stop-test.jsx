@@ -61,7 +61,7 @@ export default function S6ActivityStep3StopTest() {
         ))}
       </div>
 
-      <div className="flex items-start gap-3 rounded-xl bg-highlight-soft p-4">
+      <div className="flex items-start gap-3 rounded-xl bg-accent-soft p-4">
         <span className="inline-block w-1 h-5 bg-accent mt-1 rounded-full flex-shrink-0" />
         <p className="text-sm text-text-sub leading-relaxed">
           <span className="font-semibold text-text">완성: </span>

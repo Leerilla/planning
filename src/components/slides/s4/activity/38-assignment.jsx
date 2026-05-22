@@ -4,7 +4,7 @@
 export default function S4ActivityAssignment() {
   const rows = [
     { axis: '목표', detail: '빌드 진입 가능한 상태로 환경 안정화' },
-    { axis: '산출물', detail: 'CLAUDE.md, docs/, rules/, settings.json, GitHub 저장소 초기 커밋' },
+    { axis: '산출물', detail: '/project/claude.md, docs/, rules/, settings.json, GitHub 저장소 초기 커밋' },
     { axis: '마감', detail: '다음 학습 단계 시작 전' },
   ];
 
@@ -25,18 +25,18 @@ export default function S4ActivityAssignment() {
         다음 단계(자료 5)에서 본 산출물을 입력으로 받아 화면 분석과 Task 재구성을 진행한다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[140px_1fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[140px_1fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub">항목</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">내용</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">내용</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[140px_1fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[140px_1fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base text-text font-bold">{r.axis}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.detail}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.detail}</div>
           </div>
         ))}
       </div>

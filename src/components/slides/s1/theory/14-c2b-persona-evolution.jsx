@@ -45,9 +45,9 @@ export default function S1TheoryC2bPersonaEvolution() {
       {/* 3 stages 세로 흐름 */}
       <ul className="flex flex-col gap-3 max-w-3xl">
         {stages.map((s, i) => (
-          <li key={i} className="grid grid-cols-[48px_1fr] gap-4 items-start">
+          <li key={i} className="grid grid-cols-[48px_1fr] gap-4 items-center">
             <span
-              className={`text-sm font-bold tabular-nums tracking-wider text-center mt-1 ${
+              className={`text-sm font-bold tabular-nums tracking-wider text-center ${
                 s.current ? 'text-accent' : 'text-text-muted'
               }`}
             >

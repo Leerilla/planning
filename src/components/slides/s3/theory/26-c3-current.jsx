@@ -26,30 +26,30 @@ export default function S3TheoryC3Current() {
         한 도구로 두 작업을 모두 처리하면 둘 다 흐려진다.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-[1fr_2fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-[1fr_2fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">
             사고 작업
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">
             분석 (NotebookLM)
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-accent border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-accent border-l border-divider">
             정제 (Manyfast)
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">
               {r.axis}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {r.analysis}
             </div>
-            <div className="px-5 py-4 text-base text-text font-medium border-l border-line">
+            <div className="px-5 py-4 text-base text-text font-medium border-l border-divider">
               {r.refinement}
             </div>
           </div>

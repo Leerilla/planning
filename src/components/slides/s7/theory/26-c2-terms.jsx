@@ -42,7 +42,7 @@ export default function S7TheoryC2Terms() {
       </h1>
 
       {/* Terms table */}
-      <div className="max-w-4xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">
         {/* Table header */}
         <div className="grid grid-cols-[160px_1fr] border-b border-divider bg-bg-soft">
           <div className="px-6 py-3 text-sm font-bold text-text">

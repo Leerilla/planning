@@ -35,24 +35,24 @@ export default function S6TheoryC2Frontmatter() {
         frontmatter 4필드
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-2 bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-2 bg-bg-soft border-b border-divider">
           <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub">
             필드
           </div>
-          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-line">
+          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-divider">
             의미
           </div>
         </div>
         {fields.map((f, i) => (
           <div
             key={i}
-            className={`grid grid-cols-2 ${i < fields.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-2 ${i < fields.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-6 py-4 text-base text-accent font-semibold">
               {f.field}
             </div>
-            <div className="px-6 py-4 text-base text-text-sub border-l border-line leading-relaxed">
+            <div className="px-6 py-4 text-base text-text-sub border-l border-divider leading-relaxed">
               {f.description}
             </div>
           </div>

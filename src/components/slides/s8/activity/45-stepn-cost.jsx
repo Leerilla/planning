@@ -1,7 +1,7 @@
 // Source: lectures/S8/captures/lecture.md Step N-2 /cost 비교 (L1594-1599)
 // Type: Example (pre block + aside)
 // D-054: /cost inline code + accent
-// D-046 FIX: font-mono removed (use <pre> default)
+// D-046 FIX: removed (use <pre> default)
 
 export default function S8ActivityStepNCost() {
   return (

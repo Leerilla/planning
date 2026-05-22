@@ -18,8 +18,9 @@ export default function S5Activity_1_5_TaskCmd() {
         기존 tasks.md를 <span className="highlight-mark">화면 단위로 그룹화</span>한 새 버전으로 교체.
       </p>
 
-      <pre className="bg-bg-soft border border-line rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
-{`"docs/prd.md와 위에서 도출한 화면 2개를 기준으로
+      <pre className="bg-bg-soft border border-divider rounded p-5 text-sm text-text leading-relaxed max-w-5xl whitespace-pre-wrap">
+{`"docs/prd.md와 위에서 도출한 핵심 기능과
+ docs/workflow.md를 기준으로
  docs/tasks.md를 다시 작성해줘.
 
  기준:

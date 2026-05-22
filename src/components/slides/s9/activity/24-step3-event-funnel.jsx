@@ -26,15 +26,15 @@ export default function S9ActivityStep3EventFunnel() {
 
         {/* 변수 정의 박스 — M/N, K/M 의미 상단 정리 */}
         <div className="grid grid-cols-3 gap-3 max-w-5xl mb-4">
-          <div className="border border-divider bg-bg-soft rounded-lg px-4 py-2.5 flex items-center gap-3">
+          <div className="border border-divider bg-bg-soft rounded-xl px-4 py-2.5 flex items-center gap-3">
             <span className="text-accent font-bold text-base">N</span>
             <span className="text-text-sub text-sm">페이지 진입 사용자</span>
           </div>
-          <div className="border border-divider bg-bg-soft rounded-lg px-4 py-2.5 flex items-center gap-3">
+          <div className="border border-divider bg-bg-soft rounded-xl px-4 py-2.5 flex items-center gap-3">
             <span className="text-accent font-bold text-base">M</span>
             <span className="text-text-sub text-sm">핵심 버튼 클릭</span>
           </div>
-          <div className="border border-divider bg-bg-soft rounded-lg px-4 py-2.5 flex items-center gap-3">
+          <div className="border border-divider bg-bg-soft rounded-xl px-4 py-2.5 flex items-center gap-3">
             <span className="text-accent font-bold text-base">K</span>
             <span className="text-text-sub text-sm">핵심 기능 완료</span>
           </div>
@@ -54,7 +54,7 @@ export default function S9ActivityStep3EventFunnel() {
 
           <div className="flex items-center gap-2 text-text-muted text-sm">
             <span>↓</span>
-            <span className="font-mono">전환율 M/N</span>
+            <span className="">전환율 M/N</span>
           </div>
 
           {/* Step 2 */}
@@ -69,7 +69,7 @@ export default function S9ActivityStep3EventFunnel() {
 
           <div className="flex items-center gap-2 text-text-muted text-sm">
             <span>↓</span>
-            <span className="font-mono">전환율 K/M</span>
+            <span className="">전환율 K/M</span>
           </div>
 
           {/* Step 3 */}

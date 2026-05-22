@@ -25,20 +25,20 @@ export default function S3TheoryC5SeedThree() {
         시드 6번을 표준 3개 구성에 적용한 결과.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[60px_2fr_1.4fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[60px_2fr_1.4fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub text-center">#</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">기능</div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-line">페인포인트 매핑</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">기능</div>
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub border-l border-divider">페인포인트 매핑</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[60px_2fr_1.4fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[60px_2fr_1.4fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-2xl font-bold text-accent text-center">{r.n}</div>
-            <div className="px-5 py-4 text-base text-text font-medium border-l border-line">{r.feat}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.map}</div>
+            <div className="px-5 py-4 text-base text-text font-medium border-l border-divider">{r.feat}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.map}</div>
           </div>
         ))}
       </div>

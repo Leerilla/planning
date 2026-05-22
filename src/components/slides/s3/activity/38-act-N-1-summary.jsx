@@ -28,7 +28,7 @@ export default function S3Activity_N_1_Summary() {
 
       <div className="grid grid-cols-2 gap-4 max-w-5xl">
         {items.map((it, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="flex items-baseline gap-3 mb-2">
               <span className="text-3xl font-bold text-accent leading-none">{it.n}</span>
               <span className="text-lg font-bold text-text">{it.name}</span>

@@ -19,7 +19,7 @@ export default function S4TheoryC2Area4Seed() {
         제약사항이 명확하면 에이전트가 임의 기능을 추가하지 않는다.
       </p>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`- 모바일 앱 미지원 (웹만)
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`- 모바일 앱 미지원 (웹만)
 - 이미지 자동 생성 미지원 (텍스트만)
 - 다국어 미지원 (한국어만)
 - 광고 자동 집행 미지원

@@ -38,7 +38,7 @@ export default function S6TheoryC2Principle5() {
         {callTiming.map((col, i) => (
           <div
             key={i}
-            className={`border-l-4 border-${col.border === 'success' ? 'success' : 'danger'} bg-bg-soft rounded-md p-6`}
+            className={`border-l-4 border-${col.border === 'success' ? 'success' : 'danger'} bg-bg-soft rounded-xl p-6`}
           >
             <div className={`text-xs uppercase tracking-wider font-semibold mb-4 ${col.border === 'success' ? 'text-success' : 'text-danger'}`}>
               {col.label}

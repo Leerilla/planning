@@ -43,7 +43,7 @@ export default function S3TheoryC3ThreeEras() {
         {eras.map((e, i) => (
           <div
             key={i}
-            className={`border rounded p-5 ${i === 2 ? 'border-accent' : 'border-line'}`}
+            className={`border rounded p-5 ${i === 2 ? 'border-accent' : 'border-divider'}`}
           >
             <div className={`text-2xl font-bold mb-1 leading-tight ${i === 2 ? 'text-accent' : 'text-text'}`}>
               {e.label}
@@ -53,15 +53,15 @@ export default function S3TheoryC3ThreeEras() {
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <div className="text-text-sub uppercase text-[10px] tracking-wider mb-1">분석</div>
+                <div className="text-text-sub uppercase text-xs tracking-wider mb-1">분석</div>
                 <div className="text-text">{e.analysis}</div>
               </div>
               <div>
-                <div className="text-text-sub uppercase text-[10px] tracking-wider mb-1">정제</div>
+                <div className="text-text-sub uppercase text-xs tracking-wider mb-1">정제</div>
                 <div className="text-text">{e.refinement}</div>
               </div>
               <div>
-                <div className="text-text-sub uppercase text-[10px] tracking-wider mb-1">한계</div>
+                <div className="text-text-sub uppercase text-xs tracking-wider mb-1">한계</div>
                 <div className="text-text-sub">{e.limit}</div>
               </div>
             </div>

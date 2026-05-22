@@ -52,15 +52,15 @@ export default function S3Activity_1_2_Upload() {
           <div className="text-base font-semibold text-text-sub mb-3">
             시드 6번 업로드 파일
           </div>
-          <div className="rounded border border-line overflow-hidden">
+          <div className="rounded border border-divider overflow-hidden">
             {files.map((f, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-[1.4fr_1.4fr_1fr] ${i < files.length - 1 ? 'border-b border-line' : ''}`}
+                className={`grid grid-cols-[1.4fr_1.4fr_1fr] ${i < files.length - 1 ? 'border-b border-divider' : ''}`}
               >
                 <div className="px-4 py-3 text-base text-text font-medium">{f.name}</div>
-                <div className="px-4 py-3 text-base text-text-sub border-l border-line">{f.src}</div>
-                <div className="px-4 py-3 text-base text-text-sub border-l border-line">{f.fmt}</div>
+                <div className="px-4 py-3 text-base text-text-sub border-l border-divider">{f.src}</div>
+                <div className="px-4 py-3 text-base text-text-sub border-l border-divider">{f.fmt}</div>
               </div>
             ))}
           </div>

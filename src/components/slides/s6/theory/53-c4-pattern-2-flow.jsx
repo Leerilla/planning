@@ -1,7 +1,7 @@
 // Source: lectures/S6/lecture.md lines 574-596
 // Type: process (11-step Stop → git-committer automation flow)
 // D-041: SVG-like connector arrows (CSS), natural language labels
-// D-046: No font-mono in content text
+// D-046: No in content text
 // D11: Natural language labels only (no regex/special chars in text)
 // Interactive: step-reveal sequential (11-step flow)
 // Sprint core diagram: Pattern 2 complete workflow with accent border

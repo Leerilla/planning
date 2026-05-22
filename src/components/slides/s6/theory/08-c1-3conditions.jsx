@@ -40,7 +40,7 @@ export default function S6TheoryC13Conditions() {
 
       <div className="grid grid-cols-3 gap-6 max-w-6xl">
         {conditions.map((c, i) => (
-          <div key={i} className="border border-line rounded p-6">
+          <div key={i} className="border border-divider rounded p-6">
             <div className="text-xs uppercase tracking-wider text-accent mb-3 font-semibold">
               {c.label}
             </div>

@@ -24,7 +24,7 @@ export default function S4TheoryC3RecommendedSettings() {
         <span className="text-base text-text font-semibold">.claude/settings.json</span>
       </div>
 
-      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-line max-w-4xl">{`{
+      <pre className="text-sm text-text bg-bg-soft rounded p-5 leading-relaxed whitespace-pre-wrap border border-divider max-w-4xl">{`{
   "permissions": {
     "allow": ["Read", "Grep", "Glob", "Edit"],
     "ask": ["Bash", "Write", "WebFetch"],

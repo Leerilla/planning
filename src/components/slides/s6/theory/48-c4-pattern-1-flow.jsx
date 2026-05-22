@@ -1,7 +1,7 @@
 // Source: lectures/S6/lecture.md lines 498-517
 // Type: process (7-step PostToolUse → prd-reviewer flow)
 // D-041: Sequential flow arrow (CSS arrow, text natural language)
-// D-046: No font-mono in content text
+// D-046: No in content text
 // D11: Natural language labels only (no regex/special chars in text)
 // Sprint core diagram: PostToolUse workflow visualization with accent border
 

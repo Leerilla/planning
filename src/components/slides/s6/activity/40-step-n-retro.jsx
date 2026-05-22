@@ -38,7 +38,7 @@ export default function S6ActivityStepNRetro() {
         자동화의 본질을 인식하기 위한 회고 기준
       </p>
 
-      <div className="max-w-5xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-5xl overflow-hidden rounded-xl border border-divider">
         <div className="grid grid-cols-[36%_32%_32%] bg-bg-soft px-6 py-3 border-b border-divider">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">질문</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-accent">좋은 답</span>

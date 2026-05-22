@@ -24,7 +24,7 @@ export default function S4Activity_1_5_Length() {
             macOS / Linux
           </div>
           <p className="text-base font-medium text-text leading-relaxed tracking-tight">
-            wc -l CLAUDE.md
+            wc -l /project/claude.md
           </p>
         </div>
         <div className="rounded-2xl border-l-4 border-accent bg-bg-soft p-4">
@@ -32,7 +32,7 @@ export default function S4Activity_1_5_Length() {
             Windows PowerShell
           </div>
           <p className="text-sm font-medium text-text leading-relaxed tracking-tight">
-            (Get-Content CLAUDE.md | Measure-Object -Line).Lines
+            (Get-Content /project/claude.md | Measure-Object -Line).Lines
           </p>
         </div>
       </div>

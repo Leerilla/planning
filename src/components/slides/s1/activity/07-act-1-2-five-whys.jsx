@@ -31,9 +31,9 @@ export default function S1Activity_1_2_FiveWhys() {
       </p>
 
       {/* 2-col: 좌 빈 양식 안내 / 우 시드 6 적용 sequential */}
-      <div className="grid grid-cols-[320px_1fr] gap-5 max-w-5xl items-start">
-        {/* 좌: 빈 양식 + 진짜 문제 결론 */}
-        <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-[320px_1fr] gap-5 max-w-5xl items-stretch">
+        {/* 좌: 빈 양식 + 진짜 문제 결론 — h-full + spacer로 우측 끝선 정렬 */}
+        <div className="flex flex-col gap-3 h-full">
           <div className="rounded-2xl border-l-4 border-accent bg-bg-soft p-5">
             <div className="text-accent text-xs font-semibold tracking-wider uppercase mb-3">
               빈 양식
@@ -48,6 +48,8 @@ export default function S1Activity_1_2_FiveWhys() {
 [3]`}
             </p>
           </div>
+
+          <div className="flex-1" aria-hidden="true" />
 
           <div className="rounded-2xl border-l-4 border-success bg-success-soft p-5">
             <div className="text-success text-xs font-semibold tracking-wider uppercase mb-3">

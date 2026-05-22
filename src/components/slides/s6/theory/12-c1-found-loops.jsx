@@ -40,7 +40,7 @@ export default function S6TheoryC1FoundLoops() {
 
       <div className="flex flex-col gap-4 max-w-3xl">
         {items.map((item, i) => (
-          <div key={i} className="border border-line rounded p-5 flex gap-4 items-start">
+          <div key={i} className="border border-divider rounded p-5 flex gap-4 items-start">
             <div className="flex-shrink-0">
               <div className="text-xs uppercase tracking-wider text-accent font-semibold mb-2">
                 {item.label}
@@ -58,7 +58,7 @@ export default function S6TheoryC1FoundLoops() {
         ))}
       </div>
 
-      <p className="text-sm text-text-sub italic mt-8 pt-6 border-t border-line">
+      <p className="text-sm text-text-sub italic mt-8 pt-6 border-t border-divider">
         이 세 작업을 sub-agent와 hook이 처리한다.
       </p>
     </>

@@ -27,7 +27,7 @@ export default function S5TheoryC3ThreeElements() {
 
       <div className="grid grid-cols-3 gap-5 max-w-6xl">
         {elements.map((e, i) => (
-          <div key={i} className="border border-line rounded p-5">
+          <div key={i} className="border border-divider rounded p-5">
             <div className="flex items-center gap-3 mb-3">
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl border-2 border-accent text-accent text-base font-bold tabular-nums">
                 {e.num}

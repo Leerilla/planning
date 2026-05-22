@@ -40,7 +40,7 @@ export default function S4TheoryC3ClaudeOoda() {
 
       <div className="grid grid-cols-4 gap-3 max-w-6xl">
         {stages.map((s, i) => (
-          <div key={i} className="border border-line rounded p-4">
+          <div key={i} className="border border-divider rounded p-4">
             <div className="flex items-baseline gap-2 mb-3">
               <span className="text-3xl font-bold text-accent leading-none">{s.n}</span>
               <span className="text-base font-bold text-text">{s.en}</span>

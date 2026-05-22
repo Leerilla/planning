@@ -25,7 +25,7 @@ export default function S3Activity_4_1_Folder() {
           <div className="text-base font-semibold text-text-sub mb-3">
             구조
           </div>
-          <pre className="text-sm text-text bg-bg-soft border border-line rounded p-4 leading-relaxed whitespace-pre">{`planning_project/
+          <pre className="text-sm text-text bg-bg-soft border border-divider rounded p-4 leading-relaxed whitespace-pre">{`planning_project/
 ├── docs/
 │   ├── prd.md          ← Manyfast export
 │   ├── persona.md      ← 페르소나 워크시트

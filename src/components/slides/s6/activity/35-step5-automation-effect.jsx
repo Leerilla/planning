@@ -44,7 +44,7 @@ export default function S6ActivityStep5AutomationEffect() {
         자료 5의 Issue #1 (수동) 대비 자료 6의 Issue #5 (자동화) 차이
       </p>
 
-      <div className="max-w-4xl overflow-hidden rounded-md border border-divider">
+      <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">
         <div className="grid grid-cols-[180px_1fr_1fr] bg-bg-soft px-6 py-3 border-b border-divider">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">항목</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">Issue #1 (수동)</span>

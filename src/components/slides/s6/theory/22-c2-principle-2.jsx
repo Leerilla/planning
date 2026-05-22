@@ -36,15 +36,15 @@ export default function S6TheoryC2Principle2() {
         코드 리뷰어가 코드를 수정하지 못하게 차단. 검토 결과의 신뢰성 확보.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-3 bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-3 bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub font-semibold">
             Sub-agent
           </div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub font-semibold border-l border-line">
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub font-semibold border-l border-divider">
             Tools
           </div>
-          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub font-semibold border-l border-line">
+          <div className="px-5 py-3 text-sm uppercase tracking-wider text-text-sub font-semibold border-l border-divider">
             이유
           </div>
         </div>
@@ -52,15 +52,15 @@ export default function S6TheoryC2Principle2() {
         {tools.map((t, i) => (
           <div
             key={i}
-            className={`grid grid-cols-3 ${i < tools.length - 1 ? 'border-b border-line' : ''} group`}
+            className={`grid grid-cols-3 ${i < tools.length - 1 ? 'border-b border-divider' : ''} group`}
           >
             <div className="px-5 py-4 text-base font-bold text-text">
               {t.agent}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line text-sm">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider text-sm">
               {t.tools}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line group-hover:text-text transition-colors">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider group-hover:text-text transition-colors">
               {t.reason}
             </div>
           </div>

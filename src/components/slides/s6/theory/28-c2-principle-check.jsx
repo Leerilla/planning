@@ -25,24 +25,24 @@ export default function S6TheoryC2PrincipleCheck() {
         prd-reviewer의 6원칙 적용 점검
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-2 bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-2 bg-bg-soft border-b border-divider">
           <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub">
             원칙
           </div>
-          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-line">
+          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-divider">
             적용 위치
           </div>
         </div>
         {principles.map((p, i) => (
           <div
             key={i}
-            className={`grid grid-cols-2 ${i < principles.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-2 ${i < principles.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-6 py-4 text-base font-medium text-text">
               {p.principle}
             </div>
-            <div className="px-6 py-4 text-base text-text-sub border-l border-line leading-relaxed">
+            <div className="px-6 py-4 text-base text-text-sub border-l border-divider leading-relaxed">
               {p.location}
             </div>
           </div>

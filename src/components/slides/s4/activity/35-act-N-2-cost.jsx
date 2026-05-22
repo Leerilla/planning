@@ -27,7 +27,7 @@ export default function S4Activity_N_2_Cost() {
         </p>
       </div>
 
-      <div className="border border-line rounded p-4 max-w-3xl">
+      <div className="border border-divider rounded p-4 max-w-3xl">
         <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
           메모 항목
         </div>

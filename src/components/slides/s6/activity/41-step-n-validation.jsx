@@ -31,7 +31,7 @@ export default function S6ActivityStepNValidation() {
         {items.map((item, idx) => (
           <label
             key={idx}
-            className="flex items-start gap-4 p-5 border border-divider bg-bg-soft rounded-md cursor-pointer hover:bg-bg-soft/70 transition-colors"
+            className="flex items-start gap-4 p-5 border border-divider bg-bg-soft rounded-xl cursor-pointer hover:bg-bg-soft/70 transition-colors"
           >
             <input
               type="checkbox"

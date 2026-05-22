@@ -30,24 +30,24 @@ export default function S6TheoryC4VerifyFirst() {
         검증 우선주의의 일관 적용
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-2 bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-2 bg-bg-soft border-b border-divider">
           <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub">
             점검 항목
           </div>
-          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-line">
+          <div className="px-6 py-3 text-sm font-semibold tracking-wider uppercase text-text-sub border-l border-divider">
             확인 방법
           </div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-2 ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-2 ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-6 py-4 text-base font-medium text-text">
               {r.item}
             </div>
-            <div className="px-6 py-4 text-base text-text-sub border-l border-line leading-relaxed">
+            <div className="px-6 py-4 text-base text-text-sub border-l border-divider leading-relaxed">
               {r.method}
             </div>
           </div>

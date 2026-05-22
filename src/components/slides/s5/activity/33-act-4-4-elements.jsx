@@ -24,18 +24,18 @@ export default function S5Activity_4_4_Elements() {
         화면 1의 모든 Task(#1-#4) 완료 시 <span className="highlight-mark">동작 3요소 완전 충족</span>.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-3xl">
-        <div className="grid grid-cols-[2fr_1fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-3xl">
+        <div className="grid grid-cols-[2fr_1fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">요소</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">상태</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">상태</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[2fr_1fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[2fr_1fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">{r.e}</div>
-            <div className={`px-5 py-4 text-base font-bold border-l border-line ${r.s === '충족' ? 'text-accent' : 'text-text-sub'}`}>
+            <div className={`px-5 py-4 text-base font-bold border-l border-divider ${r.s === '충족' ? 'text-accent' : 'text-text-sub'}`}>
               {r.s}
             </div>
           </div>

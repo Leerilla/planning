@@ -29,7 +29,7 @@ export default function S4TheoryC3Ooda4Steps() {
       <div className="flex items-stretch gap-3 max-w-6xl">
         {steps.map((s, i) => (
           <div key={i} className="contents">
-            <div className="flex-1 border border-line rounded p-5">
+            <div className="flex-1 border border-divider rounded p-5">
               <div className="text-3xl font-bold text-accent leading-none mb-2">{s.n}</div>
               <div className="text-lg font-bold text-text mb-2">{s.en}</div>
               <div className="text-sm text-text-sub leading-relaxed">{s.meaning}</div>

@@ -22,30 +22,30 @@ export default function S3TheoryC1Effects() {
         모호한 PRD vs 명확한 PRD
       </h2>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[1fr_2fr_2fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[1fr_2fr_2fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-base font-semibold text-text-sub">
             측면
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-text-sub border-l border-divider">
             모호한 PRD
           </div>
-          <div className="px-5 py-3 text-base font-semibold text-accent border-l border-line">
+          <div className="px-5 py-3 text-base font-semibold text-accent border-l border-divider">
             명확한 PRD
           </div>
         </div>
         {rows.map((row, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_2fr_2fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_2fr_2fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-semibold text-text">
               {row.axis}
             </div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">
               {row.vague}
             </div>
-            <div className="px-5 py-4 text-base text-text font-medium border-l border-line">
+            <div className="px-5 py-4 text-base text-text font-medium border-l border-divider">
               {row.clear}
             </div>
           </div>

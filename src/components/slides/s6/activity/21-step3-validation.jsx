@@ -50,7 +50,7 @@ export default function S6ActivityStep3Validation() {
               }`}
             >
               <div
-                className={`mt-1 w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
+                className={`mt-1 w-5 h-5 rounded-xl border-2 flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
                   checklist[idx]
                     ? 'bg-success border-success'
                     : 'border-divider'

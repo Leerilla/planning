@@ -47,7 +47,7 @@ export default function S6TheoryC1Condition3() {
         {columns.map((col, i) => (
           <div
             key={i}
-            className={`border border-line rounded p-6 ${col.bgClass}`}
+            className={`border border-divider rounded p-6 ${col.bgClass}`}
           >
             <div className={`text-xs uppercase tracking-wider mb-3 font-semibold ${col.labelClass}`}>
               {col.label}

@@ -19,7 +19,7 @@ export default function S6ActivityStep4Prompt() {
         자료 5 메모 구조를 유지하되, 화면 목적을 현재 Task로 변경합니다.
       </p>
 
-      <div className="rounded-xl border border-line bg-bg-soft p-5 max-w-4xl">
+      <div className="rounded-xl border border-divider bg-bg-soft p-5 max-w-4xl">
         <p className="text-xs text-text bg-transparent leading-relaxed whitespace-pre-wrap font-medium">{`"Issue #2를 진행해줘.
  CLAUDE.md와 rules/architecture.md,
  rules/coding-style.md를 참조해.

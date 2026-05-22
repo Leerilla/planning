@@ -28,19 +28,19 @@ export default function S6TheoryC2MainVsSubagent() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-start border-b border-line pb-3">
+        <div className="grid grid-cols-3 gap-4 items-start border-b border-divider pb-3">
           <div className="text-sm text-text font-semibold">컨텍스트</div>
           <div className="text-sm text-text">사용자와 직접</div>
           <div className="text-sm text-text">격리된 컨텍스트</div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-start border-b border-line pb-3">
+        <div className="grid grid-cols-3 gap-4 items-start border-b border-divider pb-3">
           <div className="text-sm text-text font-semibold">출력</div>
           <div className="text-sm text-text">사용자에게 직접</div>
           <div className="text-sm text-text">메인에 요약만 반환</div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-start border-b border-line pb-3">
+        <div className="grid grid-cols-3 gap-4 items-start border-b border-divider pb-3">
           <div className="text-sm text-text font-semibold">도구</div>
           <div className="text-sm text-text">모든 도구 가능</div>
           <div className="text-sm text-text">tools에 명시한 것만</div>

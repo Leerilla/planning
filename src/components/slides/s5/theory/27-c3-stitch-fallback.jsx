@@ -24,20 +24,20 @@ export default function S5TheoryC3StitchFallback() {
         Google Labs의 실험 서비스라 가용성 변동. 폴백 사용법은 자가 학습 영역.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-4xl">
-        <div className="grid grid-cols-[1fr_1.4fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-4xl">
+        <div className="grid grid-cols-[1fr_1.4fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">폴백</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">URL</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">비고</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">URL</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">비고</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_1.4fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_1.4fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-bold text-accent">{r.name}</div>
-            <div className="px-5 py-4 text-base text-text border-l border-line">{r.url}</div>
-            <div className="px-5 py-4 text-base text-text-sub border-l border-line">{r.note}</div>
+            <div className="px-5 py-4 text-base text-text border-l border-divider">{r.url}</div>
+            <div className="px-5 py-4 text-base text-text-sub border-l border-divider">{r.note}</div>
           </div>
         ))}
       </div>

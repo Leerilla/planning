@@ -9,10 +9,9 @@ export default function S5TheoryC1FirstAssertion() {
       eyebrow="첫 단정"
       size="sm"
       message={[
-        '한 기능을 UI부터 데이터까지',
-        '한 번에 만든다',
+        'UI부터 서버 단위로 작업한다.',
       ]}
-      highlight="한 번에"
+      highlight="서버 단위"
       examples={[
         {
           label: '이유',

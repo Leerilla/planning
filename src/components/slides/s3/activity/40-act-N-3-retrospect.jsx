@@ -36,20 +36,20 @@ export default function S3Activity_N_3_Retrospect() {
         같은 질문에 답이 <span className="highlight-mark">측정 가능·구체적</span>이면 좋은 답, 일반적·모호하면 나쁜 답.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-6xl">
-        <div className="grid grid-cols-[1.4fr_2.2fr_1.6fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-6xl">
+        <div className="grid grid-cols-[1.4fr_2.2fr_1.6fr] bg-bg-soft border-b border-divider">
           <div className="px-4 py-3 text-base font-semibold text-text-sub">질문</div>
-          <div className="px-4 py-3 text-base font-semibold text-accent border-l border-line">좋은 답</div>
-          <div className="px-4 py-3 text-base font-semibold text-text-sub border-l border-line">나쁜 답</div>
+          <div className="px-4 py-3 text-base font-semibold text-accent border-l border-divider">좋은 답</div>
+          <div className="px-4 py-3 text-base font-semibold text-text-sub border-l border-divider">나쁜 답</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1.4fr_2.2fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1.4fr_2.2fr_1.6fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-4 py-4 text-sm text-text font-medium">{r.q}</div>
-            <div className="px-4 py-4 text-sm text-text border-l border-line">{r.good}</div>
-            <div className="px-4 py-4 text-sm text-text-sub border-l border-line">{r.bad}</div>
+            <div className="px-4 py-4 text-sm text-text border-l border-divider">{r.good}</div>
+            <div className="px-4 py-4 text-sm text-text-sub border-l border-divider">{r.bad}</div>
           </div>
         ))}
       </div>

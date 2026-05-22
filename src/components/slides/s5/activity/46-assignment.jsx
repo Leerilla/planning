@@ -24,18 +24,18 @@ export default function S5ActivityAssignment() {
         화면 1이 동작 3요소를 모두 충족한 상태가 <span className="highlight-mark">다음 단계의 출발선</span>.
       </p>
 
-      <div className="rounded border border-line overflow-hidden max-w-5xl">
-        <div className="grid grid-cols-[1fr_3fr] bg-bg-soft border-b border-line">
+      <div className="rounded border border-divider overflow-hidden max-w-5xl">
+        <div className="grid grid-cols-[1fr_3fr] bg-bg-soft border-b border-divider">
           <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub">항목</div>
-          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-line">내용</div>
+          <div className="px-5 py-3 text-sm font-semibold uppercase tracking-wider text-text-sub border-l border-divider">내용</div>
         </div>
         {rows.map((r, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[1fr_3fr] ${i < rows.length - 1 ? 'border-b border-line' : ''}`}
+            className={`grid grid-cols-[1fr_3fr] ${i < rows.length - 1 ? 'border-b border-divider' : ''}`}
           >
             <div className="px-5 py-4 text-base font-bold text-accent">{r.item}</div>
-            <div className="px-5 py-4 text-base text-text border-l border-line">{r.content}</div>
+            <div className="px-5 py-4 text-base text-text border-l border-divider">{r.content}</div>
           </div>
         ))}
       </div>

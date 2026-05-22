@@ -23,7 +23,7 @@ export default function S5Activity_1_2_CoreFeatures() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             Claude Code 명령
           </div>
-          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`"docs/prd.md를 읽고 핵심 기능 3개를
+          <pre className="text-sm text-text bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`"docs/prd.md를 읽고 핵심 기능 3개를
  한 줄씩 요약해줘"`}</pre>
         </div>
 
@@ -31,7 +31,7 @@ export default function S5Activity_1_2_CoreFeatures() {
           <div className="text-xs uppercase tracking-wider text-text-sub mb-2">
             시드 6번 핵심 기능 요약
           </div>
-          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-line">{`기능 1 (입력): 상품 사진 업로드
+          <pre className="text-sm text-text-sub bg-bg-soft rounded p-3 leading-relaxed whitespace-pre-wrap border border-divider">{`기능 1 (입력): 상품 사진 업로드
               + 핵심 키워드 5개 입력
 
 기능 2 (핵심 처리): 카테고리별

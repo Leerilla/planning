@@ -16,7 +16,7 @@ export default function S6TheoryC2ContextIsolation() {
       </h2>
 
       <div className="grid grid-cols-2 gap-6 max-w-5xl">
-        <div className="border border-line rounded p-6 bg-bg-soft">
+        <div className="border border-divider rounded p-6 bg-bg-soft">
           <div className="text-sm font-semibold text-text-sub uppercase tracking-wider mb-3">
             컨텍스트가 섞일 때
           </div>

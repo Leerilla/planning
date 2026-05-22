@@ -22,7 +22,7 @@ export default function S6TheoryC2Principle4() {
       </p>
 
       <div className="grid grid-cols-2 gap-6 max-w-5xl">
-        <div className="border-l-4 border-danger bg-bg-soft rounded-md p-6">
+        <div className="border-l-4 border-danger bg-bg-soft rounded-xl p-6">
           <div className="text-xs uppercase tracking-wider text-danger font-semibold mb-4">
             나쁨
           </div>
@@ -45,7 +45,7 @@ export default function S6TheoryC2Principle4() {
           </ul>
         </div>
 
-        <div className="border-l-4 border-success bg-bg-soft rounded-md p-6">
+        <div className="border-l-4 border-success bg-bg-soft rounded-xl p-6">
           <div className="text-xs uppercase tracking-wider text-success font-semibold mb-4">
             좋음
           </div>
