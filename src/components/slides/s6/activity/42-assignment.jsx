@@ -2,6 +2,7 @@
 // Type: activity (Assignment Table + Aside)
 // Profile: hierarchical / comparison / medium-high / balanced
 // Emphasis: outro (마무리 과제 안내)
+// S6 T13 (2026-05-24): 강사 요구 — 과제 배치 확인 (Tips 직전, 적절) + assignment.md 메타 표기(A5) 제거
 
 const ASSIGNMENT_ITEMS = [
   {
@@ -32,7 +33,7 @@ export default function S6ActivityAssignment() {
         과제
       </h2>
       <p className="text-base font-medium text-text-sub tracking-tight leading-relaxed mb-6 max-w-4xl">
-        본 자료의 과제는 <code className="text-accent font-semibold">lectures/S6/assignment.md</code> 파일에 정리되어 있다
+        다음 학습 단계 전까지 아래 3가지를 자기 프로젝트에서 완료한다.
       </p>
 
       <div className="max-w-4xl overflow-hidden rounded-xl border border-divider">

@@ -18,6 +18,7 @@ export default function S8ActivityStep4Cover() {
         '이벤트 3개 Clarity Events 탭',
         'Sentry 테스트 에러 도착',
       ]}
+      size="sm"
     />
   );
 }

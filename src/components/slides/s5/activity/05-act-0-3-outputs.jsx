@@ -20,7 +20,7 @@ export default function S5Activity_0_3_Outputs() {
       </div>
 
       <h2 className="text-3xl font-bold tracking-tight text-text leading-snug mb-1">
-        자료 4 산출물 점검 (D-044 §3.5/§3.6/§3.7)
+        자료 4 산출물 점검 (D-044 3.5 / 3.6 / 3.7)
       </h2>
       <p className="text-base font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
         비어 있는 항목 발견 시 <span className="highlight-mark">자료 4 해당 Step으로 회귀</span> 후 본 단계 진입.

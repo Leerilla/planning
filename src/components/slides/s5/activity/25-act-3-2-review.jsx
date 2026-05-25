@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 756-764 (3-2 시안 검토와 1회 수정)
 // Type: activity (diagram 3 step)
+// T16g (2026-05-24): eyebrow "활동 3-2" → "활동 1-7" (S5 재기획: 시안 검토가 Step 1 화면 설계로 이동)
 
 export default function S5Activity_3_2_Review() {
   const steps = [
@@ -13,7 +14,7 @@ export default function S5Activity_3_2_Review() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 3-2 · 산출물: 검토 + 1회 수정
+          활동 1-7 · 산출물: 검토 + 1회 수정
         </span>
       </div>
 

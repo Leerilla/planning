@@ -2,6 +2,7 @@
 // Type: terms, emphasis: default
 // Profile: hierarchical / comparison / balanced
 // D-052: 9 terms → 2-col grid split
+// S8 T19b (2026-05-25): 강사 요구 — 높이 축소 / 밀집도 강화
 
 export default function S8T2Terms({ deckMeta }) {
   const leftTerms = [
@@ -20,57 +21,51 @@ export default function S8T2Terms({ deckMeta }) {
   ];
 
   return (
-    <div className="flex flex-col gap-6 justify-center h-full max-w-6xl">
-      {/* Header marker */}
+    <div className="flex flex-col gap-3 justify-center h-full max-w-6xl">
       <div className="flex items-center gap-3">
-        <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-          <span className="text-white font-bold text-lg">2</span>
+        <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+          <span className="text-white font-bold text-base">2</span>
         </div>
         <span className="text-text-sub font-semibold text-xs uppercase tracking-wider">
           이론 2 · 용어 해설
         </span>
       </div>
 
-      {/* Title */}
-      <h2 className="text-3xl font-bold text-text mb-2">
+      <h2 className="text-2xl font-bold text-text leading-snug">
         챕터 용어 해설
       </h2>
 
-      {/* Subtitle */}
-      <p className="text-base text-text-sub mb-6 max-w-4xl">
+      <p className="text-sm text-text-sub max-w-4xl leading-snug">
         9개 어휘 — 본 챕터의 핵심
       </p>
 
-      {/* D-052: 2-col grid */}
-      <div className="grid grid-cols-2 gap-4 max-w-6xl">
-        {/* Left column */}
-        <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-2 gap-3 max-w-6xl">
+        <div className="flex flex-col gap-2">
           {leftTerms.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-1 p-4 border border-divider bg-bg-soft rounded-xl"
+              className="flex flex-col gap-0.5 px-4 py-2.5 border border-divider bg-bg-soft rounded-xl"
             >
-              <div className="text-sm font-bold text-text mb-1">
+              <div className="text-xs font-bold text-text">
                 {item.term}
               </div>
-              <div className="text-xs text-text-sub leading-relaxed">
+              <div className="text-xs text-text-sub leading-snug">
                 {item.definition}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right column */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           {rightTerms.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-1 p-4 border border-divider bg-bg-soft rounded-xl"
+              className="flex flex-col gap-0.5 px-4 py-2.5 border border-divider bg-bg-soft rounded-xl"
             >
-              <div className="text-sm font-bold text-text mb-1">
+              <div className="text-xs font-bold text-text">
                 {item.term}
               </div>
-              <div className="text-xs text-text-sub leading-relaxed">
+              <div className="text-xs text-text-sub leading-snug">
                 {item.definition}
               </div>
             </div>

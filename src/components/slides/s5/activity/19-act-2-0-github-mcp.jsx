@@ -1,5 +1,6 @@
 // Source: 강사 결함 보고 — Step 2 진입 전 GitHub MCP 설치/인증 (신규 슬라이드, 2026-05-13)
 // Type: activity (2-col — 설치 + 인증)
+// T16j (2026-05-24): eyebrow "활동 2-0" → "활동 3-1" (S5 재기획: GitHub 이슈 등록이 Step 3으로 분리)
 
 export default function S5Activity_2_0_GithubMcp() {
   return (
@@ -7,7 +8,7 @@ export default function S5Activity_2_0_GithubMcp() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 2-0 · 산출물: GitHub MCP 설치 + 인증
+          활동 3-1 · 산출물: GitHub MCP 설치 + 인증
         </span>
       </div>
 

@@ -3,7 +3,8 @@
 // D-041: Sequential flow arrow (CSS arrow, text natural language)
 // D-046: No in content text
 // D11: Natural language labels only (no regex/special chars in text)
-// Sprint core diagram: PostToolUse workflow visualization with accent border
+// S6 T4 (2026-05-24): 강사 요구 — 높이 화면 초과 + 다이어그램 정확성 확인
+//                     → 한 줄 grid 형태로 컴팩트화, upload.ts → upload.js (S3+ JS 프로젝트)
 
 export default function S6TheoryC4Pattern1Flow() {
   const steps = [
@@ -15,12 +16,12 @@ export default function S6TheoryC4Pattern1Flow() {
     {
       step: 2,
       label: '메인: 파일 작성',
-      detail: 'src/lib/upload.ts 작성 (Write 사용)',
+      detail: 'src/lib/upload.js 작성 (Write 사용)',
     },
     {
       step: 3,
       label: 'PostToolUse hook 자동 트리거',
-      detail: 'Edit|Write matcher 매칭',
+      detail: 'Edit, Write matcher 매칭',
     },
     {
       step: 4,
@@ -30,7 +31,7 @@ export default function S6TheoryC4Pattern1Flow() {
     {
       step: 5,
       label: 'PRD 일치 검증',
-      detail: 'docs/prd.md 읽기 + upload.ts 분석',
+      detail: 'docs/prd.md 읽기 + upload.js 분석',
     },
     {
       step: 6,
@@ -58,33 +59,31 @@ export default function S6TheoryC4Pattern1Flow() {
       <h2 className="text-3xl font-bold tracking-tight text-text leading-snug mb-1">
         핵심 패턴 1: PostToolUse → prd-reviewer
       </h2>
-      <p className="text-sm text-text-sub mb-4">
+      <p className="text-sm text-text-sub mb-3">
         코드 수정마다 PRD 일치 여부 자동 보고
       </p>
 
-      {/* 7-step vertical flow */}
-      <ul className="flex flex-col gap-1 max-w-3xl">
+      {/* 7-step compact horizontal grid rows */}
+      <ul className="flex flex-col gap-1 max-w-5xl">
         {steps.map((s, i) => (
           <li
             key={i}
-            className="border-l-4 border-accent bg-bg-soft rounded-r-md px-5 py-2 flex gap-4 items-start"
+            className="border-l-4 border-accent bg-bg-soft rounded-r grid grid-cols-[28px_180px_1fr] gap-3 items-center px-4 py-1.5"
           >
-            <span className="text-base font-bold tabular-nums text-accent shrink-0 w-5 text-center">
+            <span className="text-sm font-bold tabular-nums text-accent text-center">
               {s.step}
             </span>
-            <div className="flex flex-col gap-0 flex-1">
-              <span className="text-sm font-bold text-text leading-snug">
-                {s.label}
-              </span>
-              <span className="text-xs font-medium text-text-sub leading-snug">
-                {s.detail}
-              </span>
-            </div>
+            <span className="text-sm font-bold text-text leading-snug">
+              {s.label}
+            </span>
+            <span className="text-xs font-medium text-text-sub leading-snug">
+              {s.detail}
+            </span>
           </li>
         ))}
       </ul>
 
-      <p className="text-xs text-text-muted mt-3 max-w-3xl leading-relaxed">
+      <p className="text-xs text-text-muted mt-2 max-w-3xl leading-relaxed">
         각 단계의 결과가 다음 단계의 입력. 작업자 개입 없이 자동 보고서 생성.
       </p>
     </>

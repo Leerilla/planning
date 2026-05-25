@@ -24,7 +24,7 @@ export default function S8TheoryC5ThreeTools() {
       </p>
 
       {/* Comparison Table */}
-      <div className="w-full overflow-hidden rounded-xl border border-divider">
+      <div className="w-full max-w-5xl overflow-hidden rounded-xl border border-divider">
         {/* Header Row */}
         <div className="grid grid-cols-[200px_1fr_1fr] bg-bg-soft px-5 py-3 border-b-2 border-divider">
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide">도구</div>

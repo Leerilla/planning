@@ -24,10 +24,10 @@ export default function S8TheoryC5ThreeToolsTable() {
         비용 + 셋업 + 질문 + 의사결정
       </p>
 
-      {/* Table */}
-      <div className="w-full overflow-hidden rounded-xl border border-divider">
+      {/* Table — col1(도구) + col4(질문) 콘텐츠 기준 축소 (강사 요구) */}
+      <div className="w-fit overflow-hidden rounded-xl border border-divider">
         {/* Header Row */}
-        <div className="grid grid-cols-[180px_120px_180px_1fr_180px] bg-bg-soft px-5 py-3 border-b-2 border-divider">
+        <div className="grid grid-cols-[130px_120px_180px_200px_180px] bg-bg-soft px-5 py-3 border-b-2 border-divider">
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide">도구</div>
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide text-center">비용</div>
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide text-center">셋업 비용</div>
@@ -61,7 +61,7 @@ export default function S8TheoryC5ThreeToolsTable() {
         ].map((row, idx) => (
           <div
             key={idx}
-            className="grid grid-cols-[180px_120px_180px_1fr_180px] px-5 py-4 border-b border-divider last:border-b-0"
+            className="grid grid-cols-[130px_120px_180px_200px_180px] px-5 py-4 border-b border-divider last:border-b-0"
           >
             <div className="font-bold text-accent text-sm">{row.tool}</div>
             <div className="text-center text-text-sub text-sm">{row.cost}</div>

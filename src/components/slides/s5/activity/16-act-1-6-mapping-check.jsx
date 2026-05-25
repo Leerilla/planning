@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 647-658 (1-6 화면-Task 매핑 검토)
 // Type: activity (checklist 4 항목)
+// T16i (2026-05-24): eyebrow "활동 1-6" → "활동 2-2" (S5 재기획: 화면-Task 매핑 검토가 Step 2 Task 설계로 이동)
 
 export default function S5Activity_1_6_MappingCheck() {
   const items = [
@@ -14,7 +15,7 @@ export default function S5Activity_1_6_MappingCheck() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 1-6 · 산출물: 매핑 점검 완료
+          활동 2-2 · 산출물: 매핑 점검 완료
         </span>
       </div>
 

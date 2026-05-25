@@ -2,6 +2,8 @@
 // Type: comparison (3-column table, 3 rows)
 // Profile: hierarchical / comparison / medium-high / balanced
 // Emphasis: key-message (자동화 본질 인식)
+// S6 T12 (2026-05-24): 강사 요구 — 좋은답/나쁜답 표 열 라인 안맞음
+//                      items-start + 짧은 텍스트 정렬 어긋남 → items-center + 균일 padding
 
 export default function S6ActivityStepNRetro() {
   const rows = [
@@ -38,8 +40,8 @@ export default function S6ActivityStepNRetro() {
         자동화의 본질을 인식하기 위한 회고 기준
       </p>
 
-      <div className="max-w-5xl overflow-hidden rounded-xl border border-divider">
-        <div className="grid grid-cols-[36%_32%_32%] bg-bg-soft px-6 py-3 border-b border-divider">
+      <div className="max-w-5xl overflow-hidden rounded border border-divider">
+        <div className="grid grid-cols-[1.4fr_1.3fr_1.3fr] bg-bg-soft px-6 py-3 border-b border-divider gap-4 items-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">질문</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-accent">좋은 답</span>
           <span className="text-xs font-semibold uppercase tracking-wider text-text-sub">나쁜 답</span>
@@ -47,13 +49,13 @@ export default function S6ActivityStepNRetro() {
         {rows.map((row, idx) => (
           <div
             key={row.question}
-            className={`grid grid-cols-[36%_32%_32%] px-6 py-4 items-start gap-4 ${
+            className={`grid grid-cols-[1.4fr_1.3fr_1.3fr] px-6 py-4 items-center gap-4 ${
               idx === rows.length - 1 ? '' : 'border-b border-divider'
             }`}
           >
-            <span className="text-sm font-medium text-text">{row.question}</span>
-            <span className="text-sm font-bold text-accent leading-relaxed">{row.good}</span>
-            <span className="text-sm font-medium text-text-sub leading-relaxed">{row.bad}</span>
+            <span className="text-sm font-semibold text-text leading-snug">{row.question}</span>
+            <span className="text-sm font-bold text-accent leading-snug">{row.good}</span>
+            <span className="text-sm font-medium text-text-sub leading-snug">{row.bad}</span>
           </div>
         ))}
       </div>

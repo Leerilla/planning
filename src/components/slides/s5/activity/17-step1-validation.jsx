@@ -1,13 +1,14 @@
-// Source: lectures/S5/lecture.md lines 660-666 (Step 1 검증 기준)
-// Type: activity (checklist 5 항목)
+// Source: lectures/S5/lecture.md lines 660-666 + 재기획 (T16b 2026-05-24)
+// Type: activity (checklist 5 항목 — 화면 설계 종합)
+// T16b: Task 검증 → Step 2로 분리. Step 1은 화면 설계 5축(도출/첫 화면/prompt.md/Stitch 시안/docs 배치) 검증
 
 export default function S5ActivityStep1Validation() {
   const items = [
     'PRD 핵심 기능 3개에서 화면 2-3개가 도출됐는가',
     '첫 화면이 결정됐는가',
-    '새 docs/tasks.md가 화면 단위로 그룹화됐는가',
-    '각 Task가 1-3개 파일 수정 단위인가',
-    '화면 1의 Task만으로 동작 3요소 충족 가능한 구조인가',
+    'docs/prompt.md에 화면별 Stitch 프롬프트가 작성됐는가',
+    'Stitch 시안이 생성·검토되고 Export까지 완료됐는가',
+    'docs/screen-*.png 배치 + claude.md 지침 강화까지 정리됐는가',
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function S5ActivityStep1Validation() {
         Step 2 진입 가능한가
       </h2>
       <p className="text-sm font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
-        5개 항목 모두 통과 시 Step 2 (GitHub Issue 등록)로 진입.
+        5개 항목 모두 통과 시 Step 2 (Task 설계)로 진입.
       </p>
 
       <ul className="grid grid-cols-2 gap-3 max-w-5xl">

@@ -25,7 +25,7 @@ export default function S8TheoryC5EventStandards() {
       </p>
 
       {/* Table */}
-      <div className="w-full overflow-hidden rounded-xl border border-divider">
+      <div className="w-full max-w-4xl overflow-hidden rounded-xl border border-divider">
         {/* Header Row */}
         <div className="grid grid-cols-[200px_1fr_1fr] bg-bg-soft px-5 py-3 border-b-2 border-divider">
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide">이벤트</div>
@@ -33,7 +33,7 @@ export default function S8TheoryC5EventStandards() {
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide">답하는 질문</div>
         </div>
 
-        {/* Data Rows */}
+        {/* Data Rows — Th와 동일 px-5 py-3 + 첫 column 좌측 정렬 (Th와 일치) */}
         {[
           {
             event: '페이지 진입',
@@ -53,9 +53,9 @@ export default function S8TheoryC5EventStandards() {
         ].map((row, idx) => (
           <div
             key={idx}
-            className="grid grid-cols-[200px_1fr_1fr] px-5 py-4 border-b border-divider last:border-b-0"
+            className="grid grid-cols-[200px_1fr_1fr] px-5 py-3 border-b border-divider last:border-b-0"
           >
-            <div className="font-bold text-accent text-center text-sm">{row.event}</div>
+            <div className="font-bold text-accent text-sm">{row.event}</div>
             <div className="text-text-sub text-sm">{row.seed}</div>
             <div className="text-text-sub text-sm">{row.question}</div>
           </div>

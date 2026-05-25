@@ -1,6 +1,8 @@
 // Source: lectures/S6/lecture.md lines 983-989
 // Type: activity (Checklist), § 2.20.1 Step 3 검증 기준
 // Profile: hierarchical logic / activity visual / balanced tone
+// S6 T9 (2026-05-24): 강사 요구 — "mcpServers 필드 제거" 항목이 갑자기 등장하는 이유 불분명
+//                     → S5 추가 mcpServers와 hooks 공존 확인으로 명확화
 
 'use client';
 
@@ -11,7 +13,7 @@ export default function S6ActivityStep3Validation() {
 
   const items = [
     'settings.json에 hooks 필드 추가됐는가',
-    'mcpServers 필드가 제거됐는가',
+    'S5에서 추가한 mcpServers 필드가 보존됐는가',
     '코드 수정 후 prd-reviewer가 자동 호출됐는가',
     '응답 종료 후 git-committer가 자동 호출됐는가',
     'GitHub에 자동 커밋이 도착했는가'

@@ -1,6 +1,7 @@
 // Source: lectures/S8/captures/lecture.md L162-184 (#### 1. HTTP 요청·응답)
 // Type: process
 // D-050: lecture.md 원문 보존 + D-051: pre text-sm + D-053: HTTP 메서드 설명
+// S8 T18c (2026-05-25): 강사 요구 — 위 통신 박스(max-w-4xl)와 하단 5단계(max-w-6xl) 너비 통일 → max-w-5xl
 
 export default function S8TheoryC2HTTP() {
   return (
@@ -22,7 +23,7 @@ export default function S8TheoryC2HTTP() {
       </p>
 
       {/* HTTP Concept Diagram */}
-      <div className="flex items-center gap-4 max-w-4xl bg-bg-soft border border-divider rounded-xl p-5 mb-4">
+      <div className="flex items-center gap-4 max-w-5xl bg-bg-soft border border-divider rounded-xl p-5 mb-4">
         <div className="flex-1 text-center">
           <div className="text-sm font-bold text-text-muted uppercase tracking-wide mb-2">FE</div>
           <div className="text-base text-text font-semibold">클라이언트</div>
@@ -40,7 +41,7 @@ export default function S8TheoryC2HTTP() {
       </div>
 
       {/* Process Flow Diagram — Horizontal */}
-      <div className="grid grid-cols-5 gap-2 max-w-6xl items-stretch">
+      <div className="grid grid-cols-5 gap-2 max-w-5xl items-stretch">
         {/* Step 1 */}
         <div className="flex flex-col gap-2 p-3 border border-divider bg-bg-soft rounded-xl">
           <span className="w-7 h-7 rounded-full bg-accent text-bg flex items-center justify-center font-bold shrink-0 text-sm">1</span>

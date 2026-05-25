@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 742-754 (3-1 Stitch 자연어 프롬프트)
 // Type: activity (inline 2-area — 작업자 의도 → Claude Code가 Stitch 전용 프롬프트 자동 생성)
+// T16f (2026-05-24): eyebrow "활동 3-1" → "활동 1-6" (S5 재기획: Stitch 시안이 Step 1 화면 설계로 이동)
 
 export default function S5Activity_3_1_Prompt() {
   return (
@@ -7,7 +8,7 @@ export default function S5Activity_3_1_Prompt() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 3-1 · 산출물: Claude Code가 생성한 Stitch 프롬프트
+          활동 1-6 · 산출물: Claude Code가 생성한 Stitch 프롬프트
         </span>
       </div>
 
@@ -24,7 +25,7 @@ export default function S5Activity_3_1_Prompt() {
             작업자 → Claude Code 명령
           </div>
           <pre className="bg-bg-soft border border-divider rounded p-4 text-sm text-text leading-relaxed whitespace-pre-wrap">
-{`"PRD docs/prd.md와 첫 화면 결정(1-4 산출물)을 참조해서
+{`"PRD docs/prd.md와 직전에 작성한 docs/prompt.md를 참조해서
  Stitch에 그대로 붙여 넣을 자연어 프롬프트를 만들어줘.
 
  내 의도:

@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 676-713 (2-1 Issue 등록 명령 + 시드 6번)
 // Type: activity (inline 2-area)
+// T16k (2026-05-24): eyebrow "활동 2-1" → "활동 3-4" (S5 재기획: GitHub 이슈 등록이 Step 3으로 분리)
 
 export default function S5Activity_2_1_IssueCmd() {
   return (
@@ -7,7 +8,7 @@ export default function S5Activity_2_1_IssueCmd() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 2-1 · 산출물: GitHub Issue 10개
+          활동 3-4 · 산출물: GitHub Issue (Task 수만큼)
         </span>
       </div>
 

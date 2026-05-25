@@ -20,7 +20,7 @@ export default function S8TheoryC4TwoPaths() {
       </p>
 
       {/* Table */}
-      <div className="w-full overflow-hidden rounded-xl border border-divider">
+      <div className="w-full max-w-4xl overflow-hidden rounded-xl border border-divider">
         {/* Header Row */}
         <div className="grid grid-cols-[140px_1fr_160px] bg-bg-soft px-5 py-3 border-b-2 border-divider">
           <div className="font-bold text-text">갈래</div>

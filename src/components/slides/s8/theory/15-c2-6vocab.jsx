@@ -1,6 +1,8 @@
 // Source: lectures/S8/captures/lecture.md L151-161 (#### 최소 지식 6가지)
 // Type: terms
 // D-050: lecture.md 원문 보존
+// S8 T17a (2026-05-25): 강사 요구 — 표 헤더/본문 텍스트 라인 정렬
+//                       헤더 py-3 → py-4, 본문 셀 text-sm 명시 (헤더와 폰트 크기 통일)
 
 export default function S8TheoryC2SixVocab() {
   const terms = [
@@ -58,7 +60,7 @@ export default function S8TheoryC2SixVocab() {
       <div className="flex-1 flex flex-col overflow-hidden">
         <div className="max-w-5xl overflow-hidden rounded-xl border border-divider">
           {/* Header row */}
-          <div className="grid grid-cols-[60px_220px_1fr] bg-bg-soft px-5 py-3 border-b-2 border-divider">
+          <div className="grid grid-cols-[60px_220px_1fr] bg-bg-soft px-5 py-4 border-b-2 border-divider">
             <div className="flex items-center justify-center">
               <p className="text-sm font-bold text-text-muted uppercase tracking-wide">#</p>
             </div>
@@ -79,17 +81,17 @@ export default function S8TheoryC2SixVocab() {
               }`}
             >
               <div className="flex items-center justify-center">
-                <p className="text-accent font-bold">
+                <p className="text-sm text-accent font-bold">
                   {item.num}
                 </p>
               </div>
               <div className="flex items-center">
-                <p className="font-bold text-text">
+                <p className="text-sm font-bold text-text">
                   {item.term}
                 </p>
               </div>
               <div className="flex items-center">
-                <p className="text-text-sub">
+                <p className="text-sm text-text-sub">
                   {item.reason}
                 </p>
               </div>

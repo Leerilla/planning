@@ -1,6 +1,7 @@
 // Source: lectures/S6/lecture.md lines 312-328
 // Type: example (Warning 안티패턴 vs 올바른 운영 좌우)
 // 6원칙 적용 관련 안티 사례 vs 올바른 분리 운영
+// S6 T1 (2026-05-24): 강사 요구 — 우측 title 두 줄 명시 분할 (br → span block)
 
 import Warning from '@/components/slides/patterns/Warning';
 
@@ -24,12 +25,11 @@ export default function S6TheoryC2Antipattern() {
         tone="good"
         title={(
           <>
-            prd-reviewer는 Read/Grep/Glob만,
-            <br />
-            git-committer는 Bash/Read만
+            <span className="block">prd-reviewer는 Read/Grep/Glob만,</span>
+            <span className="block">git-committer는 Bash/Read만</span>
           </>
         )}
-        description="두 sub-agent로 분리"
+        description="두 sub-agent로 권한 분리"
         reason="각 agent가 명확한 권한 범위를 가지고 책임도 분리된다"
         avoidance="단일 책임 / 최소 권한 / 책임 분리 원칙을 모두 적용"
       />

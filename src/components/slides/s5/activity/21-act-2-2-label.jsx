@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 715-730 (2-2 라벨 확인)
 // Type: activity (diagram 4 step)
+// T16k (2026-05-24): eyebrow "활동 2-2" → "활동 3-5" (S5 재기획: GitHub 이슈 등록이 Step 3으로 분리)
 
 export default function S5Activity_2_2_Label() {
   const steps = [
@@ -14,7 +15,7 @@ export default function S5Activity_2_2_Label() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 2-2 · 산출물: 화면 라벨 필터링 확인
+          활동 3-5 · 산출물: 화면 라벨 필터링 확인
         </span>
       </div>
 

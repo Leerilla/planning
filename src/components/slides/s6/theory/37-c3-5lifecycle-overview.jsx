@@ -82,17 +82,50 @@ export default function S6TheoryC35LifecycleOverview() {
           ))}
         </div>
 
-        {/* 우측: hooks-lifecycle.svg 동작 다이어그램 */}
+        {/* 우측: 인라인 lifecycle 동작 단계 다이어그램
+            S6 T3 (2026-05-24): svg 파일 부재 → 인라인 vertical flow로 교체 */}
         <div className="flex flex-col gap-2">
           <div className="text-xs font-bold text-text-sub uppercase tracking-wider">
-            동작 다이어그램
+            동작 단계 흐름
           </div>
-          <div className="rounded-xl border border-divider bg-bg-soft p-2">
-            <img
-              src="/lectures/s6/hooks-lifecycle.svg"
-              alt="hooks lifecycle 동작 단계"
-              className="w-full h-auto max-h-[480px] object-contain"
-            />
+          <div className="rounded-xl border border-divider bg-bg-soft p-4 flex flex-col gap-1.5">
+            {[
+              { n: '1', label: 'UserPromptSubmit', desc: '사용자 입력 직후', accent: false },
+              { n: '2', label: 'PreToolUse', desc: '도구 실행 직전', accent: false },
+              { n: '·', label: '도구 실행', desc: '(Read/Edit/Bash 등)', accent: false, dim: true },
+              { n: '3', label: 'PostToolUse', desc: '도구 실행 직후', accent: true },
+              { n: '4', label: 'SubagentStop', desc: 'sub-agent 종료', accent: false },
+              { n: '5', label: 'Stop', desc: '응답 종료', accent: true },
+            ].map((step, i, arr) => (
+              <div key={i} className="flex flex-col items-stretch">
+                <div className={`grid grid-cols-[24px_1fr] gap-2 items-center px-2 py-1.5 rounded border ${
+                  step.accent
+                    ? 'border-accent bg-accent-soft'
+                    : step.dim
+                      ? 'border-divider bg-bg-soft'
+                      : 'border-divider bg-bg-soft'
+                }`}>
+                  <span className={`text-xs font-bold tabular-nums text-center ${
+                    step.accent ? 'text-accent' : step.dim ? 'text-text-sub' : 'text-text'
+                  }`}>
+                    {step.n}
+                  </span>
+                  <div className="flex flex-col">
+                    <span className={`text-xs font-semibold ${
+                      step.accent ? 'text-accent' : step.dim ? 'text-text-sub italic' : 'text-text'
+                    }`}>
+                      {step.label}
+                    </span>
+                    <span className="text-xs text-text-sub leading-tight">
+                      {step.desc}
+                    </span>
+                  </div>
+                </div>
+                {i < arr.length - 1 ? (
+                  <span className="text-text-sub text-xs text-center leading-none py-0.5">v</span>
+                ) : null}
+              </div>
+            ))}
           </div>
         </div>
       </div>

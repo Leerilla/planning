@@ -1,5 +1,6 @@
 // Source: lectures/S5/lecture.md lines 766-771 (3-3 시안 export)
 // Type: activity (inline 2-area — export 대상 + 파일 배치)
+// T16g (2026-05-24): eyebrow "활동 3-3" → "활동 1-8" (S5 재기획: Export가 Step 1 화면 설계로 이동)
 
 export default function S5Activity_3_3_Export() {
   const exports_ = [
@@ -22,7 +23,7 @@ export default function S5Activity_3_3_Export() {
       <div className="flex items-center gap-3 mb-3 flex-wrap">
         <span className="block w-10 h-[3px] bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-          활동 3-3 · 산출물: 시안 export + planning_project 배치
+          활동 1-8 · 산출물: 시안 export + planning_project 배치
         </span>
       </div>
 

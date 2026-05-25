@@ -1,11 +1,12 @@
-// Source: lectures/S5/lecture.md lines 773-777 (Step 3 검증 기준)
-// Type: activity (checklist 3)
+// Source: lectures/S5/lecture.md lines 732-736 (구 Step 2 GitHub 검증) + 재기획
+// Type: activity (checklist 3 — GitHub 이슈 등록 검증)
+// T16d (2026-05-24): Stitch 시안 검증 → Step 1로 흡수. Step 3은 GitHub 이슈 3축 검증
 
 export default function S5ActivityStep3Validation() {
   const items = [
-    '시안이 생성됐는가',
-    '본인 PRD의 카피 입력 화면에 가까운가',
-    'export가 완료됐는가',
+    'GitHub Issue가 화면 단위 Task 수만큼 등록됐는가',
+    '각 Issue가 화면 라벨(screen-1, screen-2 ...)을 갖는가',
+    'Issue 본문에 의존성과 완료 기준이 명시됐는가',
   ];
 
   return (

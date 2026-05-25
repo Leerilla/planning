@@ -3,8 +3,8 @@
 // D-041: SVG-like connector arrows (CSS), natural language labels
 // D-046: No in content text
 // D11: Natural language labels only (no regex/special chars in text)
-// Interactive: step-reveal sequential (11-step flow)
-// Sprint core diagram: Pattern 2 complete workflow with accent border
+// S6 T6 (2026-05-24): 강사 요구 — 화면 초과 → 한 줄 grid 컴팩트화
+//                     .ts/.tsx → .js/.jsx (S3+ JS 프로젝트 일관성)
 
 export default function S6TheoryC4Pattern2Flow() {
   const steps = [
@@ -16,12 +16,12 @@ export default function S6TheoryC4Pattern2Flow() {
     {
       step: 2,
       label: '메인: 파일 작성',
-      detail: 'upload.ts + ImageUploader.tsx 작성',
+      detail: 'upload.js + ImageUploader.jsx 작성',
     },
     {
       step: 3,
       label: 'PostToolUse 훅 자동 트리거',
-      detail: 'Edit/Write matcher 매칭',
+      detail: 'Edit, Write matcher 매칭',
     },
     {
       step: 4,
@@ -79,37 +79,35 @@ export default function S6TheoryC4Pattern2Flow() {
       <h2 className="text-3xl font-bold tracking-tight text-text leading-snug mb-1">
         핵심 패턴 2: Stop → git-committer
       </h2>
-      <p className="text-sm text-text-sub mb-3">
+      <p className="text-sm text-text-sub mb-2">
         응답 종료 시 변경 파일 자동 커밋으로 완전 자동화된 작업 사이클
       </p>
 
-      {/* 11-step 2-column flow (좌 1-6 / 우 7-11) — 콘텐츠 크기 ↑ */}
-      <div className="grid grid-cols-2 gap-4 max-w-6xl">
+      {/* 11-step 2-column compact grid (좌 1-6 / 우 7-11) */}
+      <div className="grid grid-cols-2 gap-3 max-w-6xl">
         {[steps.slice(0, 6), steps.slice(6, 11)].map((col, colIdx) => (
-          <ul key={colIdx} className="flex flex-col gap-2">
+          <ul key={colIdx} className="flex flex-col gap-1">
             {col.map((s) => (
               <li
                 key={s.step}
-                className="border-l-4 border-accent bg-bg-soft rounded-r-md px-5 py-3 flex gap-4 items-start"
+                className="border-l-4 border-accent bg-bg-soft rounded-r grid grid-cols-[28px_150px_1fr] gap-2 items-center px-3 py-1.5"
               >
-                <span className="text-lg font-bold tabular-nums text-accent shrink-0 w-8 text-center">
+                <span className="text-sm font-bold tabular-nums text-accent text-center">
                   {String(s.step).padStart(2, '0')}
                 </span>
-                <div className="flex flex-col flex-1 gap-0.5">
-                  <span className="text-base font-bold text-text leading-snug">
-                    {s.label}
-                  </span>
-                  <span className="text-sm font-medium text-text-sub leading-snug">
-                    {s.detail}
-                  </span>
-                </div>
+                <span className="text-sm font-bold text-text leading-snug">
+                  {s.label}
+                </span>
+                <span className="text-xs font-medium text-text-sub leading-snug">
+                  {s.detail}
+                </span>
               </li>
             ))}
           </ul>
         ))}
       </div>
 
-      <p className="text-sm text-text-sub mt-4 max-w-5xl leading-relaxed">
+      <p className="text-xs text-text-sub mt-2 max-w-5xl leading-relaxed">
         작업자는 한 줄 명령만 입력. 코드 작성, PRD 검증, 자동 커밋이 모두 도구의 일.
       </p>
     </>

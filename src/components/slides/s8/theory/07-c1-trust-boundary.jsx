@@ -1,5 +1,7 @@
 // Source: lectures/S8/captures/lecture.md L59-68 (자동 매핑, comparison 2-col table)
 // Type: ComparisonSlide
+// S8 T17a (2026-05-25): 강사 요구 — 표 헤더/본문 텍스트 라인 정렬
+//                       헤더 py-3 → py-4, 본문 셀 text-sm 명시 (헤더와 폰트 크기 통일)
 
 export default function S8TheoryC1TrustBoundary() {
   return (
@@ -18,7 +20,7 @@ export default function S8TheoryC1TrustBoundary() {
       {/* Table */}
       <div className="max-w-5xl overflow-hidden rounded-2xl border border-divider">
         {/* Table header */}
-        <div className="grid grid-cols-[160px_180px_1fr] bg-bg-soft px-5 py-3 border-b-2 border-divider">
+        <div className="grid grid-cols-[160px_180px_1fr] bg-bg-soft px-5 py-4 border-b-2 border-divider">
           <div className="flex items-center">
             <span className="text-sm font-bold text-text-muted uppercase tracking-wide">영역</span>
           </div>
@@ -33,26 +35,26 @@ export default function S8TheoryC1TrustBoundary() {
         {/* Row 1: FE (차단) */}
         <div className="grid grid-cols-[160px_180px_1fr] px-5 py-4 border-b border-divider">
           <div className="flex items-center">
-            <span className="font-bold text-text">FE</span>
+            <span className="text-sm font-bold text-text">FE</span>
           </div>
           <div className="flex items-center justify-center">
-            <span className="text-warning font-bold text-center">차단</span>
+            <span className="text-sm text-warning font-bold">차단</span>
           </div>
           <div className="flex items-center">
-            <span className="text-text-sub">화면 코드, 공개 URL</span>
+            <span className="text-sm text-text-sub">화면 코드, 공개 URL</span>
           </div>
         </div>
 
         {/* Row 2: BE (허용) */}
         <div className="grid grid-cols-[160px_180px_1fr] px-5 py-4 bg-accent-soft">
           <div className="flex items-center">
-            <span className="font-bold text-accent">BE</span>
+            <span className="text-sm font-bold text-accent">BE</span>
           </div>
           <div className="flex items-center justify-center">
-            <span className="text-success font-bold text-center">허용</span>
+            <span className="text-sm text-success font-bold">허용</span>
           </div>
           <div className="flex items-center">
-            <span className="text-text font-semibold">API 키, DB 인증, 외부 서비스 인증</span>
+            <span className="text-sm text-text font-semibold">API 키, DB 인증, 외부 서비스 인증</span>
           </div>
         </div>
       </div>

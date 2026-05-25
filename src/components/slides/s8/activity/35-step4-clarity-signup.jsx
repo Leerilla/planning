@@ -71,7 +71,7 @@ export default function S8ActivityStep4ClaritySignup() {
           <div className="flex flex-col gap-2 p-3 border border-divider bg-bg-soft rounded-xl">
             <span className="w-7 h-7 rounded-full bg-accent text-bg flex items-center justify-center font-bold shrink-0 text-sm">6</span>
             <div className="text-sm text-text leading-snug flex-1">
-              "Settings" → "Setup" 탭
+              수동으로 설치의 추적 코드 받기 선택
             </div>
           </div>
 
@@ -79,9 +79,7 @@ export default function S8ActivityStep4ClaritySignup() {
           <div className="flex flex-col gap-2 p-3 border border-divider bg-bg-soft rounded-xl col-span-2">
             <span className="w-7 h-7 rounded-full bg-accent text-bg flex items-center justify-center font-bold shrink-0 text-sm">7</span>
             <div className="text-sm text-text leading-snug flex-1">
-              "Tracking code" 스크립트 복사
-              <br />
-              <span className="text-text-sub text-xs">(<code className="text-accent font-semibold">clarity.start</code>로 시작하는 약 10줄)</span>
+              클립보드에 복사
             </div>
           </div>
         </div>

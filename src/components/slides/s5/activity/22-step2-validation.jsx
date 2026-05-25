@@ -1,11 +1,12 @@
-// Source: lectures/S5/lecture.md lines 732-736 (Step 2 검증 기준)
-// Type: activity (checklist 3 항목)
+// Source: lectures/S5/lecture.md lines 568-586 + 재기획 (T16c 2026-05-24)
+// Type: activity (checklist 3 항목 — Task 설계 종합)
+// T16c: GitHub 검증 → Step 3로 분리. Step 2는 Task 그룹화/매핑/단위 적정성 3축
 
 export default function S5ActivityStep2Validation() {
   const items = [
-    'GitHub Issue가 10개 등록됐는가',
-    '각 Issue가 화면 라벨(screen-1, screen-2)을 갖는가',
-    'Issue 본문에 의존성과 완료 기준이 명시됐는가',
+    '새 docs/tasks.md가 화면 단위로 그룹화됐는가',
+    '각 Task가 1-3개 파일 수정 단위로 적정한가',
+    '화면 1의 Task만으로 동작 3요소를 충족 가능한 구조인가',
   ];
 
   return (
@@ -21,7 +22,7 @@ export default function S5ActivityStep2Validation() {
         Step 3 진입 가능한가
       </h2>
       <p className="text-sm font-medium text-text-sub tracking-tight leading-relaxed mb-5 max-w-4xl">
-        3개 항목 모두 통과 시 Step 3 (Stitch로 첫 화면 시안)로 진입.
+        3개 항목 모두 통과 시 Step 3 (GitHub 이슈 등록)로 진입.
       </p>
 
       <ul className="grid grid-cols-2 gap-3 max-w-5xl">
